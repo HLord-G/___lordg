@@ -1,54 +1,58 @@
 {
   "page_title": "Selected Work",
   "page_description": "A selection of professional work areas and responsibilities.",
-  "work": [
-    {
-      "icon": "inventory_2",
-      "title": "Applicant Tracker",
-      "sub-header": "LordG Project",
-      "description": "A recruitment management system designed to organize applicant profiles, track application statuses, manage candidate information, and streamline the hiring process.",
-      "link": "https://lordg.vercel.app/projects/applicant_tracker",
-      "img": ""
-    },
-    {
-      "icon": "movie_edit",
-      "title": "AI Video Advertising T-shirt",
-      "sub-header": "LordG Project",
-      "description": "Create engaging AI-powered T-shirt advertisements using AI-generated visuals, product showcases, cinematic camera movements, smooth transitions, and creative video editing.",
-      "link": "",
-      "img": ""
-    },
-    {
-      "icon": "robot_2",
-      "title": "Robotics Data Annotation",
-      "sub-header": "Remotask · 2025–2026",
-      "description": "Reviewed task videos and labeled robot movements, hand actions, objects, and everyday activities to support AI robot training.",
-      "link": "",
-      "img": ""
-    },
-    {
-      "icon": "design_services",
-      "title": "Graphic Design & Printing",
-      "sub-header": "Cyberbee Advertising · 2023–2024",
-      "description": "Created custom tarpaulin designs, T-shirt graphics for sublimation, mug designs, and print-ready materials.",
-      "link": "",
-      "img": ""
-    },
-    {
-      "icon": "support_agent",
-      "title": "Community Office & Computer Support",
-      "sub-header": "Barangay Lapasan · 2020–2023",
-      "description": "Handled graphic design, computer technician duties, data entry, voter information and community records, and computer support.",
-      "link": "",
-      "img": ""
-    },
-    {
-      "icon": "precision_manufacturing",
-      "title": "CNC Plasma Operation",
-      "sub-header": "G & R I · 2017–2018",
-      "description": "Performed CNC plasma cutting, prepared technical designs using AutoCAD and SketchUp, checked machine performance, and maintained an organized work area.",
-      "link": "",
-      "img": ""
-    }
-  ]
+  "work": 
+
+[
+  {
+    "icon": "person_search",
+    "title": "Applicant Tracker",
+    "sub-header": "LordG Project",
+    "description": "A recruitment management system for organizing applicant profiles, tracking application statuses, and streamlining the hiring process.",
+    "link": "https://lordg.vercel.app/projects/applicant_tracker",
+    "img": ""
+  },
+  {
+    "icon": "movie_edit",
+    "title": "AI Video Advertising T-shirt",
+    "sub-header": "LordG Project",
+    "description": "Created AI-powered T-shirt advertisements featuring generated visuals, product showcases, cinematic camera movements, and smooth transitions.",
+    "link": "https://hlord-g.github.io/___lordg/projects/ads_video_a/",
+    "img": ""
+  },
+  {
+    "icon": "cleaning_services",
+    "title": "AI Video Advertising – House Cleaning Texas",
+    "sub-header": "LordG Project",
+    "description": "Created AI-powered house cleaning advertisements featuring realistic cleaning scenes, generated visuals, cinematic camera movements, and creative transitions.",
+    "link": "https://hlord-g.github.io/___lordg/projects/ads_video_b/",
+    "img": ""
+  },
+  {
+    "icon": "hub",
+    "title": "Orbit CRM",
+    "sub-header": "LordG Project",
+    "description": "A CRM platform for managing customer information, tracking sales opportunities, organizing client interactions, and streamlining business workflows.",
+    "link": "https://lordg.vercel.app/projects/orbit_crm",
+    "img": ""
+  },
+  {
+    "icon": "menu_book",
+    "title": "English Master",
+    "sub-header": "LordG Project",
+    "description": "An English learning platform featuring interactive lessons and activities to improve vocabulary, grammar, reading comprehension, and communication skills.",
+    "link": "https://hlord-g.github.io/___lordg/projects/english/",
+    "img": ""
+  },
+  {
+    "icon": "precision_manufacturing",
+    "title": "CNC Plasma Operation",
+    "sub-header": "G & R I · 2017–2018",
+    "description": "Operated CNC plasma cutting machines, prepared technical designs using AutoCAD and SketchUp, and performed machine monitoring and basic maintenance.",
+    "link": "",
+    "img": ""
+  }
+]
+
+
 }
