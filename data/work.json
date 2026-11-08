@@ -4,17 +4,17 @@
   "work": [
     {
       "icon": "inventory_2",
-      "title": "Product Research & Amazon Support",
-      "sub-header": "Matt 633 Inc. · 2024–2025",
-      "description": "Alibaba product research, reviews and customer feedback checks, ROI evaluation, supplier research, and Canva reports.",
-      "link": "",
+      "title": "Applicant Tracker",
+      "sub-header": "LordG Project",
+      "description": "A recruitment management system designed to organize applicant profiles, track application statuses, manage candidate information, and streamline the hiring process.",
+      "link": "https://lordg.vercel.app/projects/applicant_tracker",
       "img": ""
     },
     {
-      "icon": "smart_toy",
-      "title": "AI Video Advertising",
-      "sub-header": "Matt 633 Inc. · 2024–2025",
-      "description": "Created AI-generated video advertisements for TikTok and other social media platforms to help promote products.",
+      "icon": "movie_edit",
+      "title": "AI Video Advertising T-shirt",
+      "sub-header": "LordG Project",
+      "description": "Create engaging AI-powered T-shirt advertisements using AI-generated visuals, product showcases, cinematic camera movements, smooth transitions, and creative video editing.",
       "link": "",
       "img": ""
     },
