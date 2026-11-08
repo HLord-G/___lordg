@@ -1,0 +1,27 @@
+{
+  "Fullname": "Harold A. Guzman",
+  "Address": "Cagayan de Oro City, Philippines",
+  "email": "guzmanh056@gmail.com",
+  "phone": "09958548020",
+  "work-status": false,
+  "hero": {
+    "title": "Ideas into",
+    "sub-title": "digital impact.",
+    "description": "I'm Harold A. Guzman — a motivated and reliable professional with experience across creative design, web development, technical support, and administrative work. I enjoy learning, adapting, and building useful digital experiences.",
+    "logo-letter": "H",
+    "skills": [
+      { "icon": "design_services", "title": "Graphic Design" },
+      { "icon": "code", "title": "Web Development" },
+      { "icon": "support_agent", "title": "IT Support" },
+      { "icon": "auto_awesome", "title": "AI" }
+    ]
+  },
+  "skills_expertise": [
+    { "icon": "design_services", "title": "Graphic Design", "description": "Photoshop and Canva." },
+    { "icon": "code", "title": "Web Development", "description": "HTML, CSS, JavaScript, and PHP." },
+    { "icon": "database", "title": "Database Management", "description": "MySQL and MongoDB." },
+    { "icon": "support_agent", "title": "IT Support", "description": "IT support and troubleshooting." },
+    { "icon": "smart_toy", "title": "AI Video Creation & AI-Vibe Coding", "description": "AI video creation and frontend/backend AI-vibe coding." },
+    { "icon": "folder_managed", "title": "Administration & Data", "description": "Data entry, management, file management, and administrative support." }
+  ]
+}

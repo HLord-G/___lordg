@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>HireFlow — Applicant Tracker</title>
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgaGVpZ2h0PSIyNHB4IiB3aWR0aD0iMjRweCIgZmlsbD0iIzFmMWYxZiI+PHBhdGggZD0iTTEyLDcuMTNRMTEuNTUgNi44IDExLjA0IDYuNjVUMTAgNi41cS0wLjY3IDAtMS4zMiAwLjI2VDcuNTMgNy41MlQ2Ljc2IDguNjdUNi41IDEwcTAgMC41MiAwLjE1IDEuMDRUNy4xMyAxMlE2LjggMTIuNDUgNi42NSAxMi45NlE2LjUgMTMuNDggNi41IDE0cTAgMC42NyAwLjI2IDEuMzJ0MC43NiAxLjE1dDEuMTUgMC43NlQxMCAxNy41cTAuNTMgMCAxLjA0LTAuMTVUMTIgMTYuODhxMC40NSAwLjMyIDAuOTYgMC40OFQxNCAxNy41cTAuNjggMCAxLjMzLTAuMjZ0MS4xNS0wLjc2dDAuNzYtMS4xNVQxNy41IDE0cTAtMC41My0wLjE1LTEuMDRUMTYuODggMTJxMC4zMi0wLjQ1IDAuNDgtMC45NlExNy41IDEwLjUyIDE3LjUgMTBxMC0wLjY4LTAuMjYtMS4zM1QxNi40OCA3LjUyVDE1LjMzIDYuNzZUMTQgNi41cS0wLjUyIDAtMS4wNCAwLjE1VDEyIDcuMTNabTAgNy4zbC0xLjE1IDAuOHEtMC4yIDAuMTMtMC40MSAwLjJUMTAgMTUuNXEtMC4yNyAwLTAuNTUtMC4xMXEtMC4yOC0wLjExLTAuNS0wLjM0cS0wLjIzLTAuMjItMC4zNC0wLjVUOC41IDE0cTAtMC4yMyAwLjA4LTAuNDR0MC4yLTAuNDFMOS41OCAxMmwtMC44LTEuMTVxLTAuMTMtMC4yLTAuMi0wLjQxVDguNSAxMHEwLTAuMjggMC4xMS0wLjU1dDAuMzQtMC41dDAuNS0wLjM0VDEwIDguNXEwLjIzIDAgMC40NCAwLjA3dDAuNDEgMC4yTDEyIDkuNTdsMS4xNS0wLjhxMC4yLTAuMTMgMC40MS0wLjJRMTMuNzggOC41IDE0IDguNXEwLjI4IDAgMC41NSAwLjExdDAuNSAwLjM0dDAuMzQgMC41VDE1LjUgMTBxMCAwLjIyLTAuMDcgMC40NHQtMC4yIDAuNDFMMTQuNDMgMTJsMC44IDEuMTVxMC4xMyAwLjIgMC4yIDAuNDFRMTUuNSAxMy43NyAxNS41IDE0cTAgMC4yNy0wLjExIDAuNTV0LTAuMzQgMC41cS0wLjIyIDAuMjMtMC41IDAuMzRUMTQgMTUuNXEtMC4yMiAwLTAuNDQtMC4wOHQtMC40MS0wLjJMMTIgMTQuNDNabTAuODktMS41NHEwLjM2LTAuMzYgMC4zNi0wLjg5dC0wLjM2LTAuODlUMTIgMTAuNzV0LTAuODkgMC4zNlExMC43NSAxMS40OCAxMC43NSAxMnEwIDAuNTIgMC4zNiAwLjg5VDEyIDEzLjI1cTAuNTMgMCAwLjg5LTAuMzZaTTEyIDIycS0yLjA3IDAtMy45LTAuNzlxLTEuODItMC43OS0zLjE3LTIuMTRRMy41OCAxNy43MyAyLjc5IDE1LjlUMiAxMlEyIDkuOTIgMi43OSA4LjFRMy41OCA2LjI3IDQuOTMgNC45M1E2LjI4IDMuNTcgOC4xIDIuNzlROS45MyAyIDEyIDJ0My45IDAuNzl0My4xNyAyLjE0cTEuMzUgMS4zNSAyLjE0IDMuMTdRMjIgOS45MiAyMiAxMnQtMC43OSAzLjl0LTIuMTQgMy4xN3EtMS4zNSAxLjM1LTMuMTcgMi4xNFQxMiAyMlptMC0ycTMuMzUgMCA1LjY4LTIuMzJUMjAgMTJUMTcuNjggNi4zMlQxMiA0VDYuMzMgNi4zMlQ0IDEydDIuMzMgNS42OFQxMiAyMFptMC04WiIvPjwvc3ZnPg==">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="min-h-screen bg-base-200/70 font-sans text-base-content antialiased">
+<div class="min-h-screen lg:flex">
+  <aside class="hidden w-72 shrink-0 border-r border-base-300/80 bg-base-100 p-5 shadow-sm lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col">
+    <a href="#" data-page="overview" class="mb-10 flex items-center gap-3 rounded-2xl px-2 py-2 transition hover:bg-base-200/70">
+      <span class="grid size-11 place-items-center rounded-2xl bg-primary text-primary-content shadow-sm"><span class="material-symbols-rounded">group</span></span>
+      <span><span class="block text-xl font-extrabold tracking-tight">HireFlow</span><span class="text-xs text-base-content/55">Applicant management</span></span>
+    </a>
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-base-content/45">Workspace</p>
+    <nav id="sideNav" class="space-y-1"></nav>
+    <button id="sidebarSettingsBtn" type="button" class="mt-auto flex w-full items-center gap-3 rounded-2xl border border-base-300 bg-base-200/70 px-4 py-3 text-left transition hover:border-primary/40 hover:bg-primary/5">
+      <span class="grid size-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary"><span class="material-symbols-rounded">settings</span></span>
+      <span class="min-w-0 flex-1"><span class="block text-sm font-semibold">Settings</span><span class="block text-xs text-base-content/55">Import, export and appearance</span></span>
+      <span class="material-symbols-rounded text-base-content/45">chevron_right</span>
+    </button>
+  </aside>
+
+  <main class="min-w-0 flex-1">
+    <header class="sticky top-0 z-20 border-b border-base-300/80 bg-base-100/90 shadow-sm backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3.5 sm:px-6 lg:px-8">
+        <div class="flex min-w-0 items-center gap-3">
+          <div class="grid size-10 shrink-0 place-items-center rounded-xl bg-primary text-primary-content lg:hidden"><span class="material-symbols-rounded">group</span></div>
+          <div class="min-w-0"><h1 id="pageTitle" class="truncate text-xl font-extrabold tracking-tight sm:text-2xl">Overview</h1><p id="pageSubtitle" class="text-xs text-base-content/55 sm:text-sm">Your recruitment activity at a glance.</p></div>
+        </div>
+        <div class="flex shrink-0 items-center gap-2">
+          <button id="headerSettingsBtn" type="button" class="btn btn-ghost btn-sm gap-1"><span class="material-symbols-rounded text-lg">settings</span><span class="hidden sm:inline">Settings</span></button>
+          <button id="headerAddBtn" class="btn btn-primary btn-sm gap-1"><span class="material-symbols-rounded text-lg">person_add</span><span class="hidden sm:inline">Add applicant</span></button>
+        </div>
+      </div>
+      <nav id="mobileNav" class="flex gap-1 overflow-x-auto border-t border-base-300/80 bg-base-100 px-3 py-2 lg:hidden"></nav>
+    </header>
+
+    <div class="mx-auto max-w-7xl space-y-7 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <section id="overviewPage" class="page-section space-y-6">
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="group rounded-2xl border border-base-300/80 bg-base-100 p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"><div class="flex items-center justify-between text-sm text-base-content/60">Total applicants <span class="material-symbols-rounded rounded-lg bg-primary/10 p-2 text-primary">groups</span></div><div id="statTotal" class="mt-3 text-3xl font-bold">0</div><p class="text-xs text-base-content/50">All candidate records</p></div>
+          <div class="group rounded-2xl border border-base-300/80 bg-base-100 p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"><div class="flex items-center justify-between text-sm text-base-content/60">In review <span class="material-symbols-rounded rounded-lg bg-info/10 p-2 text-info">rate_review</span></div><div id="statReview" class="mt-3 text-3xl font-bold">0</div><p class="text-xs text-base-content/50">Screening and interview</p></div>
+          <div class="group rounded-2xl border border-base-300/80 bg-base-100 p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"><div class="flex items-center justify-between text-sm text-base-content/60">Shortlisted <span class="material-symbols-rounded rounded-lg bg-warning/10 p-2 text-warning">star</span></div><div id="statShort" class="mt-3 text-3xl font-bold">0</div><p class="text-xs text-base-content/50">For final consideration</p></div>
+          <div class="group rounded-2xl border border-base-300/80 bg-base-100 p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"><div class="flex items-center justify-between text-sm text-base-content/60">Hired <span class="material-symbols-rounded rounded-lg bg-success/10 p-2 text-success">verified</span></div><div id="statHired" class="mt-3 text-3xl font-bold">0</div><p class="text-xs text-base-content/50">Successfully hired</p></div>
+        </div>
+        <div class="grid gap-6 xl:grid-cols-3">
+          <div class="rounded-3xl border border-base-300/80 bg-base-100 p-5 shadow-sm sm:p-6 xl:col-span-2">
+            <div class="mb-5"><h2 class="font-bold">Hiring pipeline</h2><p class="text-sm text-base-content/55">Applicants grouped by their current stage</p></div>
+            <div id="pipeline" class="space-y-4"></div>
+          </div>
+          <div class="rounded-3xl border border-base-300/80 bg-base-100 p-5 shadow-sm sm:p-6">
+            <h2 class="font-bold">Recent applicants</h2><p class="mb-4 text-sm text-base-content/55">Latest candidates added</p>
+            <div id="recentApplicants" class="space-y-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stagePage" class="page-section hidden space-y-4">
+        <div class="flex flex-col gap-4 rounded-3xl border border-base-300/80 bg-base-100 p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-5">
+          <div><h2 id="stageHeading" class="text-lg font-bold">Applicants</h2><p id="stageDescription" class="text-sm text-base-content/55"></p></div>
+          <div class="flex flex-wrap items-center gap-2">
+            <label class="input input-bordered flex h-10 min-h-10 w-full items-center gap-2 sm:w-44"><span class="material-symbols-rounded text-base-content/45">search</span><input id="searchInput" type="search" class="grow min-w-0" placeholder="Search applicants..."></label>
+            <select id="sortSelect" class="select select-bordered h-10 min-h-10 w-full sm:w-40"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="name">Name A–Z</option></select>
+            <button id="settingsBtn" class="btn btn-outline h-10 min-h-10 gap-2 px-3"><span class="material-symbols-rounded text-lg">settings</span><span>Settings</span></button>
+            <button id="interviewQuestionsBtn" class="btn btn-outline h-10 min-h-10 gap-2 px-3 hidden"><span class="material-symbols-rounded text-lg">quiz</span><span>Interview setup</span></button>
+          </div>
+        </div>
+        <div id="stageCards" class="grid gap-5 xl:grid-cols-2"></div>
+        <div id="stageEmpty" class="hidden rounded-2xl border border-dashed border-base-300 bg-base-100 px-5 py-16 text-center">
+          <span class="material-symbols-rounded text-5xl text-base-content/20">person_search</span><h3 id="emptyTitle" class="mt-3 font-semibold">No applicants here yet</h3><p id="emptyText" class="mt-1 text-sm text-base-content/55">Candidates will appear here as they move through your hiring process.</p>
+          <button id="emptyAddBtn" class="btn btn-primary btn-sm mt-4">Add applicant</button>
+        </div>
+      </section>
+      <p class="pb-4 text-center text-xs text-base-content/45">HireFlow Applicant Tracker · Saved locally in this browser</p>
+    </div>
+  </main>
+</div>
+
+<dialog id="applicantModal" class="modal">
+  <div class="modal-box max-w-2xl rounded-3xl border border-base-300 bg-base-100 shadow-2xl">
+    <div class="mb-5 flex items-start justify-between"><div><h3 id="applicantModalTitle" class="text-xl font-bold">Add applicant</h3><p class="text-sm text-base-content/55">Add the candidate's contact and application details.</p></div><button class="btn btn-ghost btn-sm btn-square" data-close="applicantModal"><span class="material-symbols-rounded">close</span></button></div>
+    <form id="applicantForm" class="space-y-5">
+      <input type="hidden" id="applicantId">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Full name <span class="text-error">*</span></span><input id="fullName" class="input input-bordered w-full min-w-0" required placeholder="e.g. Alex Santos"></label>
+        <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Email address <span class="text-error">*</span></span><input id="email" type="email" class="input input-bordered w-full min-w-0" required placeholder="alex@email.com"></label>
+        <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Phone number</span><input id="phone" type="tel" class="input input-bordered w-full min-w-0" placeholder="+63 9XX XXX XXXX"></label>
+        <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Position applied <span class="text-error">*</span></span><input id="position" class="input input-bordered w-full min-w-0" required placeholder="e.g. Web Developer"></label>
+        <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Application date <span class="text-error">*</span></span><input id="appliedDate" type="date" class="input input-bordered w-full min-w-0" required></label>
+        <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Application source</span><select id="source" class="select select-bordered w-full min-w-0"><option>Website</option><option>LinkedIn</option><option>Referral</option><option>Facebook</option><option>Job board</option><option>Email</option><option>Other</option></select></label>
+      </div>
+      <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Resume / portfolio URL</span><input id="resume" type="url" class="input input-bordered w-full min-w-0" placeholder="https://..."></label>
+      <label class="flex min-w-0 flex-col gap-2"><span class="text-sm font-semibold">Notes / requirements <span class="font-normal text-base-content/45">(Plain text)</span></span><textarea id="notes" class="textarea textarea-bordered min-h-36 w-full resize-y" placeholder="Write applicant notes or requirements..."></textarea><span class="text-xs text-base-content/45">Write normally. Line breaks will be preserved.</span></label>
+      <div class="flex flex-col-reverse justify-end gap-2 border-t border-base-300 pt-4 sm:flex-row"><button type="button" class="btn btn-ghost" data-close="applicantModal">Cancel</button><button type="submit" class="btn btn-primary"><span class="material-symbols-rounded text-lg">save</span> Save applicant</button></div>
+    </form>
+  </div><form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="screeningModal" class="modal">
+  <div class="modal-box max-w-xl">
+    <div class="mb-4 flex items-start justify-between"><div><h3 class="text-xl font-bold">Screening checklist</h3><p id="screeningApplicantName" class="text-sm text-base-content/55"></p></div><button class="btn btn-ghost btn-sm btn-square" data-close="screeningModal"><span class="material-symbols-rounded">close</span></button></div>
+    <p class="mb-3 text-sm">Check each item after reviewing the applicant. All items must be checked before scheduling an interview.</p>
+    <div id="checklistItems" class="space-y-3 rounded-xl bg-base-200 p-4"></div>
+    <div class="mt-5 flex flex-col-reverse justify-end gap-2 sm:flex-row"><button class="btn btn-ghost" data-close="screeningModal">Close</button><button id="scheduleInterviewBtn" class="btn btn-primary gap-2" disabled><span>Pass for Interview</span><span class="material-symbols-rounded">arrow_forward</span></button></div>
+  </div><form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="interviewSetupModal" class="modal">
+  <div class="modal-box max-w-2xl rounded-3xl border border-base-300 bg-base-100 shadow-2xl">
+    <div class="mb-5 flex items-start justify-between gap-3">
+      <div><h3 class="text-xl font-bold">Interview setup</h3><p class="text-sm text-base-content/55">Manage reusable interview questions and checklist items.</p></div>
+      <button class="btn btn-ghost btn-sm btn-square" data-close="interviewSetupModal"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2">
+      <section class="space-y-3">
+        <div class="flex items-center justify-between"><h4 class="font-semibold">Interview questions</h4><span id="questionCount" class="badge badge-ghost"></span></div>
+        <form id="questionAddForm" class="flex gap-2"><input id="newQuestion" class="input input-bordered input-sm min-w-0 flex-1" maxlength="240" required placeholder="Add a question"><button class="btn btn-primary btn-sm" type="submit" aria-label="Add question"><span class="material-symbols-rounded">add</span></button></form>
+        <div id="questionSettingsList" class="space-y-2"></div>
+      </section>
+      <section class="space-y-3">
+        <div class="flex items-center justify-between"><h4 class="font-semibold">Interview checklist</h4><span id="interviewCheckCount" class="badge badge-ghost"></span></div>
+        <form id="interviewCheckAddForm" class="flex gap-2"><input id="newInterviewCheck" class="input input-bordered input-sm min-w-0 flex-1" maxlength="180" required placeholder="Add checklist item"><button class="btn btn-primary btn-sm" type="submit" aria-label="Add checklist item"><span class="material-symbols-rounded">add</span></button></form>
+        <div id="interviewCheckSettingsList" class="space-y-2"></div>
+      </section>
+    </div>
+    <div class="mt-5 flex justify-end border-t border-base-300 pt-4"><button class="btn btn-ghost" data-close="interviewSetupModal">Done</button></div>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="interviewWorkspaceModal" class="modal">
+  <div class="modal-box max-w-6xl rounded-3xl border border-base-300 bg-base-100 p-0 shadow-2xl">
+    <div class="flex items-center justify-between gap-3 border-b border-base-300 px-5 py-4">
+      <div class="min-w-0"><h3 class="text-lg font-bold">Interview workspace</h3><p id="workspaceApplicant" class="truncate text-sm text-base-content/55"></p></div>
+      <button class="btn btn-ghost btn-sm btn-square" data-close="interviewWorkspaceModal" aria-label="Close"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <div class="grid gap-4 p-4 sm:p-5 lg:grid-cols-[1.25fr_.75fr]">
+      <section class="min-w-0 space-y-4">
+        <div class="rounded-xl border border-base-300 p-4">
+          <div class="mb-3 flex items-center justify-between"><h4 class="font-semibold">Interview questions</h4><span class="badge badge-ghost">Question notes below each</span></div>
+          <div id="workspaceQuestions" class="space-y-4"></div>
+        </div>
+        <div class="rounded-xl border border-base-300 p-4">
+          <div class="mb-3 flex items-center justify-between"><h4 class="font-semibold">Interview checklist</h4><span id="workspaceChecklistProgress" class="badge badge-ghost"></span></div>
+          <div id="workspaceChecklist" class="space-y-3"></div>
+        </div>
+      </section>
+      <aside class="min-w-0">
+        <div class="h-full rounded-xl border border-base-300 bg-base-200/40 p-4">
+          <div class="mb-3"><h4 class="font-semibold">Applicant interview notes</h4><p class="text-xs text-base-content/55">General notes about this candidate. Separate from question notes and checklist.</p></div>
+          <textarea id="workspaceApplicantNotes" class="textarea textarea-bordered min-h-64 w-full bg-base-100" placeholder="Write overall feedback, strengths, concerns, and next steps..."></textarea>
+          <button id="saveWorkspaceNotes" class="btn btn-primary btn-sm mt-3 w-full"><span class="material-symbols-rounded">save</span> Save applicant notes</button>
+        </div>
+      </aside>
+    </div>
+    <div class="flex flex-col-reverse gap-2 border-t border-base-300 px-5 py-4 sm:flex-row sm:justify-between">
+      <p class="self-center text-xs text-base-content/50">Question notes and checklist progress save automatically.</p>
+      <button class="btn btn-ghost" data-close="interviewWorkspaceModal">Close workspace</button>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="interviewReminderModal" class="modal">
+  <div class="modal-box max-w-md text-center">
+    <div class="mx-auto mb-3 grid size-14 place-items-center rounded-2xl bg-primary/10 text-primary"><span class="material-symbols-rounded text-3xl">alarm</span></div>
+    <h3 class="text-xl font-bold">Interview starting soon</h3>
+    <p id="reminderApplicant" class="mt-2 text-sm text-base-content/60"></p>
+    <p class="mt-2 text-sm">Your interview is scheduled in about 5 minutes. You can prepare your questions or join the meeting.</p>
+    <div class="mt-5 flex flex-col gap-2">
+      <button id="reminderStartBtn" class="btn btn-primary"><span class="material-symbols-rounded">video_call</span> Start interview</button>
+      <button id="reminderWorkspaceBtn" class="btn btn-outline">Open interview workspace</button>
+      <button class="btn btn-ghost" data-close="interviewReminderModal">Remind me later</button>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="appSettingsModal" class="modal">
+  <div class="modal-box max-w-lg rounded-3xl border border-base-300 bg-base-100 p-0 shadow-2xl">
+    <div class="flex items-start justify-between border-b border-base-300 px-5 py-5 sm:px-6">
+      <div class="flex items-center gap-3">
+        <span class="grid size-11 place-items-center rounded-2xl bg-primary/10 text-primary"><span class="material-symbols-rounded">settings</span></span>
+        <div><h3 class="text-xl font-bold">Application settings</h3><p class="text-sm text-base-content/55">Manage your data and appearance.</p></div>
+      </div>
+      <button class="btn btn-ghost btn-sm btn-square" data-close="appSettingsModal" aria-label="Close settings"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <div class="space-y-5 p-5 sm:p-6">
+      <section class="space-y-3">
+        <div><h4 class="font-semibold">Data management</h4><p class="text-xs text-base-content/55">Import an existing backup or export your applicant records.</p></div>
+        <div class="grid grid-cols-2 gap-3">
+          <button id="importBtn" type="button" class="btn btn-outline justify-start gap-2"><span class="material-symbols-rounded">file_upload</span> Import data</button>
+          <button id="exportBtn" type="button" class="btn btn-outline justify-start gap-2"><span class="material-symbols-rounded">file_download</span> Export data</button>
+        </div>
+      </section>
+      <div class="divider my-0"></div>
+      <section class="flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="grid size-10 place-items-center rounded-xl bg-base-200"><span id="themeToggleIcon" class="material-symbols-rounded">dark_mode</span></span>
+          <div><h4 class="font-semibold">Appearance</h4><p class="text-xs text-base-content/55">Choose light or dark theme.</p></div>
+        </div>
+        <button id="themeToggle" type="button" class="btn btn-outline btn-sm gap-2" title="Switch color theme" aria-label="Switch color theme"><span id="themeToggleLabel">Dark mode</span></button>
+      </section>
+    </div>
+    <div class="flex justify-end border-t border-base-300 px-5 py-4 sm:px-6"><button class="btn btn-primary btn-sm" data-close="appSettingsModal">Done</button></div>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="settingsModal" class="modal">
+  <div class="modal-box max-w-xl">
+    <div class="mb-4 flex items-start justify-between">
+      <div><h3 class="text-xl font-bold">Screening checklist settings</h3><p class="text-sm text-base-content/55">Add, rename, or remove the requirements used during applicant screening.</p></div>
+      <button class="btn btn-ghost btn-sm btn-square" data-close="settingsModal"><span class="material-symbols-rounded">close</span></button>
+    </div>
+    <form id="checkAddForm" class="flex flex-col gap-2 sm:flex-row">
+      <input id="newCheckText" class="input input-bordered flex-1" maxlength="140" required placeholder="Add a screening requirement...">
+      <button class="btn btn-primary" type="submit"><span class="material-symbols-rounded">add</span> Add item</button>
+    </form>
+    <div class="mt-5">
+      <div class="mb-2 flex items-center justify-between"><h4 class="font-semibold">Current checklist</h4><span id="checkCount" class="badge badge-ghost"></span></div>
+      <div id="settingsCheckList" class="space-y-2"></div>
+      <p id="settingsEmpty" class="hidden rounded-lg bg-base-200 p-4 text-center text-sm text-base-content/55">No checklist items. Add at least one requirement to enable screening.</p>
+    </div>
+    <div class="mt-5 flex justify-end border-t border-base-300 pt-4"><button class="btn btn-ghost" data-close="settingsModal">Done</button></div>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="interviewModal" class="modal">
+  <div class="modal-box max-w-xl rounded-2xl p-5 sm:p-7">
+    <div class="mb-6 flex items-start justify-between gap-4">
+      <div class="flex items-start gap-3">
+        <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary"><span class="material-symbols-rounded">calendar_month</span></span>
+        <div><h3 class="text-xl font-bold tracking-tight">Schedule interview</h3><p id="interviewApplicantName" class="mt-1 text-sm text-base-content/55"></p></div>
+      </div>
+      <button class="btn btn-ghost btn-sm btn-square" data-close="interviewModal" aria-label="Close"><span class="material-symbols-rounded">close</span></button>
+    </div>
+
+    <form id="interviewForm" class="space-y-5">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="form-control gap-2">
+          <span class="text-sm font-semibold">Interview date <span class="text-error">*</span></span>
+          <input id="interviewDate" type="date" class="input input-bordered w-full" required>
+        </label>
+        <label class="form-control gap-2">
+          <span class="text-sm font-semibold">Interview time <span class="text-error">*</span></span>
+          <input id="interviewTime" type="time" class="input input-bordered w-full" required>
+        </label>
+      </div>
+
+      <div class="rounded-xl border border-base-300 p-4">
+        <div class="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div><h4 class="font-semibold">Google Meet</h4><p class="text-xs text-base-content/55">Create a meeting, then paste its link below.</p></div>
+          <a href="https://meet.google.com/new" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm gap-2">
+            <span class="material-symbols-rounded text-lg">video_call</span> Create Google Meet
+            <span class="material-symbols-rounded text-base">open_in_new</span>
+          </a>
+        </div>
+        <label class="form-control gap-2">
+          <span class="text-sm font-semibold">Meeting link <span class="text-error">*</span></span>
+          <input id="meetLink" type="url" class="input input-bordered w-full" required placeholder="https://meet.google.com/xxx-yyyy-zzz">
+        </label>
+        <p class="mt-2 text-xs leading-5 text-base-content/55">Click “Create Google Meet” to open Google Meet in a new tab. After creating the meeting, copy the meeting URL and paste it here.</p>
+      </div>
+
+      <div class="flex flex-col-reverse gap-2 border-t border-base-300 pt-4 sm:flex-row sm:justify-end">
+        <button type="button" class="btn btn-ghost" data-close="interviewModal">Cancel</button>
+        <button type="submit" class="btn btn-primary gap-2"><span class="material-symbols-rounded text-lg">event_available</span> Save & move to Interview</button>
+      </div>
+    </form>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="notesModal" class="modal">
+  <div class="modal-box max-w-2xl overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-0 shadow-xl">
+    <div class="flex items-center justify-between gap-4 border-b border-base-300 px-5 py-4 sm:px-6">
+      <div class="flex min-w-0 items-center gap-3">
+        <div class="grid size-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+          <span class="material-symbols-rounded text-xl">sticky_note_2</span>
+        </div>
+        <div class="min-w-0">
+          <h3 class="text-lg font-bold leading-tight">Applicant notes</h3>
+          <p id="notesApplicantName" class="mt-1 truncate text-xs text-base-content/55"></p>
+        </div>
+      </div>
+      <button class="btn btn-ghost btn-sm btn-square shrink-0" data-close="notesModal" aria-label="Close">
+        <span class="material-symbols-rounded">close</span>
+      </button>
+    </div>
+
+    <div class="space-y-4 p-5 sm:p-6">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-sm font-semibold">Notes workspace</p>
+          <p class="text-xs text-base-content/50">Switch between reading and editing.</p>
+        </div>
+        <div class="join grid w-full grid-cols-2 sm:w-56">
+          <button type="button" id="notesViewTab" class="btn btn-sm join-item btn-ghost gap-2">
+            <span class="material-symbols-rounded text-base">visibility</span>View
+          </button>
+          <button type="button" id="notesEditTab" class="btn btn-sm join-item btn-primary gap-2">
+            <span class="material-symbols-rounded text-base">edit</span>Edit
+          </button>
+        </div>
+      </div>
+
+      <section id="notesViewPanel" class="hidden min-h-64 rounded-xl border border-base-300 bg-base-100 p-4">
+        <div class="mb-3 flex items-center gap-2 border-b border-base-200 pb-3 text-sm font-semibold">
+          <span class="material-symbols-rounded text-lg text-primary">description</span>Formatted notes
+        </div>
+        <div id="notesOnlyView" class="min-h-48 whitespace-pre-wrap break-words text-sm leading-7"></div>
+      </section>
+
+      <section id="notesEditPanel">
+        <div class="overflow-hidden rounded-xl border border-base-300 bg-base-100">
+          <div class="flex items-center justify-between gap-3 border-b border-base-200 px-4 py-3">
+            <label for="notesOnlyInput" class="text-sm font-semibold">Applicant notes</label>
+            <span id="notesCharCount" class="text-xs tabular-nums text-base-content/45">0 characters</span>
+          </div>
+          <textarea id="notesOnlyInput" class="textarea min-h-64 w-full resize-y rounded-none border-0 bg-base-100 p-4 text-sm leading-7 shadow-none focus:outline-none focus:ring-0" placeholder="Write clear notes about this applicant..."></textarea>
+          <div class="flex min-h-10 items-center justify-end border-t border-base-200 px-4 py-2">
+            <span class="text-xs text-base-content/45">Plain text · line breaks preserved</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="flex flex-col-reverse gap-2 border-t border-base-300 bg-base-100 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <p class="text-xs text-base-content/45">Changes are saved to this applicant.</p>
+      <div class="join grid grid-cols-2 sm:flex sm:justify-end">
+        <button type="button" class="btn btn-sm join-item" data-close="notesModal">Close</button>
+        <button type="button" id="saveNotesOnly" class="btn btn-sm btn-primary join-item gap-2">
+          <span class="material-symbols-rounded text-base">save</span>Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+
+<dialog id="detailModal" class="modal">
+  <div class="modal-box max-w-xl"><div class="flex items-start justify-between"><div><h3 id="detailName" class="text-xl font-bold"></h3><p id="detailPosition" class="text-sm text-base-content/55"></p></div><button class="btn btn-ghost btn-sm btn-square" data-close="detailModal"><span class="material-symbols-rounded">close</span></button></div><div id="detailContent" class="mt-5 space-y-4"></div><div class="mt-5 flex justify-end"><button id="detailEditBtn" class="btn btn-primary btn-sm">Edit applicant</button></div></div><form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+<input id="fileInput" type="file" accept=".lordg,.json,application/json" class="hidden">
+
+<script>
+$(function () {
+  const KEY = 'hireflow_applicants_v2';
+  const stages = [
+    {id:'overview',label:'Overview',icon:'dashboard',title:'Overview',subtitle:'Your recruitment activity at a glance.'},
+    {id:'New',label:'New',icon:'person_add',title:'New applicants',subtitle:'Collect and organize incoming applications.'},
+    {id:'Screening',label:'Screening',icon:'fact_check',title:'Screening',subtitle:'Review candidate qualifications using the checklist.'},
+    {id:'Interview',label:'Interview',icon:'event',title:'Interview',subtitle:'Manage interview schedules and candidate results.'},
+    {id:'Shortlisted',label:'Shortlisted',icon:'star',title:'Shortlisted',subtitle:'Review promising candidates before the final decision.'},
+    {id:'Hired',label:'Hired',icon:'verified',title:'Hired',subtitle:'Applicants who have accepted the position.'},
+    {id:'Rejected',label:'Reject',icon:'person_off',title:'Rejected applicants',subtitle:'Keep rejected applications and reopen them when needed.'}
+  ];
+  const DEFAULT_CHECKS = ['Resume and application reviewed','Required qualifications match the role','Relevant skills and experience verified','Contact information is complete','Required documents / portfolio checked'];
+  const CHECKS_KEY = 'hireflow_screening_checks_v1';
+  function loadChecks(){try{const saved=JSON.parse(localStorage.getItem(CHECKS_KEY)||'null');return Array.isArray(saved)?saved.filter(x=>typeof x==='string'&&x.trim()).map(x=>x.trim()):[...DEFAULT_CHECKS]}catch(e){return [...DEFAULT_CHECKS]}}
+  let checks = loadChecks();
+  function saveChecks(){localStorage.setItem(CHECKS_KEY,JSON.stringify(checks))}
+  const badgeClass = {New:'badge-ghost',Screening:'badge-info',Interview:'badge-primary',Shortlisted:'badge-warning',Hired:'badge-success',Rejected:'badge-error'};
+  let applicants = load();
+  let currentPage = 'overview';
+  let activeId = null;
+  let detailId = null;
+  let notesEditId = null;
+
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]').map(normalize)}catch(e){return []}}
+  function normalize(a){return {id:String(a.id||Date.now()+Math.random()),name:String(a.name||a.fullName||''),email:String(a.email||''),phone:String(a.phone||''),position:String(a.position||''),appliedDate:String(a.appliedDate||new Date().toISOString().slice(0,10)),status:stages.some(s=>s.id===a.status)?a.status:'New',stageHistory:Array.isArray(a.stageHistory)?a.stageHistory.filter(s=>stages.some(x=>x.id===s.id)).map(s=>s.id):(stages.some(s=>s.id===a.previousStatus)?[a.previousStatus]:[]),source:String(a.source||'Other'),resume:String(a.resume||''),notes:String(a.notes||''),screeningChecks:Array.isArray(a.screeningChecks)?a.screeningChecks.map(v=>typeof v==='number'?checks[v]:String(v)).filter(v=>checks.includes(v)):[],interviewDate:String(a.interviewDate||''),interviewTime:String(a.interviewTime||''),meetLink:String(a.meetLink||''),interviewQuestionNotes:a.interviewQuestionNotes&&typeof a.interviewQuestionNotes==='object'?a.interviewQuestionNotes:{},interviewChecklist:Array.isArray(a.interviewChecklist)?a.interviewChecklist:[],interviewNotes:String(a.interviewNotes||''),interviewReminderShownAt:Number(a.interviewReminderShownAt||0),createdAt:Number(a.createdAt||Date.now())}}
+  function save(){localStorage.setItem(KEY,JSON.stringify(applicants))}
+  const THEME_KEY='hireflow_theme_v1';
+  function applyTheme(theme){
+    const selected=theme==='dark'?'dark':'light';
+    document.documentElement.setAttribute('data-theme',selected);
+    const dark=selected==='dark';
+    $('#themeToggleIcon').text(dark?'light_mode':'dark_mode');
+    $('#themeToggleLabel').text(dark?'Switch to light':'Switch to dark');
+    $('#themeToggle').attr('title',dark?'Switch to light mode':'Switch to dark mode');
+    $('#themeToggle').attr('aria-label',dark?'Switch to light mode':'Switch to dark mode');
+    $('meta[name="theme-color"]').attr('content',dark?'#111827':'#ffffff');
+    localStorage.setItem(THEME_KEY,selected);
+  }
+  window.__hireflowSetTheme=applyTheme;
+  function toggleTheme(){
+    applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');
+  }
+  applyTheme(localStorage.getItem(THEME_KEY)||'light');
+
+  const INTERVIEW_TEMPLATE_KEY='hireflow_interview_template_v1';
+  const defaultInterviewTemplate={
+    questions:[
+      {id:'q1',text:'Can you tell me about yourself and your relevant experience?'},
+      {id:'q2',text:'What interests you about this role?'},
+      {id:'q3',text:'Describe a challenge you handled and how you solved it.'},
+      {id:'q4',text:'What are your strengths that fit this position?'}
+    ],
+    checklist:[
+      {id:'c1',text:'Candidate joined the meeting on time'},
+      {id:'c2',text:'Verified identity and background'},
+      {id:'c3',text:'Discussed role responsibilities and expectations'},
+      {id:'c4',text:'Asked all required interview questions'},
+      {id:'c5',text:'Explained next steps and timeline'}
+    ]
+  };
+  function loadInterviewTemplate(){
+    try{
+      const raw=localStorage.getItem(INTERVIEW_TEMPLATE_KEY);
+      if(raw!==null){
+        const saved=JSON.parse(raw);
+        if(saved&&Array.isArray(saved.questions)&&Array.isArray(saved.checklist))return saved;
+      }
+      const defaults=JSON.parse(JSON.stringify(defaultInterviewTemplate));
+      localStorage.setItem(INTERVIEW_TEMPLATE_KEY,JSON.stringify(defaults));
+      return defaults;
+    }catch(e){return JSON.parse(JSON.stringify(defaultInterviewTemplate))}
+  }
+  let interviewTemplate=loadInterviewTemplate();
+  function saveInterviewTemplate(){localStorage.setItem(INTERVIEW_TEMPLATE_KEY,JSON.stringify(interviewTemplate))}
+
+  function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function renderMarkdown(value){
+    let source=esc(value||'');
+    source=source.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a class="link link-primary" href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    source=source.replace(/`([^`]+)`/g,'<code class="rounded bg-base-300 px-1 py-0.5 text-xs">$1</code>');
+    source=source.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+    source=source.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
+    const lines=source.split(/\r?\n/);let output=[];let inList=false;
+    lines.forEach(line=>{
+      const item=line.match(/^\s*[-*]\s+(.+)$/);
+      if(item){if(!inList){output.push('<ul class="ml-5 list-disc space-y-1">');inList=true}output.push('<li>'+item[1]+'</li>');return}
+      if(inList){output.push('</ul>');inList=false}
+      if(!line.trim()){output.push('<div class="h-1"></div>');return}
+      const heading=line.match(/^(#{1,3})\s+(.+)$/);
+      if(heading){const level=heading[1].length;output.push(`<div class="${level===1?'text-lg font-bold':level===2?'font-bold':'font-semibold'}">${heading[2]}</div>`)}
+      else output.push('<p>'+line+'</p>');
+    });
+    if(inList)output.push('</ul>');
+    return output.join('');
+  }
+  function initials(n){return String(n||'?').trim().split(/\s+/).slice(0,2).map(x=>x[0]).join('').toUpperCase()}
+  function date(v){if(!v)return 'Not set';const d=new Date(v+'T00:00:00');return isNaN(d)?'Not set':d.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'})}
+  function badge(s){return `<span class="badge ${badgeClass[s]||'badge-ghost'} badge-sm">${esc(s)}</span>`}
+  function byId(id){return applicants.find(a=>a.id===String(id))}
+  window.__hireflowSaveInterviewData=function(id,data){
+    const current=byId(id);if(!current||!data)return false;
+    current.interviewQuestionNotes=data.interviewQuestionNotes&&typeof data.interviewQuestionNotes==='object'?{...data.interviewQuestionNotes}:{};
+    current.interviewChecklist=Array.isArray(data.interviewChecklist)?[...data.interviewChecklist]:[];
+    current.interviewNotes=String(data.interviewNotes||'');
+    save();
+    return true;
+  };
+  function go(page){currentPage=page;const stage=stages.find(s=>s.id===page)||stages[0];$('#pageTitle').text(stage.title);$('#pageSubtitle').text(stage.subtitle);$('#overviewPage').toggleClass('hidden',page!=='overview');$('#stagePage').toggleClass('hidden',page==='overview');$('#headerAddBtn').toggleClass('hidden',!['overview','New'].includes(page));$('#sideNav a,#mobileNav button').removeClass('bg-primary/10 text-primary font-semibold').addClass('text-base-content/70');$(`[data-page="${page}"]`).removeClass('text-base-content/70').addClass('bg-primary/10 text-primary font-semibold');if(page!=='overview')renderStage();renderOverview()}
+  function navMarkup(mobile){return stages.map(s=>mobile?`<button data-page="${s.id}" class="flex shrink-0 items-center gap-1 rounded-lg px-3 py-2 text-sm"><span class="material-symbols-rounded text-lg">${s.icon}</span>${s.label}</button>`:`<a href="#" data-page="${s.id}" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm"><span class="material-symbols-rounded">${s.icon}</span>${s.label}${s.id!=='overview'?`<span class="ml-auto text-xs text-base-content/45">${applicants.filter(a=>a.status===s.id).length}</span>`:''}</a>`).join('')}
+  function renderNav(){$('#sideNav').html(navMarkup(false));$('#mobileNav').html(navMarkup(true))}
+  function renderOverview(){
+    $('#statTotal').text(applicants.length);$('#statReview').text(applicants.filter(a=>['Screening','Interview'].includes(a.status)).length);$('#statShort').text(applicants.filter(a=>a.status==='Shortlisted').length);$('#statHired').text(applicants.filter(a=>a.status==='Hired').length);
+    $('#pipeline').html(stages.filter(s=>s.id!=='overview').map(s=>{const n=applicants.filter(a=>a.status===s.id).length;return `<button data-page="${s.id}" class="w-full text-left"><div class="mb-2 flex justify-between text-sm"><span class="font-medium">${s.label}</span><span class="text-base-content/55">${n} <span class="text-xs">(${applicants.length?Math.round(n/applicants.length*100):0}%)</span></span></div><progress class="progress ${s.id==='Hired'?'progress-success':s.id==='Rejected'?'progress-error':'progress-primary'} w-full" value="${n}" max="${Math.max(applicants.length,1)}"></progress></button>`}).join(''));
+    const recent=[...applicants].sort((a,b)=>b.createdAt-a.createdAt).slice(0,5);
+    $('#recentApplicants').html(recent.length?recent.map(a=>`<button data-detail="${a.id}" class="flex w-full items-center gap-3 text-left"><span class="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10 text-xs font-bold text-primary">${esc(initials(a.name))}</span><span class="min-w-0 flex-1"><span class="block truncate text-sm font-semibold">${esc(a.name)}</span><span class="block truncate text-xs text-base-content/50">${esc(a.position)}</span></span>${badge(a.status)}</button>`).join(''):'<p class="text-sm text-base-content/50">No applicants added yet.</p>');
+    renderNav();
+  }
+  function stageList(){let list=applicants.filter(a=>a.status===currentPage);const q=$('#searchInput').val()?.toLowerCase().trim()||'';const sort=$('#sortSelect').val()||'newest';list=list.filter(a=>[a.name,a.email,a.position,a.phone].join(' ').toLowerCase().includes(q));list.sort((a,b)=>sort==='name'?a.name.localeCompare(b.name):sort==='oldest'?a.appliedDate.localeCompare(b.appliedDate):b.appliedDate.localeCompare(a.appliedDate));return list}
+  function renderStage(){
+    const cfg=stages.find(s=>s.id===currentPage);$('#stageHeading').text(`${cfg.label} · ${applicants.filter(a=>a.status===currentPage).length}`);$('#stageDescription').text(cfg.subtitle);
+    $('#settingsBtn').toggleClass('hidden',currentPage!=='Screening');
+    $('#interviewQuestionsBtn').toggleClass('hidden',currentPage!=='Interview');
+    const list=stageList();$('#stageCards').html(list.map(card).join(''));$('#stageEmpty').toggleClass('hidden',list.length>0);$('#searchInput').val($('#searchInput').val()||'');
+    $('#emptyAddBtn').toggleClass('hidden',currentPage!=='New');$('#emptyTitle').text(currentPage==='New'?'No new applicants yet':`No ${cfg.label.toLowerCase()} applicants`);$('#emptyText').text(currentPage==='New'?'Add your first applicant to start the hiring process.':'Candidates will appear here when they move into this stage.');
+  }
+  function card(a){
+    const iconBtn = (icon, title, attrs, color='btn-outline') =>
+      `<button type="button" class="btn btn-sm btn-square ${color}" ${attrs} title="${title}" aria-label="${title}"><span class="material-symbols-rounded">${icon}</span></button>`;
+    const actionBtn = (icon, label, attrs, color='btn-primary') =>
+      `<button type="button" class="btn btn-sm ${color} gap-2 whitespace-nowrap" ${attrs}><span class="material-symbols-rounded text-lg">${icon}</span><span>${label}</span></button>`;
+
+    let workflowButtons = '';
+    let rejectButton = '';
+
+    if(a.status==='New'){
+      workflowButtons = actionBtn('arrow_forward','Pass to Screening',`data-move="Screening" data-id="${a.id}"`,'btn-primary');
+      rejectButton = iconBtn('block','Reject applicant',`data-move="Rejected" data-id="${a.id}"`,'btn-outline btn-error');
+    }
+    if(a.status==='Screening'){
+      workflowButtons = iconBtn('fact_check','Open screening checklist',`data-screen="${a.id}"`,'btn-primary');
+      rejectButton = iconBtn('block','Reject applicant',`data-move="Rejected" data-id="${a.id}"`,'btn-outline btn-error');
+    }
+    if(a.status==='Interview'){
+      workflowButtons = iconBtn('play_arrow','Start interview',`data-start-interview="${a.id}"`,'btn-primary') +
+        iconBtn('edit_calendar','Edit interview schedule',`data-edit-interview="${a.id}"`) +
+        actionBtn('arrow_forward','Pass to Shortlisted',`data-move="Shortlisted" data-id="${a.id}"`,'btn-success');
+      rejectButton = iconBtn('block','Reject applicant',`data-move="Rejected" data-id="${a.id}"`,'btn-outline btn-error');
+    }
+    if(a.status==='Shortlisted'){
+      workflowButtons = actionBtn('arrow_forward','Mark as Hired',`data-move="Hired" data-id="${a.id}"`,'btn-success');
+      rejectButton = iconBtn('block','Reject applicant',`data-move="Rejected" data-id="${a.id}"`,'btn-outline btn-error');
+    }
+    if(a.status==='Rejected'){
+      workflowButtons = iconBtn('refresh','Renew to New',`data-renew="${a.id}"`,'btn-primary') +
+        iconBtn('delete','Delete applicant',`data-delete="${a.id}"`,'btn-outline btn-error');
+    }
+
+    const fallbackBackStage = {
+      Screening:'New',
+      Interview:'Screening',
+      Shortlisted:'Interview',
+      Hired:'Shortlisted',
+      Rejected:'New'
+    };
+    let backButton = '';
+    if(a.status==='New'){
+      backButton = iconBtn('arrow_back','Back to Overview',`data-back-overview="${a.id}"`);
+    } else {
+      const backStage = a.stageHistory && a.stageHistory.length
+        ? a.stageHistory[a.stageHistory.length-1]
+        : (fallbackBackStage[a.status] || 'New');
+      backButton = iconBtn('arrow_back',`Back to ${backStage}`,`data-back="${a.id}"`);
+    }
+
+    const viewEditGroup =
+      `<div class="join inline-flex shrink-0" aria-label="Applicant details actions">` +
+      iconBtn('visibility','View applicant',`data-detail="${a.id}"`) +
+      iconBtn('edit_note','Edit notes',`data-edit-notes="${a.id}"`) +
+      `</div>`;
+
+    const navigationButtons = backButton + workflowButtons;
+    const navigationGroup = navigationButtons
+      ? `<div class="join inline-flex shrink-0" aria-label="Applicant workflow actions">${navigationButtons}</div>`
+      : '';
+
+    const interview=a.status==='Interview'?`<div class="mt-3 grid gap-2 rounded-xl bg-base-200 p-3 text-sm sm:grid-cols-2"><div><span class="text-xs text-base-content/50">Interview date</span><p class="font-medium">${date(a.interviewDate)}</p></div><div><span class="text-xs text-base-content/50">Interview time</span><p class="font-medium">${esc(a.interviewTime||'Not set')}</p></div><div class="sm:col-span-2"><a class="link link-primary break-all" href="${esc(a.meetLink)}" target="_blank" rel="noopener">Open Google Meet link</a></div></div>`:'';
+    const screening=a.status==='Screening'?`<p class="mt-2 text-xs text-base-content/55">Checklist completed: ${a.screeningChecks.length}/${checks.length}</p>`:'';
+    const hired=a.status==='Hired'?`<span class="badge badge-success badge-outline">Successfully hired</span>`:'';
+
+    return `<article class="rounded-3xl border border-base-300/80 bg-base-100 p-5 shadow-sm transition duration-200 hover:shadow-md sm:p-6">
+      <div class="flex items-start gap-3">
+        <span class="grid size-11 shrink-0 place-items-center rounded-full bg-primary/10 font-bold text-primary">${esc(initials(a.name))}</span>
+        <div class="min-w-0 flex-1">
+          <div class="flex flex-wrap items-center gap-2"><button data-detail="${a.id}" class="text-left font-bold hover:text-primary">${esc(a.name)}</button>${badge(a.status)}</div>
+          <p class="mt-1 text-sm text-base-content/60">${esc(a.position)}</p>
+          <p class="mt-1 break-all text-xs text-base-content/50">${esc(a.email)} ${a.phone?' · '+esc(a.phone):''}</p>
+        </div>
+        <button type="button" class="btn btn-ghost btn-sm btn-square shrink-0" data-edit="${a.id}" title="Edit applicant profile" aria-label="Edit applicant profile"><span class="material-symbols-rounded">edit</span></button>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-base-content/50"><span>Applied: ${date(a.appliedDate)}</span><span>Source: ${esc(a.source)}</span></div>
+      ${screening}${interview}
+      <div class="mt-5 flex flex-wrap items-center gap-2.5 border-t border-base-300/80 pt-4">
+        ${viewEditGroup}
+        ${navigationGroup}
+        ${rejectButton ? `<div class="ml-auto shrink-0">${rejectButton}</div>` : ''}
+        ${hired}
+      </div>
+    </article>`;
+  }
+  function openApplicant(a){$('#applicantForm')[0].reset();$('#applicantId').val(a?.id||'');$('#applicantModalTitle').text(a?'Edit applicant':'Add applicant');$('#fullName').val(a?.name||'');$('#email').val(a?.email||'');$('#phone').val(a?.phone||'');$('#position').val(a?.position||'');$('#appliedDate').val(a?.appliedDate||new Date().toISOString().slice(0,10));$('#source').val(a?.source||'Website');$('#resume').val(a?.resume||'');$('#notes').val(a?.notes||'');$('#notesPreview').html(renderMarkdown($('#notes').val())||'<p class="text-base-content/45">Your formatted notes will appear here.</p>');$('#applicantModal').get(0).showModal()}
+  function openScreening(id){const a=byId(id);if(!a)return;activeId=id;$('#screeningApplicantName').text(`${a.name} · ${a.position}`);$('#checklistItems').html(checks.map((c,i)=>`<label class="flex cursor-pointer items-center gap-3"><input type="checkbox" class="checkbox checkbox-primary screening-check" data-index="${i}" ${a.screeningChecks.includes(c)?'checked':''}><span class="text-sm">${esc(c)}</span></label>`).join(''));updateScreeningButton();$('#screeningModal').get(0).showModal()}
+  function updateScreeningButton(){const count=$('.screening-check:checked').length;$('#scheduleInterviewBtn').prop('disabled',checks.length===0||count!==checks.length)}
+  function openInterview(id){const a=byId(id);if(!a)return;activeId=id;$('#interviewApplicantName').text(`${a.name} · ${a.position}`);$('#interviewDate').val(a.interviewDate||'');$('#interviewTime').val(a.interviewTime||'');$('#meetLink').val(a.meetLink||'');$('#interviewModal').get(0).showModal()}
+  function setNotesMode(mode){
+    const editing=mode==='edit';
+    $('#notesViewPanel').toggleClass('hidden',editing);
+    $('#notesEditPanel').toggleClass('hidden',!editing);
+    $('#notesViewTab').toggleClass('btn-primary',!editing).toggleClass('btn-ghost',editing);
+    $('#notesEditTab').toggleClass('btn-primary',editing).toggleClass('btn-ghost',!editing);
+    $('#saveNotesOnly').toggleClass('hidden',!editing);
+    const value=$('#notesOnlyInput').val()||'';
+    $('#notesOnlyView').text(value||'No notes have been added yet.');
+    $('#notesCharCount').text(`${value.length} characters`);
+  }
+  function openNotesEditor(id){
+    const a=byId(id);if(!a)return;notesEditId=id;
+    $('#notesApplicantName').text(`${a.name} · ${a.position}`);
+    $('#notesOnlyInput').val(a.notes||'');
+    setNotesMode('edit');
+    $('#notesModal').get(0).showModal();
+  }
+  function showDetail(id){
+    const a=byId(id);if(!a)return;
+    try{
+      const latest=JSON.parse(localStorage.getItem(KEY)||'[]').find(item=>String(item.id)===String(id));
+      if(latest){
+        a.interviewQuestionNotes=latest.interviewQuestionNotes||a.interviewQuestionNotes||{};
+        a.interviewChecklist=latest.interviewChecklist||a.interviewChecklist||[];
+        a.interviewNotes=latest.interviewNotes||a.interviewNotes||'';
+      }
+    }catch(e){}
+    detailId=id;$('#detailName').text(a.name);$('#detailPosition').text(a.position);
+    const questionRows=interviewTemplate.questions.map((q,i)=>{const answer=(a.interviewQuestionNotes||{})[q.id]||'';return `<div class="rounded-lg border border-base-300 p-3"><p class="text-sm font-semibold">${i+1}. ${esc(q.text)}</p><div class="mt-2 text-sm">${answer?renderMarkdown(answer):'<span class="text-base-content/45">No answer notes recorded.</span>'}</div></div>`}).join('');
+    const checklistRows=interviewTemplate.checklist.map(item=>{const done=(a.interviewChecklist||[]).includes(item.id);return `<div class="flex items-center gap-2 rounded-lg border border-base-200 p-2"><span class="material-symbols-rounded ${done?'text-success':'text-base-content/35'}">${done?'check_circle':'radio_button_unchecked'}</span><span class="flex-1 text-sm">${esc(item.text)}</span><span class="badge badge-sm ${done?'badge-success':'badge-ghost'}">${done?'Done':'Pending'}</span></div>`}).join('');
+    const interviewSummary=`<section class="space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-4"><div class="flex items-center justify-between gap-2"><div><h4 class="font-semibold">Interview evaluation</h4><p class="text-xs text-base-content/50">Read-only interview questions, checklist and notes.</p></div><span class="badge badge-info badge-outline">View only</span></div><div><p class="mb-1 text-xs font-semibold uppercase text-base-content/50">Applicant interview notes</p><div class="text-sm">${a.interviewNotes?renderMarkdown(a.interviewNotes):'<span class="text-base-content/45">No general interview notes recorded.</span>'}</div></div><div><p class="mb-2 text-xs font-semibold uppercase text-base-content/50">Question answers</p><div class="space-y-2">${questionRows||'<p class="text-sm text-base-content/45">No interview questions configured.</p>'}</div></div><div><p class="mb-2 text-xs font-semibold uppercase text-base-content/50">Interview checklist</p><div class="space-y-2">${checklistRows||'<p class="text-sm text-base-content/45">No checklist items configured.</p>'}</div></div></section>`;
+    $('#detailContent').html(`<div class="flex flex-wrap gap-2">${badge(a.status)}<span class="text-xs text-base-content/50">Applied ${date(a.appliedDate)}</span></div><div class="grid gap-3 rounded-xl bg-base-200 p-4 sm:grid-cols-2"><div><p class="text-xs text-base-content/50">Email</p><p class="break-all text-sm font-medium">${esc(a.email)}</p></div><div><p class="text-xs text-base-content/50">Phone</p><p class="text-sm font-medium">${esc(a.phone||'—')}</p></div><div><p class="text-xs text-base-content/50">Source</p><p class="text-sm font-medium">${esc(a.source)}</p></div><div><p class="text-xs text-base-content/50">Resume / portfolio</p>${a.resume?`<a class="link link-primary break-all text-sm" href="${esc(a.resume)}" target="_blank" rel="noopener">Open link</a>`:'<p class="text-sm">—</p>'}</div></div><section class="overflow-hidden rounded-2xl border border-primary/30 bg-primary/5 shadow-sm"><div class="flex items-center gap-3 border-b border-primary/15 px-4 py-3"><span class="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary"><span class="material-symbols-rounded">sticky_note_2</span></span><div class="min-w-0 flex-1"><h4 class="text-sm font-bold text-base-content">Profile notes</h4><p class="text-xs text-base-content/55">Important applicant information</p></div><span class="badge badge-primary badge-outline badge-sm">Profile</span></div><div class="min-h-16 whitespace-pre-wrap break-words px-4 py-4 text-sm leading-7">${a.notes?esc(a.notes):'<p class="text-sm italic text-base-content/50">No profile notes added.</p>'}</div></section>${interviewSummary}`);
+    $('#detailModal').get(0).showModal();
+  }
+  function move(id,status){const a=byId(id);if(!a)return;if(status==='Rejected'&&!confirm(`Move ${a.name} to Reject?`))return;a.stageHistory=a.stageHistory||[];a.stageHistory.push(a.status);a.status=status;save();refresh()}
+  function goBack(id){
+    const a=byId(id);if(!a)return;
+    const fallbackBackStage={Screening:'New',Interview:'Screening',Shortlisted:'Interview',Hired:'Shortlisted',Rejected:'New'};
+    const history=a.stageHistory||[];
+    const target=history.length?history[history.length-1]:(fallbackBackStage[a.status]||'New');
+    if(!target||target===a.status)return;
+    if(!confirm(`Move ${a.name} back to ${target}?`))return;
+    if(history.length)history.pop();
+    a.stageHistory=history;
+    a.status=target;
+    save();refresh();
+  }
+  function renderInterviewSetup(){
+    $('#questionCount').text(`${interviewTemplate.questions.length} questions`);
+    $('#interviewCheckCount').text(`${interviewTemplate.checklist.length} items`);
+    const row=(item,type,index)=>`<div class="flex items-start gap-2 rounded-lg border border-base-300 p-2"><span class="min-w-0 flex-1 break-words text-sm">${esc(item.text)}</span><button class="btn btn-ghost btn-xs btn-square shrink-0" data-template-edit="${type}" data-index="${index}" title="Edit"><span class="material-symbols-rounded text-base">edit</span></button><button class="btn btn-ghost btn-xs btn-square shrink-0 text-error" data-template-delete="${type}" data-index="${index}" title="Delete"><span class="material-symbols-rounded text-base">delete</span></button></div>`;
+    $('#questionSettingsList').html(interviewTemplate.questions.map((x,i)=>row(x,'question',i)).join('')||'<p class="text-xs text-base-content/50">No questions yet.</p>');
+    $('#interviewCheckSettingsList').html(interviewTemplate.checklist.map((x,i)=>row(x,'check',i)).join('')||'<p class="text-xs text-base-content/50">No checklist items yet.</p>');
+  }
+  function addTemplateItem(type,text){
+    const value=text.trim();if(!value)return;
+    const list=type==='question'?interviewTemplate.questions:interviewTemplate.checklist;
+    if(list.some(x=>x.text.toLowerCase()===value.toLowerCase())){alert('This item already exists.');return}
+    list.push({id:`${type}_${Date.now()}_${Math.random().toString(36).slice(2,7)}`,text:value});
+    saveInterviewTemplate();renderInterviewSetup();
+  }
+  function editTemplateItem(type,index){
+    const list=type==='question'?interviewTemplate.questions:interviewTemplate.checklist;const item=list[index];if(!item)return;
+    const value=prompt(type==='question'?'Edit interview question:':'Edit checklist item:',item.text);if(value===null)return;
+    if(!value.trim()){alert('Text cannot be empty.');return}
+    item.text=value.trim();saveInterviewTemplate();renderInterviewSetup();
+  }
+  function deleteTemplateItem(type,index){
+    const list=type==='question'?interviewTemplate.questions:interviewTemplate.checklist;const item=list[index];if(!item)return;
+    if(!confirm(`Remove "${item.text}"?`))return;
+    list.splice(index,1);saveInterviewTemplate();renderInterviewSetup();
+  }
+  function openInterviewWorkspace(id){
+    const a=byId(id);if(!a)return;activeId=id;
+    const popup=window.open('','HireFlowInterviewWorkspace','popup=yes,width=1380,height=900,resizable=yes,scrollbars=yes');
+    if(!popup){alert('Please allow pop-ups for this site, then click Start Interview again.');return}
+    const popupHtml=`<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff"><title>Interview Workspace</title>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"><\/script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0" rel="stylesheet">
+<style></style>
+</head>
+<body class="min-h-screen bg-base-200/70 font-sans text-base-content antialiased">
+<header class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 border-b border-base-300 bg-base-100 px-5 py-4">
+ <div class="min-w-0"><h1 class="text-lg font-bold">Interview workspace</h1><p id="candidate" class="truncate text-sm text-base-content/55"></p></div>
+ <div class="flex flex-wrap items-center gap-2">
+  <button id="popupThemeToggle" class="btn btn-ghost btn-sm btn-square" title="Toggle theme" aria-label="Toggle theme"><span id="popupThemeIcon" class="material-symbols-rounded">dark_mode</span></button>
+  <div class="join">
+   <button id="joinMeet" class="btn btn-primary btn-sm join-item gap-2"><span class="material-symbols-rounded">video_call</span><span class="hidden sm:inline">Open Google Meet</span></button>
+   <button id="closeWindow" class="btn btn-outline btn-sm join-item gap-2"><span class="material-symbols-rounded">close</span><span class="hidden sm:inline">Close</span></button>
+  </div>
+ </div>
+</header>
+<main class="grid items-start gap-4 p-4 sm:p-5 lg:grid-cols-[1.25fr_.75fr]">
+ <section class="min-w-0 space-y-3">
+  <div class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-base-300 bg-base-100 p-3">
+   <div class="min-w-0">
+    <p class="text-sm font-semibold">Interview workspace</p>
+    <p class="text-xs text-base-content/50">Switch between questions and checklist.</p>
+   </div>
+   <div class="join w-full sm:w-auto">
+    <button type="button" id="showQuestionsBtn" class="btn btn-sm btn-primary join-item flex-1 gap-2 sm:flex-none"><span class="material-symbols-rounded text-base">quiz</span> Questions <span id="questionCount" class="badge badge-sm">0</span></button>
+    <button type="button" id="showChecklistBtn" class="btn btn-sm btn-ghost join-item flex-1 gap-2 sm:flex-none"><span class="material-symbols-rounded text-base">checklist</span> Checklist <span id="progress" class="badge badge-sm badge-outline">0/0</span></button>
+   </div>
+  </div>
+  <section id="questionsPanel" class="rounded-2xl border border-base-300 bg-base-100 p-3 sm:p-4">
+   <div class="mb-4"><h2 class="font-semibold">Interview questions</h2><p class="text-xs text-base-content/50">Record answers and observations under each question.</p></div>
+   <div id="questions" class="space-y-3"></div>
+  </section>
+  <section id="checklistPanel" class="hidden rounded-2xl border border-base-300 bg-base-100 p-3 sm:p-4">
+   <div class="mb-4"><h2 class="font-semibold">Interview checklist</h2><p class="text-xs text-base-content/50">Tick each item as you complete it.</p></div>
+   <div id="checklist" class="space-y-2"></div>
+  </section>
+ </section>
+ <aside class="min-w-0 self-start lg:sticky lg:top-24">
+  <details open class="collapse collapse-arrow rounded-2xl border border-base-300 bg-base-100">
+   <summary class="collapse-title flex min-h-0 items-center gap-3 py-4 pr-12">
+    <span class="grid size-9 shrink-0 place-items-center rounded-xl bg-info/10 text-info"><span class="material-symbols-rounded">note_alt</span></span>
+    <span class="min-w-0"><span class="block font-semibold">Applicant interview notes</span><span class="block text-xs font-normal text-base-content/50">General feedback, strengths and next steps.</span></span>
+   </summary>
+   <div class="px-4 pb-4">
+    <textarea id="applicantNotes" class="textarea textarea-bordered min-h-64 w-full" placeholder="Write overall feedback about this applicant..."></textarea>
+    <div class="mt-3 flex flex-wrap items-center justify-between gap-2"><span id="saveStatus" class="text-xs text-base-content/45">Autosaves as you type</span><button id="saveNotes" class="btn btn-primary btn-sm gap-2"><span class="material-symbols-rounded">save</span> Save notes</button></div>
+   </div>
+  </details>
+ </aside>
+</main>
+<script>
+(function(){
+ const APP_KEY='hireflow_applicants_v2';
+ const applicantId=${JSON.stringify(String(id))};
+ const openerWindow=window.opener;
+ let applicant=null;
+ const template=${JSON.stringify(interviewTemplate)};
+ const $=function(id){return document.getElementById(id)};
+ function setPopupTheme(theme){
+  const selected=theme==='dark'?'dark':'light';
+  document.documentElement.setAttribute('data-theme',selected);
+  $('popupThemeIcon').textContent=selected==='dark'?'light_mode':'dark_mode';
+  try{if(openerWindow&&!openerWindow.closed&&typeof openerWindow.__hireflowSetTheme==='function')openerWindow.__hireflowSetTheme(selected)}catch(e){}
+ }
+ try{setPopupTheme(openerWindow&&!openerWindow.closed?openerWindow.document.documentElement.getAttribute('data-theme'):'light')}catch(e){setPopupTheme('light')}
+ $('popupThemeToggle').addEventListener('click',function(){setPopupTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark')});
+ function readData(){
+  if(!openerWindow||openerWindow.closed)throw new Error('Open the workspace from the Applicant Tracker.');
+  const list=JSON.parse(openerWindow.localStorage.getItem(APP_KEY)||'[]');
+  applicant=list.find(function(x){return String(x.id)===applicantId});
+  if(!applicant)throw new Error('Applicant record not found. Keep the main tracker open.');
+  applicant.interviewQuestionNotes=applicant.interviewQuestionNotes||{};
+  applicant.interviewChecklist=applicant.interviewChecklist||[];
+  applicant.interviewNotes=applicant.interviewNotes||'';
+ }
+ function saveApplicant(){
+  if(!openerWindow||openerWindow.closed)throw new Error('The main Applicant Tracker must remain open to save interview data.');
+  const payload={
+   interviewQuestionNotes:applicant.interviewQuestionNotes||{},
+   interviewChecklist:applicant.interviewChecklist||[],
+   interviewNotes:applicant.interviewNotes||''
+  };
+  if(typeof openerWindow.__hireflowSaveInterviewData==='function'){
+   const saved=openerWindow.__hireflowSaveInterviewData(applicantId,payload);
+   if(!saved)throw new Error('Could not find this applicant in the main tracker.');
+  }else{
+   const list=JSON.parse(openerWindow.localStorage.getItem(APP_KEY)||'[]');
+   const index=list.findIndex(function(x){return String(x.id)===applicantId});
+   if(index<0)throw new Error('Applicant record not found.');
+   Object.assign(list[index],payload);
+   openerWindow.localStorage.setItem(APP_KEY,JSON.stringify(list));
+  }
+  $('saveStatus').textContent='Saved to Applicant Tracker';
+ }
+ function make(tag,cls,text){
+  const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;
+ }
+ function render(){
+  $('candidate').textContent=applicant.name+' · '+applicant.position;
+  $('joinMeet').addEventListener('click',function(){
+   if(!applicant.meetLink){alert('No Google Meet link has been saved. Edit the interview schedule in the main tracker.');return}
+   window.open(applicant.meetLink,'_blank','noopener,noreferrer');
+  });
+  $('closeWindow').addEventListener('click',function(){saveApplicant();window.close()});
+  window.addEventListener('beforeunload',function(){try{saveApplicant()}catch(e){}});
+  function showWorkspacePanel(panel){
+   const questionsActive=panel==='questions';
+   $('questionsPanel').classList.toggle('hidden',!questionsActive);
+   $('checklistPanel').classList.toggle('hidden',questionsActive);
+   $('showQuestionsBtn').className='btn btn-sm join-item flex-1 gap-2 sm:flex-none '+(questionsActive?'btn-primary':'btn-ghost');
+   $('showChecklistBtn').className='btn btn-sm join-item flex-1 gap-2 sm:flex-none '+(!questionsActive?'btn-primary':'btn-ghost');
+  }
+  $('showQuestionsBtn').addEventListener('click',function(){showWorkspacePanel('questions')});
+  $('showChecklistBtn').addEventListener('click',function(){showWorkspacePanel('checklist')});
+  showWorkspacePanel('questions');
+  const questions=$('questions');questions.replaceChildren();
+  $('questionCount').textContent=(template.questions||[]).length+' questions';
+  (template.questions||[]).forEach(function(q,i){
+   const card=make('details','rounded-xl border border-base-300 bg-base-100');
+   const summary=make('summary','flex cursor-pointer list-none items-center gap-3 rounded-xl p-3 hover:bg-base-200/50');
+   summary.appendChild(make('span','grid size-7 shrink-0 place-items-center rounded-lg bg-primary/10 text-xs font-bold text-primary',String(i+1)));
+   summary.appendChild(make('span','min-w-0 flex-1 text-sm font-semibold leading-6',q.text));
+   summary.appendChild(make('span','material-symbols-rounded shrink-0 text-base-content/50','expand_more'));
+   card.appendChild(summary);
+   const body=make('div','border-t border-base-200 p-3');
+   const label=make('label','block');label.appendChild(make('span','mb-1 block text-xs font-medium text-base-content/55','Question notes / candidate answer'));
+   const area=make('textarea','textarea textarea-bordered min-h-24 w-full text-sm');area.placeholder="Record the candidate's answer or observations...";area.value=applicant.interviewQuestionNotes[q.id]||'';
+   area.addEventListener('input',function(){applicant.interviewQuestionNotes[q.id]=area.value;saveApplicant()});
+   label.appendChild(area);body.appendChild(label);card.appendChild(body);questions.appendChild(card);
+  });
+  if(!(template.questions||[]).length)questions.appendChild(make('p','rounded-xl bg-base-200 p-4 text-sm text-base-content/50','No interview questions configured. Add questions in Interview setup.'));
+  const checklist=$('checklist');checklist.replaceChildren();
+  (template.checklist||[]).forEach(function(item,i){
+   const checked=applicant.interviewChecklist.includes(item.id);
+   const label=make('label','flex cursor-pointer items-center gap-3 rounded-xl border border-base-200 bg-base-100 p-3 hover:bg-base-200/50');
+   const cb=make('input','checkbox checkbox-primary');cb.type='checkbox';cb.checked=checked;
+   cb.addEventListener('change',function(){
+    if(cb.checked&&!applicant.interviewChecklist.includes(item.id))applicant.interviewChecklist.push(item.id);
+    if(!cb.checked)applicant.interviewChecklist=applicant.interviewChecklist.filter(function(x){return x!==item.id});
+    saveApplicant();updateProgress();
+   });
+   label.appendChild(cb);label.appendChild(make('span','min-w-0 flex-1 text-sm',item.text));
+   label.appendChild(make('span','badge badge-sm '+(checked?'badge-success':'badge-ghost'),checked?'Done':'Pending'));
+   checklist.appendChild(label);
+  });
+  if(!(template.checklist||[]).length)checklist.appendChild(make('p','rounded-xl bg-base-200 p-4 text-sm text-base-content/50','No checklist items configured. Add items in Interview setup.'));
+  $('applicantNotes').value=applicant.interviewNotes;
+  $('applicantNotes').addEventListener('input',function(){applicant.interviewNotes=$('applicantNotes').value;saveApplicant()});
+  $('saveNotes').addEventListener('click',function(){applicant.interviewNotes=$('applicantNotes').value;saveApplicant();$('saveStatus').textContent='Applicant notes saved successfully';});
+  $('applicantNotes').addEventListener('change',function(){applicant.interviewNotes=$('applicantNotes').value;saveApplicant()});
+  updateProgress();
+ }
+ function updateProgress(){
+  const items=template.checklist||[];
+  const validIds=items.map(function(item){return item.id});
+  const done=applicant.interviewChecklist.filter(function(id){return validIds.includes(id)}).length;
+  $('progress').textContent=done+'/'+items.length;
+ }
+ try{readData();render()}catch(error){document.body.innerHTML='<main class="p-8"><h1 class="text-xl font-bold">Unable to load interview workspace</h1><p class="mt-2">'+error.message+'</p></main>'}
+})();
+<\/script>
+</body></html>`;
+    popup.document.open();popup.document.write(popupHtml);popup.document.close();
+  }
+  function updateInterviewChecklistProgress(){
+    const total=interviewTemplate.checklist.length;
+    const checked=$('#workspaceChecklist [data-interview-check]:checked').length;
+    $('#workspaceChecklistProgress').text(`${checked}/${total} completed`);
+  }
+  function startInterview(id){
+    const a=byId(id);if(!a)return;
+    if(!a.meetLink){alert('Please add a Google Meet link in Edit interview schedule first.');openInterview(id);return}
+    openInterviewWorkspace(id);
+  }
+  function checkUpcomingInterviews(){
+    const now=Date.now();
+    applicants.forEach(a=>{
+      if(a.status!=='Interview'||!a.interviewDate||!a.interviewTime||a.interviewReminderShownAt)return;
+      const start=new Date(`${a.interviewDate}T${a.interviewTime}`).getTime();
+      const remaining=start-now;
+      if(remaining>0&&remaining<=5*60*1000){
+        a.interviewReminderShownAt=now;save();
+        $('#reminderApplicant').text(`${a.name} · ${a.position} · ${a.interviewTime}`);
+        $('#reminderStartBtn').data('applicant-id',a.id);
+        $('#reminderWorkspaceBtn').data('applicant-id',a.id);
+        if(!$('#interviewReminderModal').get(0).open)$('#interviewReminderModal').get(0).showModal();
+      }
+    });
+  }
+  function renderCheckSettings(){
+    $('#checkCount').text(`${checks.length} items`);
+    $('#settingsEmpty').toggleClass('hidden',checks.length>0);
+    $('#settingsCheckList').html(checks.map((c,i)=>`<div class="flex items-center gap-2 rounded-xl border border-base-300 bg-base-100 p-3"><span class="grid size-7 shrink-0 place-items-center rounded-lg bg-primary/10 text-xs font-bold text-primary">${i+1}</span><span class="min-w-0 flex-1 break-words text-sm">${esc(c)}</span><button class="btn btn-ghost btn-sm btn-square" data-check-edit="${i}" title="Edit item"><span class="material-symbols-rounded">edit</span></button><button class="btn btn-ghost btn-sm btn-square text-error" data-check-delete="${i}" title="Remove item"><span class="material-symbols-rounded">delete</span></button></div>`).join(''));
+  }
+  function editCheck(index){
+    const oldText=checks[index];if(oldText===undefined)return;
+    const next=prompt('Edit screening requirement:',oldText);if(next===null)return;
+    const value=next.trim();if(!value){alert('Requirement cannot be empty.');return}
+    if(checks.some((c,i)=>i!==index&&c.toLowerCase()===value.toLowerCase())){alert('This requirement already exists.');return}
+    checks[index]=value;
+    applicants.forEach(a=>{a.screeningChecks=(a.screeningChecks||[]).map(v=>v===oldText?value:v)});
+    saveChecks();save();renderCheckSettings();if(activeId&&$('#screeningModal').get(0).open)openScreening(activeId);
+  }
+  function deleteCheck(index){
+    const oldText=checks[index];if(oldText===undefined)return;
+    if(!confirm(`Remove "${oldText}" from the screening checklist?`))return;
+    checks.splice(index,1);
+    applicants.forEach(a=>{a.screeningChecks=(a.screeningChecks||[]).filter(v=>v!==oldText)});
+    saveChecks();save();renderCheckSettings();if(activeId&&$('#screeningModal').get(0).open)openScreening(activeId);
+  }
+  function refresh(){renderOverview();if(currentPage!=='overview')renderStage()}
+  function exportData(){const payload={app:'HireFlow Applicant Tracker',version:2,exportedAt:new Date().toISOString(),applicants};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download=`hireflow-backup-${new Date().toISOString().slice(0,10)}.lordg`;link.click();URL.revokeObjectURL(url)}
+
+  $('#themeToggle').on('click',toggleTheme);
+  function openAppSettings(){$('#appSettingsModal').get(0).showModal()}
+  $('#sidebarSettingsBtn,#headerSettingsBtn').on('click',openAppSettings);
+  renderNav();go('overview');
+  $(document).on('click','[data-page]',function(e){e.preventDefault();go($(this).data('page'))});
+  $('#settingsBtn').on('click',function(){renderCheckSettings();$('#settingsModal').get(0).showModal()});
+  $('#interviewQuestionsBtn').on('click',function(){renderInterviewSetup();$('#interviewSetupModal').get(0).showModal()});
+  $('#questionAddForm').on('submit',function(e){e.preventDefault();addTemplateItem('question',$('#newQuestion').val());$('#newQuestion').val('')});
+  $('#interviewCheckAddForm').on('submit',function(e){e.preventDefault();addTemplateItem('check',$('#newInterviewCheck').val());$('#newInterviewCheck').val('')});
+  $('#questionSettingsList,#interviewCheckSettingsList').on('click','[data-template-edit]',function(){editTemplateItem($(this).data('template-edit'),Number($(this).data('index')))});
+  $('#questionSettingsList,#interviewCheckSettingsList').on('click','[data-template-delete]',function(){deleteTemplateItem($(this).data('template-delete'),Number($(this).data('index')))});
+  $(document).on('click','[data-start-interview]',function(){startInterview($(this).data('start-interview'))});
+  $(document).on('click','[data-interview-review]',function(){showDetail($(this).data('interview-review'))});
+  $('#workspaceQuestions').on('input','[data-question-note]',function(){const a=byId(activeId);if(!a)return;a.interviewQuestionNotes=a.interviewQuestionNotes||{};a.interviewQuestionNotes[$(this).data('question-note')]=$(this).val();save()});
+  $('#workspaceChecklist').on('change','[data-interview-check]',function(){const a=byId(activeId);if(!a)return;a.interviewChecklist=a.interviewChecklist||[];const id=$(this).data('interview-check');if(this.checked&&!a.interviewChecklist.includes(id))a.interviewChecklist.push(id);if(!this.checked)a.interviewChecklist=a.interviewChecklist.filter(x=>x!==id);save();updateInterviewChecklistProgress()});
+  $('#saveWorkspaceNotes').on('click',function(){const a=byId(activeId);if(!a)return;a.interviewNotes=$('#workspaceApplicantNotes').val();save();$(this).text('Saved');});
+  $('#reminderStartBtn').on('click',function(){const id=$(this).data('applicant-id');$('#interviewReminderModal').get(0).close();startInterview(id)});
+  $('#reminderWorkspaceBtn').on('click',function(){const id=$(this).data('applicant-id');$('#interviewReminderModal').get(0).close();openInterviewWorkspace(id)});
+  checkUpcomingInterviews();setInterval(checkUpcomingInterviews,30000);
+
+  $('#checkAddForm').on('submit',function(e){e.preventDefault();const value=$('#newCheckText').val().trim();if(!value)return;if(checks.some(c=>c.toLowerCase()===value.toLowerCase())){alert('This requirement already exists.');return}checks.push(value);saveChecks();$('#newCheckText').val('');renderCheckSettings();if(activeId&&$('#screeningModal').get(0).open)openScreening(activeId)});
+  $('#settingsCheckList').on('click','[data-check-edit]',function(){editCheck(Number($(this).data('check-edit')))});
+  $('#settingsCheckList').on('click','[data-check-delete]',function(){deleteCheck(Number($(this).data('check-delete')))});
+  $('#headerAddBtn,#emptyAddBtn').on('click',()=>openApplicant());
+  $('#searchInput,#sortSelect').on('input change',renderStage);
+  $(document).on('click','[data-edit]',function(){openApplicant(byId($(this).data('edit')))});
+  $(document).on('click','[data-detail]',function(){showDetail($(this).data('detail'))});
+  $(document).on('click','[data-edit-notes]',function(){openNotesEditor($(this).data('edit-notes'))});
+  $('#notesViewTab').on('click',function(){setNotesMode('view')});
+  $('#notesEditTab').on('click',function(){setNotesMode('edit')});
+  $('#notesOnlyInput').on('input',function(){const value=$(this).val()||'';$('#notesCharCount').text(`${value.length} characters`);$('#notesOnlyView').text(value||'No notes have been added yet.')});
+  $('#saveNotesOnly').on('click',function(){const a=byId(notesEditId);if(!a)return;a.notes=$('#notesOnlyInput').val();save();$('#notesModal').get(0).close();refresh();if($('#detailModal').get(0).open)showDetail(a.id)});
+  $(document).on('click','[data-move]',function(){move($(this).data('id'),$(this).data('move'))});
+  $(document).on('click','[data-back]',function(){goBack($(this).data('back'))});
+  $(document).on('click','[data-back-overview]',function(){go('overview')});
+  $(document).on('click','[data-screen]',function(){openScreening($(this).data('screen'))});
+  $(document).on('click','[data-edit-interview]',function(){openInterview($(this).data('edit-interview'))});
+  $(document).on('click','[data-renew]',function(){const a=byId($(this).data('renew'));if(a&&confirm(`Renew ${a.name} and return to New applicants?`)){a.status='New';a.stageHistory=[];a.screeningChecks=[];a.interviewDate='';a.interviewTime='';a.meetLink='';save();refresh()}});
+  $(document).on('click','[data-delete]',function(){const id=String($(this).data('delete'));const a=byId(id);if(a&&confirm(`Permanently delete ${a.name}?`)){applicants=applicants.filter(x=>x.id!==id);save();refresh()}});
+  $(document).on('click','[data-close]',function(){$('#'+$(this).data('close')).get(0).close()});
+  $('.screening-check').on('change',updateScreeningButton);
+  $('#checklistItems').on('change','.screening-check',function(){const a=byId(activeId);if(!a)return;a.screeningChecks=$('.screening-check:checked').map(function(){return checks[Number($(this).data('index'))]}).get();save();updateScreeningButton()});
+  $('#scheduleInterviewBtn').on('click',function(){const a=byId(activeId);if(!a)return;$('#screeningModal').get(0).close();openInterview(activeId)});
+  $('#interviewForm').on('submit',function(e){e.preventDefault();const a=byId(activeId);if(!a)return;a.interviewDate=$('#interviewDate').val();a.interviewTime=$('#interviewTime').val();a.meetLink=$('#meetLink').val().trim();a.interviewReminderShownAt=0;a.stageHistory=a.stageHistory||[];a.stageHistory.push(a.status);a.status='Interview';save();$('#interviewModal').get(0).close();go('Interview')});
+  $('#applicantForm').on('submit',function(e){e.preventDefault();const id=$('#applicantId').val();let a=id?byId(id):null;if(!a){a=normalize({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),status:'New',createdAt:Date.now()});applicants.unshift(a)}Object.assign(a,{name:$('#fullName').val().trim(),email:$('#email').val().trim(),phone:$('#phone').val().trim(),position:$('#position').val().trim(),appliedDate:$('#appliedDate').val(),source:$('#source').val(),resume:$('#resume').val().trim(),notes:$('#notes').val().trim()});save();$('#applicantModal').get(0).close();go('New')});
+  $('#detailEditBtn').on('click',function(){const a=byId(detailId);$('#detailModal').get(0).close();if(a)openApplicant(a)});
+  $('#exportBtn').on('click',exportData);$('#importBtn').on('click',()=>$('#fileInput').trigger('click'));
+  $('#fileInput').on('change',function(){const f=this.files[0];if(!f)return;const reader=new FileReader();reader.onload=()=>{try{const parsed=JSON.parse(reader.result);const list=Array.isArray(parsed)?parsed:parsed.applicants;if(!Array.isArray(list))throw Error();if(!confirm(`Import ${list.length} applicant records? This will replace your current records.`))return;applicants=list.map(normalize);save();refresh();alert('Import completed.')}catch(e){alert('Could not import this file. Please select a valid .lordg or JSON backup.')}finally{$('#fileInput').val('')}};reader.readAsText(f)});
+});
+</script>
+</body>
+</html>

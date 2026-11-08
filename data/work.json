@@ -1,0 +1,54 @@
+{
+  "page_title": "Selected Work",
+  "page_description": "A selection of professional work areas and responsibilities.",
+  "work": [
+    {
+      "icon": "inventory_2",
+      "title": "Product Research & Amazon Support",
+      "sub-header": "Matt 633 Inc. · 2024–2025",
+      "description": "Alibaba product research, reviews and customer feedback checks, ROI evaluation, supplier research, and Canva reports.",
+      "link": "",
+      "img": ""
+    },
+    {
+      "icon": "smart_toy",
+      "title": "AI Video Advertising",
+      "sub-header": "Matt 633 Inc. · 2024–2025",
+      "description": "Created AI-generated video advertisements for TikTok and other social media platforms to help promote products.",
+      "link": "",
+      "img": ""
+    },
+    {
+      "icon": "robot_2",
+      "title": "Robotics Data Annotation",
+      "sub-header": "Remotask · 2025–2026",
+      "description": "Reviewed task videos and labeled robot movements, hand actions, objects, and everyday activities to support AI robot training.",
+      "link": "",
+      "img": ""
+    },
+    {
+      "icon": "design_services",
+      "title": "Graphic Design & Printing",
+      "sub-header": "Cyberbee Advertising · 2023–2024",
+      "description": "Created custom tarpaulin designs, T-shirt graphics for sublimation, mug designs, and print-ready materials.",
+      "link": "",
+      "img": ""
+    },
+    {
+      "icon": "support_agent",
+      "title": "Community Office & Computer Support",
+      "sub-header": "Barangay Lapasan · 2020–2023",
+      "description": "Handled graphic design, computer technician duties, data entry, voter information and community records, and computer support.",
+      "link": "",
+      "img": ""
+    },
+    {
+      "icon": "precision_manufacturing",
+      "title": "CNC Plasma Operation",
+      "sub-header": "G & R I · 2017–2018",
+      "description": "Performed CNC plasma cutting, prepared technical designs using AutoCAD and SketchUp, checked machine performance, and maintained an organized work area.",
+      "link": "",
+      "img": ""
+    }
+  ]
+}

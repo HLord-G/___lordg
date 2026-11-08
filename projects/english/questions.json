@@ -1,0 +1,345 @@
+[
+  {
+    "id": "q-grammar-1",
+    "level": "Intermediate",
+    "type": "Multiple Choice",
+    "category": "Grammar",
+    "question": "Choose the sentence that uses the present perfect correctly.",
+    "options": {
+      "A": "I have finished the report yesterday.",
+      "B": "She has worked here since 2022.",
+      "C": "They has already left.",
+      "D": "We have saw that movie."
+    },
+    "correctAnswer": "B",
+    "explanation": "Why B is correct: “She has worked” follows the present perfect structure: has/have + past participle. “Since 2022” identifies the starting point of an action that began in the past and continues now. When to use it: use the present perfect with “since” for a starting point (since Monday, since 2022) and “for” for a duration (for three years).",
+    "wrongExplanations": {
+      "A": "Why it is wrong: “Yesterday” is a finished time in the past, so it does not normally go with the present perfect. Correct sentence: “I finished the report yesterday.” When to use it: use the simple past with finished time expressions such as yesterday, last week, or in 2020.",
+      "C": "Why it is wrong: “They” is plural and takes “have,” not “has.” Correct sentence: “They have already left.” When to use it: use “has” with he, she, or it; use “have” with I, you, we, and they.",
+      "D": "Why it is wrong: the present perfect needs the past participle “seen,” not the simple past “saw.” Correct sentence: “We have seen that movie.” When to use it: use “have/has + past participle” (seen, written, eaten) to form the present perfect."
+    },
+    "bislish": {
+      "question": "Pilia ang sentence nga sakto ang paggamit sa present perfect.",
+      "options": {
+        "A": "I have finished the report yesterday.",
+        "B": "She has worked here since 2022.",
+        "C": "They has already left.",
+        "D": "We have saw that movie."
+      },
+      "passage": "",
+      "explanation": "Ngano sakto ang B: Ang “She has worked” nagsunod sa present perfect structure: has/have + past participle. Ang “since 2022” nagpasabot nga nagsugod ang action sauna ug nagpadayon hangtod karon. Kanus-a gamiton: gamita ang “since” para sa starting point (since Monday, since 2022), ug “for” para sa duration (for three years).",
+      "wrongExplanations": {
+        "A": "Ngano sayop: Ang “yesterday” nahuman na nga time sa past, busa simple past ang gamiton. Correct sentence: “I finished the report yesterday.” Kanus-a gamiton: gamita ang simple past uban sa finished time expressions sama sa yesterday, last week, o in 2020.",
+        "C": "Ngano sayop: Plural ang “they,” busa “have” ang gamiton, dili “has.” Correct sentence: “They have already left.” Rule: “has” para sa he, she, it; “have” para sa I, you, we, they.",
+        "D": "Ngano sayop: Ang present perfect nagkinahanglan sa past participle nga “seen,” dili “saw.” Correct sentence: “We have seen that movie.” Rule: gamita ang have/has + past participle sama sa seen, written, ug eaten."
+      }
+    }
+  },
+  {
+    "id": "q-grammar-2",
+    "level": "Hard",
+    "type": "Multiple Choice",
+    "category": "Grammar",
+    "question": "Which sentence has correct subject–verb agreement?",
+    "options": {
+      "A": "Neither the supervisor nor the employees was available.",
+      "B": "Neither the employees nor the supervisor were available.",
+      "C": "Neither the supervisor nor the employees were available.",
+      "D": "Neither the employees nor the supervisor have available."
+    },
+    "correctAnswer": "C",
+    "explanation": "Why C is correct: in a “neither…nor” subject, the verb generally agrees with the nearer subject. Here, “employees” is nearest to the verb and is plural, so “were” is correct. When to use it: use this pattern when joining two subjects with “neither…nor”; check the subject closest to the verb.",
+    "wrongExplanations": {
+      "A": "Why it is wrong: the nearer subject is “employees,” which is plural, so “was” does not agree. Correct sentence: “Neither the supervisor nor the employees were available.” When to use it: use “were” when the nearer subject is plural.",
+      "B": "Why it is wrong: the nearer subject is “supervisor,” which is singular, so “were” does not agree. Correct sentence: “Neither the employees nor the supervisor was available.” When to use it: use “was” when the nearer subject is singular.",
+      "D": "Why it is wrong: “have available” is not a complete, natural verb phrase in this sentence. Correct sentence: “Neither the employees nor the supervisor was available.” When to use it: use “be available” (am/is/are/was/were available) to say someone has time or is free."
+    },
+    "bislish": {
+      "question": "Asa nga sentence ang sakto ang subject–verb agreement?",
+      "options": {
+        "A": "Neither the supervisor nor the employees was available.",
+        "B": "Neither the employees nor the supervisor were available.",
+        "C": "Neither the supervisor nor the employees were available.",
+        "D": "Neither the employees nor the supervisor have available."
+      },
+      "explanation": "Ngano sakto ang C: Sa “neither…nor” subject, kasagaran ang verb mo-agree sa subject nga pinakaduol niini. Dinhi, ang “employees” ang duol sa verb ug plural siya, busa “were” ang sakto. Kanus-a gamiton: kung magdugtong ka og duha ka subjects gamit ang “neither…nor,” tan-awa ang subject nga pinakaduol sa verb.",
+      "wrongExplanations": {
+        "A": "Ngano sayop: Ang duol nga subject kay “employees,” nga plural, busa dili mo-agree ang “was.” Correct sentence: “Neither the supervisor nor the employees were available.” Gamita ang “were” kung plural ang duol nga subject.",
+        "B": "Ngano sayop: Ang duol nga subject kay “supervisor,” nga singular, busa “was” ang sakto, dili “were.” Correct sentence: “Neither the employees nor the supervisor was available.” Gamita ang “was” kung singular ang duol nga subject.",
+        "D": "Ngano sayop: Dili natural ug dili sakto ang “have available” nga verb phrase dinhi. Correct sentence: “Neither the employees nor the supervisor was available.” Gamita ang “be available” (am/is/are/was/were available) kung nagpasabot nga libre o available ang usa ka tawo."
+      }
+    }
+  },
+  {
+    "id": "q-vocabulary-1",
+    "level": "Intermediate",
+    "type": "Multiple Choice",
+    "category": "Vocabulary",
+    "question": "What does ‘ambiguous’ mean in the sentence: ‘The instructions were ambiguous’?",
+    "options": {
+      "A": "Very detailed",
+      "B": "Open to more than one interpretation",
+      "C": "Completely incorrect",
+      "D": "Easy to follow"
+    },
+    "correctAnswer": "B",
+    "explanation": "Why B is correct: “Ambiguous” means unclear or open to more than one possible meaning. When to use it: use it for instructions, messages, statements, rules, or wording that can be interpreted in different ways. Example: “The deadline in the email was ambiguous.”",
+    "wrongExplanations": {
+      "A": "Why it is wrong: “Very detailed” means containing many facts or specifics; it does not mean unclear. Better word: “detailed.” When to use it: use “detailed” when something gives plenty of information, such as a detailed report.",
+      "C": "Why it is wrong: “Ambiguous” does not mean completely false. Better word: “incorrect” or “inaccurate” if information is wrong. When to use it: use “incorrect” for an answer or statement that is not right; use “ambiguous” when its meaning is unclear.",
+      "D": "Why it is wrong: “Easy to follow” means clear, which is nearly the opposite of ambiguous. Better phrase: “clear and easy to follow.” When to use it: use this phrase for instructions or steps that are understandable."
+    },
+    "bislish": {
+      "question": "Unsa ang meaning sa “ambiguous” sa sentence: “The instructions were ambiguous”?",
+      "options": {
+        "A": "Very detailed",
+        "B": "Open to more than one interpretation",
+        "C": "Completely incorrect",
+        "D": "Easy to follow"
+      },
+      "explanation": "Ngano sakto ang B: Ang “ambiguous” nagpasabot nga dili klaro kay posible nga lain-lain ang pagsabot niini. Kanus-a gamiton: gamita kini kung ang instructions, message, statement, rules, o wording adunay labaw sa usa ka possible meaning. Example: “The deadline in the email was ambiguous.”",
+      "wrongExplanations": {
+        "A": "Ngano sayop: Ang “very detailed” nagpasabot nga daghan og detalye; dili kini meaning nga unclear. Mas sakto nga word: “detailed.” Gamita kini kung daghan og information ang report o explanation.",
+        "C": "Ngano sayop: Ang “ambiguous” dili pasabot nga false o incorrect; unclear ang meaning niini. Gamita ang “incorrect” kung sayop ang answer, ug “ambiguous” kung dili klaro ang meaning.",
+        "D": "Ngano sayop: Ang “easy to follow” nagpasabot nga klaro, nga halos opposite sa ambiguous. Gamita kini kung sayon sabton ang instructions o steps."
+      }
+    }
+  },
+  {
+    "id": "q-vocabulary-2",
+    "level": "Hard",
+    "type": "Multiple Choice",
+    "category": "Vocabulary",
+    "question": "Choose the closest synonym of ‘mitigate’ in this sentence: ‘The team introduced safeguards to mitigate the risk.’",
+    "options": {
+      "A": "Measure",
+      "B": "Reduce",
+      "C": "Transfer",
+      "D": "Ignore"
+    },
+    "correctAnswer": "B",
+    "explanation": "Why B is correct: “Mitigate” means to make something less severe, harmful, or serious. “Reduce” is the closest choice. When to use it: use “mitigate” in formal or professional contexts with words such as risk, damage, impact, or effects. Example: “The team added safeguards to mitigate the risk.”",
+    "wrongExplanations": {
+      "A": "Why it is wrong: “Measure” means to find or assess an amount; it does not mean make something less severe. Better word: “assess” or “measure” when you are checking the size or level of something. When to use it: “measure the risk” means evaluate it; “mitigate the risk” means reduce it.",
+      "C": "Why it is wrong: “Transfer” means move something to another person or place, not make it less severe. When to use it: use “transfer” for moving ownership, information, money, or responsibility, such as “transfer the file to the team.”",
+      "D": "Why it is wrong: “Ignore” means pay no attention to something; ignoring a risk does not reduce it. When to use it: use “ignore” when someone deliberately gives no attention to something, such as “Do not ignore the warning.”"
+    },
+    "bislish": {
+      "question": "Pilia ang pinakaduol nga synonym sa “mitigate” niini nga sentence: “The team introduced safeguards to mitigate the risk.”",
+      "options": {
+        "A": "Measure",
+        "B": "Reduce",
+        "C": "Transfer",
+        "D": "Ignore"
+      },
+      "explanation": "Ngano sakto ang B: Ang “mitigate” nagpasabot nga pakunhoran ang kabug-at, kadaot, o seriousness sa usa ka butang. Ang “reduce” ang pinakaduol nga meaning. Kanus-a gamiton: kasagaran gamiton ang “mitigate” sa formal o professional English uban sa words sama sa risk, damage, impact, o effects. Example: “The team added safeguards to mitigate the risk.”",
+      "wrongExplanations": {
+        "A": "Ngano sayop: Ang “measure” kay pagsukod o pag-assess sa amount; dili kini pagpakunhod sa severity. Example: “measure the risk” = susihon ang risk; “mitigate the risk” = pakunhoran ang risk.",
+        "C": "Ngano sayop: Ang “transfer” kay pagbalhin sa usa ka butang ngadto sa laing lugar o tawo, dili pagpakunhod sa severity. Gamita kini sa pagbalhin og ownership, files, money, o responsibility.",
+        "D": "Ngano sayop: Ang “ignore” kay dili pagtagad sa usa ka butang. Ang pag-ignore sa risk dili makapakunhod niini. Gamita kini kung dili tagdon ang usa ka butang, pananglitan “Do not ignore the warning.”"
+      }
+    }
+  },
+  {
+    "id": "q-writing-1",
+    "level": "Intermediate",
+    "type": "Multiple Choice",
+    "category": "Writing",
+    "question": "Which sentence is the clearest and most concise for a professional email?",
+    "options": {
+      "A": "I am writing this email in order to ask about the meeting schedule.",
+      "B": "Just wanna know when the meeting is.",
+      "C": "Could you please confirm the meeting schedule?",
+      "D": "Tell me the meeting time now."
+    },
+    "correctAnswer": "C",
+    "explanation": "Why C is correct: “Could you please confirm the meeting schedule?” is polite, direct, grammatically complete, and concise. When to use it: use this wording in professional emails or workplace messages when requesting confirmation. “Could you please…” makes a request sound courteous.",
+    "wrongExplanations": {
+      "A": "Why it is less effective: it is grammatically understandable, but “in order to” is wordy. Better revision: “I am writing to ask about the meeting schedule” or, more directly, “Could you please confirm the meeting schedule?” When to use it: choose concise wording in professional emails, especially when the request is simple.",
+      "B": "Why it is unsuitable: “wanna” is very informal and is usually avoided in professional writing. Better revision: “I would like to know when the meeting is” or “Could you please confirm the meeting time?” When to use it: “wanna” may appear in casual speech or informal messages with friends, not formal workplace emails.",
+      "D": "Why it is unsuitable: “Tell me…now” sounds demanding and may seem rude. Better revision: “Could you please let me know the meeting time?” When to use it: use polite request forms such as “Could you please…” when communicating with colleagues, clients, or managers."
+    },
+    "bislish": {
+      "question": "Asa nga sentence ang pinakaklaro ug concise para sa professional email?",
+      "options": {
+        "A": "I am writing this email in order to ask about the meeting schedule.",
+        "B": "Just wanna know when the meeting is.",
+        "C": "Could you please confirm the meeting schedule?",
+        "D": "Tell me the meeting time now."
+      },
+      "explanation": "Ngano sakto ang C: Polite, direct, ug concise ang sentence. Maayo kini gamiton sa professional email kung mangayo ka og confirmation sa meeting schedule. Ang “Could you please…” naghimo sa request nga respectful ug courteous.",
+      "wrongExplanations": {
+        "A": "Ngano dili ideal: Masabtan ra ang sentence, pero wordy ang “in order to.” Mas concise: “Could you please confirm the meeting schedule?” Gamita ang short and direct wording kung simple ra ang request sa professional email.",
+        "B": "Ngano dili angay: Informal kaayo ang “wanna,” busa dili kini maayo sa kasagaran professional writing. Better: “I would like to know when the meeting is.” Gamita ang “wanna” sa casual conversation, dili sa formal workplace email.",
+        "D": "Ngano dili angay: Murag nagmando ug demanding ang “Tell me…now.” Better: “Could you please let me know the meeting time?” Gamita ang polite request forms kung makig-communicate sa colleagues, clients, o manager."
+      }
+    }
+  },
+  {
+    "id": "q-writing-2",
+    "level": "Hard",
+    "type": "Multiple Choice",
+    "category": "Writing",
+    "question": "Choose the best revision of this sentence: ‘Due to the fact that the server was unavailable, we postponed the launch.’",
+    "options": {
+      "A": "Because the server was unavailable, we postponed the launch.",
+      "B": "Due to server unavailable, launch postponed.",
+      "C": "The launch was postponed on account of the fact of server unavailability.",
+      "D": "The server unavailable and we postponed launch because."
+    },
+    "correctAnswer": "A",
+    "explanation": "Why A is correct: it keeps the original meaning and uses a clear, complete sentence. “Because” introduces the reason, and “the server was unavailable” is a complete clause. When to use it: use “because + subject + verb” to explain why something happened, especially in clear business or technical writing.",
+    "wrongExplanations": {
+      "B": "Why it is wrong: it is missing necessary words and a complete sentence structure. Correct revision: “Because the server was unavailable, we postponed the launch.” When to use it: include a subject and verb in a complete clause; use “the” before a specific noun such as “the server” and “the launch.”",
+      "C": "Why it is ineffective: “on account of the fact of” is unnecessarily wordy and awkward. Better revision: “Because the server was unavailable, we postponed the launch.” When to use it: prefer “because” for a direct reason in everyday professional writing; avoid stacked phrases that make sentences harder to read.",
+      "D": "Why it is wrong: the word order is incorrect and the sentence is not grammatical. Correct revision: “The server was unavailable, so we postponed the launch.” When to use it: use “so” to introduce a result; the pattern is cause + “so” + result."
+    },
+    "bislish": {
+      "question": "Pilia ang pinakamaayong revision ani nga sentence: “Due to the fact that the server was unavailable, we postponed the launch.”",
+      "options": {
+        "A": "Because the server was unavailable, we postponed the launch.",
+        "B": "Due to server unavailable, launch postponed.",
+        "C": "The launch was postponed on account of the fact of server unavailability.",
+        "D": "The server unavailable and we postponed launch because."
+      },
+      "explanation": "Ngano sakto ang A: Gipabilin niini ang original meaning pero mas direct ug grammatically correct ang structure. Ang “Because” nag-introduce sa reason, ug complete clause ang “the server was unavailable.” Kanus-a gamiton: gamita ang “because + subject + verb” kung mag-explain ka nganong nahitabo ang usa ka butang.",
+      "wrongExplanations": {
+        "B": "Ngano sayop: Kulang og necessary words ug complete sentence structure. Correct: “Because the server was unavailable, we postponed the launch.” Siguroa nga kompleto ang subject ug verb, ug gamita ang articles sama sa “the” kung specific ang noun.",
+        "C": "Ngano dili maayo: Sobra ka wordy ug awkward ang “on account of the fact of.” Mas simple: “Because the server was unavailable, we postponed the launch.” Sa professional writing, pili-a ang direct nga “because” kaysa daghang unnecessary phrases.",
+        "D": "Ngano sayop: Dili sakto ang word order ug grammar. Correct: “The server was unavailable, so we postponed the launch.” Gamita ang “so” aron ipakita ang result: cause + so + result."
+      }
+    }
+  },
+  {
+    "id": "q-sjt-1",
+    "level": "Intermediate",
+    "type": "Multiple Choice",
+    "category": "Situational Judgment",
+    "question": "Your manager asks you to finish a task, but you already have other priorities. What should you say?",
+    "options": {
+      "A": "I can't do that.",
+      "B": "Could you help me prioritize which task should be completed first?",
+      "C": "That's not my problem.",
+      "D": "Maybe next time."
+    },
+    "correctAnswer": "B",
+    "explanation": "Why B is correct: it communicates that you have existing work while respectfully asking your manager to set priorities. It focuses on finding a solution rather than refusing. When to use it: use this response when several tasks compete for your time and you need your manager to confirm which one has the highest priority.",
+    "wrongExplanations": {
+      "A": "Why it is not the best response: it refuses without explaining your workload or asking what should take priority. Better response: “I’m currently working on other priorities. Could you help me decide which task should come first?” When to use it: use a clear explanation plus a proposed next step when your workload is full.",
+      "C": "Why it is inappropriate: it sounds dismissive and uncooperative, and it does not solve the priority conflict. Better response: “I can help, but I’m handling other tasks. Which should I prioritize?” When to use it: use collaborative language when discussing workload with a manager or teammate.",
+      "D": "Why it is ineffective: “Maybe next time” is vague and does not tell the manager whether or when you can complete the task. Better response: “I can take this on after I finish my current priority. Would that timing work?” When to use it: suggest a realistic time when you cannot start a task immediately."
+    },
+    "bislish": {
+      "question": "Ang imong manager nangayo nga humanon nimo ang usa ka task, pero naa na kay laing priorities. Unsa ang pinakamaayong isulti?",
+      "options": {
+        "A": "I can't do that.",
+        "B": "Could you help me prioritize which task should be completed first?",
+        "C": "That's not my problem.",
+        "D": "Maybe next time."
+      },
+      "explanation": "Ngano sakto ang B: Gi-explain nimo nga naa kay existing tasks ug respetado kang nangayo sa manager nga mag-set og priority. Focus kini sa pagpangita og solution imbis diretso nga pagbalibad. Kanus-a gamiton: gamita kini kung daghan kag competing tasks ug kinahanglan nimo ma-confirm kung asa ang unahon.",
+      "wrongExplanations": {
+        "A": "Dili kini best response: Nag-refuse ka diretso nga wala nag-explain sa imong workload o nangayo og priority. Better: “I’m currently working on other priorities. Could you help me decide which task should come first?” Gamita ang clear explanation ug propose og next step kung puno na imong workload.",
+        "C": "Dili angay: Dismissive ug dili cooperative paminawon; dili pud makatabang sa pag-solve sa conflict. Better: “I can help, but I’m handling other tasks. Which should I prioritize?” Gamita ang collaborative language kung maghisgot sa workload.",
+        "D": "Dili effective: Vague kaayo ang “Maybe next time” ug wala naghatag og klaro kung kanus-a nimo mahimo ang task. Better: “I can take this on after I finish my current priority. Would that timing work?” Suggest og realistic nga schedule kung dili pa ka ka-start dayon."
+      }
+    }
+  },
+  {
+    "id": "q-sjt-2",
+    "level": "Hard",
+    "type": "Multiple Choice",
+    "category": "Situational Judgment",
+    "question": "A colleague points out an error in your report shortly before a meeting. What is the best response?",
+    "options": {
+      "A": "Tell them the report is already finished.",
+      "B": "Blame the person who gave you the data.",
+      "C": "Thank them, verify the issue, and correct it if needed.",
+      "D": "Ignore the feedback because the meeting is soon."
+    },
+    "correctAnswer": "C",
+    "explanation": "Why C is correct: it acknowledges the colleague’s feedback, checks whether the report really contains an error, and corrects it if necessary. This is responsible and professional. When to use it: use this approach when receiving feedback, especially before sharing a report, presentation, or other important work.",
+    "wrongExplanations": {
+      "A": "Why it is wrong: finishing a report does not prove that it is error-free. Better response: “Thanks for pointing that out. I’ll check it and correct it if needed.” When to use it: stay open to last-minute corrections before submitting or presenting work.",
+      "B": "Why it is wrong: blaming another person does not fix the report and can damage teamwork. Better response: “Thanks for flagging it. I’ll verify the data and update the report if needed.” When to use it: focus on checking facts and fixing the issue instead of assigning blame.",
+      "D": "Why it is wrong: ignoring a possible error may cause incorrect information to be presented. Better response: “Let me quickly verify the issue before the meeting.” When to use it: check important facts before presenting, even when time is limited."
+    },
+    "bislish": {
+      "question": "Naay colleague nga nakabantay og error sa imong report gamay na lang magsugod ang meeting. Unsa ang pinakamaayong response?",
+      "options": {
+        "A": "Tell them the report is already finished.",
+        "B": "Blame the person who gave you the data.",
+        "C": "Thank them, verify the issue, and correct it if needed.",
+        "D": "Ignore the feedback because the meeting is soon."
+      },
+      "explanation": "Ngano sakto ang C: Gi-acknowledge nimo ang feedback, i-check kung tinuod ba ang error, ug i-correct kung kinahanglan. Responsible ug professional kini nga response. Kanus-a gamiton: gamita kini kung makadawat kag feedback, labi na sa dili pa i-share ang report, presentation, o importanteng work.",
+      "wrongExplanations": {
+        "A": "Ngano sayop: Dili pasabot nga tungod nahuman na ang report kay wala na kini'y error. Better: “Thanks for pointing that out. I’ll check it and correct it if needed.” Magpabiling open sa corrections bisan hapit na ang presentation.",
+        "B": "Ngano sayop: Ang pagbasol sa lain dili maka-fix sa report ug makadaot sa teamwork. Better: “Thanks for flagging it. I’ll verify the data and update the report if needed.” Focus sa pag-check sa facts ug pag-correct sa issue, dili sa pagbasol.",
+        "D": "Ngano sayop: Kung i-ignore ang possible error, basin ma-share ang incorrect information. Better: “Let me quickly verify the issue before the meeting.” I-check ang important facts sa dili pa mag-present, bisan limitado ang oras."
+      }
+    }
+  },
+  {
+    "id": "q-reading-1",
+    "level": "Intermediate",
+    "type": "Multiple Choice",
+    "category": "Reading Comprehension",
+    "passage": "Mia practices English for twenty minutes every morning. She listens to a short podcast, writes down three new words, and uses each word in a sentence. After two months, she feels more confident during conversations.",
+    "question": "What helped Mia build her confidence in English?",
+    "options": {
+      "A": "Studying only once a week",
+      "B": "Practicing regularly with listening and vocabulary activities",
+      "C": "Memorizing long lists without using the words",
+      "D": "Avoiding conversations"
+    },
+    "correctAnswer": "B",
+    "explanation": "Why B is correct: the passage says Mia practices every morning, listens to a podcast, writes down new words, and uses each word in a sentence. These regular listening and vocabulary activities helped her confidence. When to use this reading skill: find the key details in the passage and connect them to the question; do not choose an answer that adds information not stated.",
+    "wrongExplanations": {
+      "A": "Why it is incorrect: the passage says Mia practices every morning, not once a week. Passage evidence: “every morning.” How to answer: match the option with the exact frequency stated in the passage.",
+      "C": "Why it is incorrect: Mia uses each new word in a sentence; she does not only memorize lists. Passage evidence: “uses each word in a sentence.” How to answer: look for details that directly support or contradict each option.",
+      "D": "Why it is incorrect: the passage says Mia becomes more confident during conversations; it does not say she avoids them. Passage evidence: “more confident during conversations.” How to answer: avoid choices that reverse or contradict the passage."
+    },
+    "bislish": {
+      "question": "Unsa ang nakatabang kang Mia nga mas molig-on ang iyang confidence sa English?",
+      "passage": "Si Mia mag-practice og English sulod sa 20 minutes kada buntag. Maminaw siya og short podcast, isulat ang tulo ka new words, ug gamiton ang matag word sa usa ka sentence. Human sa duha ka bulan, mas confident na siya kung makig-conversation.",
+      "explanation": "Ngano sakto ang B: Giingon sa passage nga mag-practice si Mia kada buntag, maminaw og podcast, mosulat og new words, ug mogamit niini sa sentences. Kining regular listening ug vocabulary activities nakatabang sa iyang confidence. Reading tip: pangitaa ang key details sa passage ug i-connect kini sa question; ayaw pagpili og answer nga walay support sa passage.",
+      "wrongExplanations": {
+        "A": "Ngano sayop: Ang passage nag-ingon nga mag-practice siya kada buntag, dili once a week. Evidence: “every morning.” Tip: i-match ang option sa exact frequency nga giingon sa passage.",
+        "C": "Ngano sayop: Gigamit ni Mia ang matag new word sa sentence; dili lang siya nag-memorize og lists. Evidence: “uses each word in a sentence.” Tip: pangitaa ang details nga directly mosupport o mosupak sa option.",
+        "D": "Ngano sayop: Ang passage nag-ingon nga mas confident siya during conversations, dili nga naglikay siya niini. Evidence: “more confident during conversations.” Tip: likayi ang choices nga opposite o contradiction sa passage."
+      }
+    }
+  },
+  {
+    "id": "q-reading-2",
+    "level": "Hard",
+    "type": "Multiple Choice",
+    "category": "Reading Comprehension",
+    "passage": "The community library introduced a weekend reading program for adults. Attendance was low during the first month, so the organizers asked participants for feedback. Many requested shorter sessions and more practical topics. The library adjusted the schedule, and attendance increased the following month.",
+    "question": "What can be inferred about the library's decision to ask for feedback?",
+    "options": {
+      "A": "It helped the organizers improve the program based on participants' needs.",
+      "B": "It proved that adults do not enjoy reading.",
+      "C": "It caused the program to close.",
+      "D": "It showed that the original schedule should never change."
+    },
+    "correctAnswer": "A",
+    "explanation": "Why A is correct: the organizers asked participants what they needed, shortened sessions, added more practical topics, and attendance increased. This supports the inference that feedback helped improve the program. When to use this reading skill: an inference is a reasonable conclusion based on details in the passage, even if the exact conclusion is not stated word for word.",
+    "wrongExplanations": {
+      "B": "Why it is incorrect: the passage does not say adults dislike reading. Attendance increased after the organizers made changes. Better interpretation: participants wanted the program adjusted to their needs. How to answer: do not make a broad claim that the passage does not support.",
+      "C": "Why it is incorrect: the program did not close; it continued and attendance increased. Passage evidence: “attendance increased the following month.” How to answer: check the outcome stated near the end of the passage.",
+      "D": "Why it is incorrect: the organizers did change the schedule, and attendance then increased. Better interpretation: adjusting the original schedule helped meet participants’ needs. How to answer: use the sequence of problem, action, and result to identify the inference."
+    },
+    "bislish": {
+      "question": "Unsa ang mahimong ma-infer sa desisyon sa library nga mangayo og feedback?",
+      "passage": "Nag-introduce ang community library og weekend reading program para sa adults. Gamay ang ni-attend sa unang bulan, busa nangayo ang organizers og feedback sa participants. Daghan ang nangayo og mas mubo nga sessions ug mas practical nga topics. Gi-adjust sa library ang schedule, ug misaka ang attendance sa sunod nga bulan.",
+      "explanation": "Ngano sakto ang A: Gipaminaw sa organizers ang participants, gipamubo ang sessions, ug gidugangan og practical topics. Human niini, misaka ang attendance. Nagpasabot kini nga nakatabang ang feedback sa pag-improve sa program. Reading tip: ang inference kay reasonable conclusion nga base sa details sa passage, bisan dili siya giingon word-for-word.",
+      "wrongExplanations": {
+        "B": "Ngano sayop: Wala nag-ingon ang passage nga dili ganahan mobasa ang adults. Misaka gani ang attendance human gi-adjust ang program. Tip: ayaw paghimo og broad claim nga walay support sa passage.",
+        "C": "Ngano sayop: Wala gi-close ang program; nagpadayon kini ug misuccessful pa. Evidence: misaka ang attendance sa sunod nga bulan. Tip: i-check ang outcome sa last part sa passage.",
+        "D": "Ngano sayop: Giusab gyud sa organizers ang schedule, ug misaka ang attendance human niini. Mas sakto nga interpretation: nakatabang ang schedule changes sa pag-meet sa needs sa participants. Tip: tan-awa ang sequence sa problem, action, ug result."
+      }
+    }
+  }
+]

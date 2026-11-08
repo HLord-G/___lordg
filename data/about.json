@@ -1,0 +1,113 @@
+{
+  "Fullname": "Harold A. Guzman",
+  "Address": "Cagayan de Oro City, Philippines",
+  "email": "guzmanh056@gmail.com",
+  "phone": "09958548020",
+  "work-status": false,
+  "profile": [
+    {
+      "title": "Professional summary",
+      "description": "Motivated and reliable professional with strong organizational, administrative, and communication skills. Eager to learn, adapt, and contribute to a productive work environment.\n\nProfessional areas listed in the résumé include graphic design, web development, IT support and computer repair, data analytics, and creative and tech-savvy work."
+    }
+  ],
+  "skills": [
+    "Microsoft Office",
+    "Google Workspace",
+    "AI Video Creation",
+    "AI-Vibe Coding (Frontend & Backend)",
+    "Data Entry & Management",
+    "Administrative Support",
+    "File Management",
+    "IT Support & Troubleshooting",
+    "Graphic Design (Photoshop & Canva)",
+    "Web Development (HTML, CSS, JavaScript & PHP)",
+    "Database Management (MySQL & MongoDB)"
+  ],
+  "education": [
+    {
+      "title": "Mana Millennium Technical",
+      "course": "Computer System Servicing NCII (CSS)",
+      "years": "2019"
+    },
+    {
+      "title": "Capitol University",
+      "course": "Bachelor of Science in Marine Engineering",
+      "years": "2012–2014"
+    }
+  ],
+  "social_media": [
+    {
+      "icon": "groups",
+      "title": "Facebook",
+      "description": "Facebook",
+      "link": ""
+    },
+    {
+      "icon": "work",
+      "title": "LinkedIn",
+      "description": "Professional network",
+      "link": ""
+    },
+    {
+      "icon": "code",
+      "title": "GitHub",
+      "description": "Code repository",
+      "link": ""
+    },
+    {
+      "icon": "photo_camera",
+      "title": "Instagram",
+      "description": "Photos & updates",
+      "link": ""
+    },
+    {
+      "icon": "alternate_email",
+      "title": "X",
+      "description": "Short updates",
+      "link": ""
+    },
+    {
+      "icon": "chat",
+      "title": "WhatsApp",
+      "description": "Direct message",
+      "link": "https://wa.me/639958548020"
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Computer System Servicing NCII (CSS)",
+      "school": "Mana Millennium Technical",
+      "year": "2019",
+      "img": "assets/certificates/CSSNCII.webp",
+      "Description": "Completed Computer System Servicing NCII (CSS) training at Mana Millennium Technical in 2019.",
+      "skills": [
+        "IT Support & Troubleshooting",
+        "Computer System Servicing",
+        "File Management"
+      ],
+      "verification_link": ""
+    },
+      {
+      "title": "Artificial Intelligence",
+      "school": "Amazon Web Services (AWS) and TESDA Courses",
+      "year": "2024",
+      "img": "assets/certificates/Artificial_Intelligence.webp",
+      "Description": "Completed Artificial Intelligence (AI) and Machine Learning (ML), including real-world applications and use cases. Gain practical knowledge of prompt engineering and responsible AI practices for effective and ethical AI utilization.",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Prompt Engineering",
+        "Generative AI",
+        "Critical Thinking",
+        "Problem Solving",
+        "Analytical Skills",
+        "Digital Literacy",
+        "Responsible AI",
+        "AI Tool Proficiency"
+      ],
+      "verification_link": ""
+    }
+  ]
+}
+
+

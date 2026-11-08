@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>FluentPath — English Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="min-h-screen bg-base-200 text-base-content font-sans">
+  <div class="drawer lg:drawer-open">
+    <input id="app-drawer" type="checkbox" class="drawer-toggle">
+    <div class="drawer-content flex min-h-screen flex-col">
+      <header class="navbar sticky top-0 z-30 border-b border-base-300 bg-base-100/95 px-4 backdrop-blur lg:px-8">
+        <div class="flex-none lg:hidden">
+          <label for="app-drawer" class="btn btn-square btn-ghost" aria-label="Open navigation"><span class="material-symbols-rounded">menu</span></label>
+        </div>
+        <div class="flex-1">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-base-content/50">English learning workspace</p>
+            <h1 id="page-title" class="text-lg font-bold sm:text-xl">Dashboard</h1>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="hidden items-center gap-1 rounded-full bg-base-200 px-3 py-2 text-sm font-semibold sm:flex">
+            <span class="material-symbols-rounded text-amber-500">local_fire_department</span><span id="top-streak">0 day</span>
+          </div>
+          <div class="hidden items-center gap-1 rounded-full bg-base-200 px-3 py-2 text-sm font-semibold sm:flex">
+            <span class="material-symbols-rounded text-warning">bolt</span><span id="top-xp">0 XP</span>
+          </div>
+          <button id="theme-toggle" class="btn btn-ghost btn-square" title="Toggle theme"><span class="material-symbols-rounded">dark_mode</span></button>
+        </div>
+      </header>
+
+      <main class="mx-auto w-full max-w-7xl flex-1 p-4 sm:p-6 lg:p-8">
+        <section id="view-dashboard" class="view space-y-6">
+          <div class="rounded-3xl bg-neutral p-6 text-neutral-content shadow-sm sm:p-8">
+            <div class="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+              <div class="max-w-2xl space-y-3">
+                <span class="badge badge-warning badge-outline">YOUR ENGLISH JOURNEY</span>
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Small steps. <span class="text-warning">Stronger English.</span></h2>
+                <p class="max-w-xl text-sm leading-6 text-neutral-content/75 sm:text-base">Build your confidence one lesson at a time. Practice, learn from your mistakes, and celebrate every improvement.</p>
+                <button class="btn btn-warning mt-2" data-go="lessons">Continue learning <span class="material-symbols-rounded">arrow_forward</span></button>
+              </div>
+              <div class="grid grid-cols-2 gap-3 md:min-w-64">
+                <div class="rounded-2xl bg-neutral-content/10 p-4"><span class="material-symbols-rounded text-warning">school</span><p id="hero-lessons" class="mt-2 text-2xl font-bold">0</p><p class="text-xs text-neutral-content/70">Lessons completed</p></div>
+                <div class="rounded-2xl bg-neutral-content/10 p-4"><span class="material-symbols-rounded text-warning">workspace_premium</span><p id="hero-badges" class="mt-2 text-2xl font-bold">0</p><p class="text-xs text-neutral-content/70">Badges earned</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="stat rounded-2xl border border-base-300 bg-base-100 shadow-sm"><div class="stat-figure text-primary"><span class="material-symbols-rounded text-3xl">bolt</span></div><div class="stat-title">Total XP</div><div id="stat-xp" class="stat-value text-3xl">0</div><div class="stat-desc">Keep collecting points</div></div>
+            <div class="stat rounded-2xl border border-base-300 bg-base-100 shadow-sm"><div class="stat-figure text-warning"><span class="material-symbols-rounded text-3xl">local_fire_department</span></div><div class="stat-title">Learning streak</div><div id="stat-streak" class="stat-value text-3xl">0</div><div class="stat-desc">Consecutive active days</div></div>
+            <div class="stat rounded-2xl border border-base-300 bg-base-100 shadow-sm"><div class="stat-figure text-success"><span class="material-symbols-rounded text-3xl">task_alt</span></div><div class="stat-title">Correct answers</div><div id="stat-correct" class="stat-value text-3xl">0</div><div class="stat-desc">Every answer counts</div></div>
+            <div class="stat rounded-2xl border border-base-300 bg-base-100 shadow-sm"><div class="stat-figure text-secondary"><span class="material-symbols-rounded text-3xl">menu_book</span></div><div class="stat-title">Lessons completed</div><div id="stat-lessons" class="stat-value text-3xl">0</div><div class="stat-desc">Your learning progress</div></div>
+          </div>
+
+          <div class="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:p-6">
+              <div class="mb-5 flex items-center justify-between"><div><h3 class="text-lg font-bold">Learning progress</h3><p class="text-sm text-base-content/60">Your overall lesson completion</p></div><span class="material-symbols-rounded text-primary">trending_up</span></div>
+              <div class="flex items-end justify-between"><p class="text-3xl font-bold" id="progress-percent">0%</p><p class="text-sm text-base-content/60" id="progress-count">0 of 0 lessons</p></div>
+              <progress id="overall-progress" class="progress progress-primary mt-3 w-full" value="0" max="100"></progress>
+              <div class="mt-6 grid gap-3 sm:grid-cols-3">
+                <div class="rounded-xl bg-base-200 p-4"><p class="text-xs text-base-content/60">Beginner</p><p id="beginner-count" class="mt-1 text-xl font-bold">0 / 0</p></div>
+                <div class="rounded-xl bg-base-200 p-4"><p class="text-xs text-base-content/60">Intermediate</p><p id="intermediate-count" class="mt-1 text-xl font-bold">0 / 0</p></div>
+                <div class="rounded-xl bg-base-200 p-4"><p class="text-xs text-base-content/60">Advanced</p><p id="advanced-count" class="mt-1 text-xl font-bold">0 / 0</p></div>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:p-6">
+              <div class="mb-4 flex items-center justify-between"><div><h3 class="text-lg font-bold">Daily goal</h3><p class="text-sm text-base-content/60">Answer 10 questions today</p></div><span class="material-symbols-rounded text-warning">flag</span></div>
+              <div class="flex items-center gap-5">
+                <div class="flex size-24 shrink-0 flex-col items-center justify-center rounded-full border-8 border-primary/20"><span id="daily-percent" class="text-lg font-bold">0%</span><span class="text-[10px] text-base-content/50">TODAY</span></div>
+                <div><p id="daily-count" class="text-2xl font-bold">0 / 10</p><p class="text-sm text-base-content/60">Questions answered today</p></div>
+              </div>
+              <button class="btn btn-outline btn-primary mt-5 w-full" data-go="quiz">Start a quick quiz</button>
+            </div>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-2">
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm">
+              <div class="mb-4 flex items-center justify-between"><h3 class="text-lg font-bold">Pick up where you left off</h3><button class="btn btn-ghost btn-sm" data-go="lessons">All lessons</button></div>
+              <div id="dashboard-lessons" class="space-y-3"></div>
+            </div>
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm">
+              <div class="mb-4 flex items-center justify-between"><h3 class="text-lg font-bold">Recent activity</h3><button class="btn btn-ghost btn-sm" data-go="calendar">View calendar</button></div>
+              <div id="recent-activity" class="space-y-3"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-lessons" class="view hidden space-y-6">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-end"><div><p class="text-sm font-semibold uppercase tracking-wider text-primary">Build your foundation</p><h2 class="mt-1 text-2xl font-bold">English lessons</h2><p class="mt-1 text-sm text-base-content/60">Choose a topic and learn at your own pace.</p></div><div class="flex flex-wrap gap-2" id="level-filters"><button class="btn btn-sm btn-primary" data-level="All">All levels</button><button class="btn btn-sm btn-ghost" data-level="Beginner">Beginner</button><button class="btn btn-sm btn-ghost" data-level="Intermediate">Intermediate</button><button class="btn btn-sm btn-ghost" data-level="Advanced">Advanced</button></div></div>
+          <div id="lesson-grid" class="grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+        </section>
+
+        <section id="view-lesson-detail" class="view hidden">
+          <button class="btn btn-ghost btn-sm mb-4" data-go="lessons"><span class="material-symbols-rounded">arrow_back</span> Back to lessons</button>
+          <div id="lesson-content"></div>
+        </section>
+
+        <section id="view-quiz" class="view hidden space-y-5">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-end"><div><p class="text-sm font-semibold uppercase tracking-wider text-primary">Practice makes progress</p><h2 class="mt-1 text-2xl font-bold">Quick quiz</h2><p class="mt-1 text-sm text-base-content/60">Answer one randomly selected multiple-choice question from five categories.</p></div><span class="badge badge-outline badge-lg">+10 XP for a correct answer</span></div>
+          <div id="quiz-start" class="rounded-2xl border border-base-300 bg-base-100 p-6 text-center shadow-sm sm:p-10"><div class="mx-auto flex size-16 items-center justify-center rounded-2xl bg-primary/10 text-primary"><span class="material-symbols-rounded text-4xl">quiz</span></div><h3 class="mt-4 text-xl font-bold">Ready to test your English?</h3><p class="mx-auto mt-2 max-w-md text-sm text-base-content/60">You will get one randomly selected multiple-choice question from Grammar, Vocabulary, Writing, Situational Judgment, or Reading Comprehension. Take your time and choose the best answer.</p><div id="recovery-notice" class="mx-auto mt-5 hidden max-w-md rounded-xl border border-warning/40 bg-warning/10 p-4 text-center"><span class="material-symbols-rounded text-3xl text-warning">hourglass_top</span><p class="mt-2 font-bold">Recovery Mode</p><p class="mt-1 text-sm text-base-content/70">Your XP reached zero. Take a rest while your energy recovers.</p><p class="mt-2 text-sm font-semibold">New +20 XP in <span id="recovery-countdown" class="tabular-nums">10:00</span></p></div><button id="start-quiz" class="btn btn-primary mt-6">Start <span class="material-symbols-rounded">arrow_forward</span></button></div>
+          <div id="quiz-panel" class="hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:p-8">
+            <p id="quiz-category" class="text-xs font-bold uppercase tracking-wider text-primary">Grammar Questions</p><div id="quiz-passage" class="hidden mt-4 rounded-xl bg-base-200 p-4 text-sm leading-6"></div><h3 id="quiz-question" class="mt-2 text-xl font-bold leading-relaxed sm:text-2xl"></h3>
+            <div id="quiz-options" class="mt-6 grid gap-3"></div>
+            <div id="quiz-feedback" class="mt-5 hidden rounded-xl p-4 text-sm"></div>
+            <div class="mt-7 flex justify-end"><button id="quiz-next" class="btn btn-primary" disabled>Check answer</button></div>
+          </div>
+          <div id="quiz-result" class="hidden rounded-2xl border border-base-300 bg-base-100 p-8 text-center shadow-sm"><div class="mx-auto flex size-16 items-center justify-center rounded-2xl bg-success/10 text-success"><span class="material-symbols-rounded text-4xl">emoji_events</span></div><h3 class="mt-4 text-2xl font-bold">Quiz completed!</h3><p id="result-message" class="mt-2 text-base-content/60"></p><div class="mt-6 flex flex-wrap justify-center gap-3"><button id="retry-quiz" class="btn btn-primary">Try again</button><button class="btn btn-outline" data-go="dashboard">Go to dashboard</button></div></div>
+        </section>
+
+        <section id="view-achievements" class="view hidden space-y-6">
+          <div><p class="text-sm font-semibold uppercase tracking-wider text-primary">Celebrate your milestones</p><h2 class="mt-1 text-2xl font-bold">Achievements</h2><p class="mt-1 text-sm text-base-content/60">Every small win moves you forward.</p></div>
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3" id="achievement-grid"></div>
+        </section>
+
+        <section id="view-calendar" class="view hidden space-y-6">
+          <div><p class="text-sm font-semibold uppercase tracking-wider text-primary">Show up for yourself</p><h2 class="mt-1 text-2xl font-bold">Learning calendar</h2><p class="mt-1 text-sm text-base-content/60">Your learning activity, one day at a time.</p></div>
+          <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:p-6"><div class="mb-5 flex items-center justify-between"><button id="month-prev" class="btn btn-ghost btn-square btn-sm"><span class="material-symbols-rounded">chevron_left</span></button><h3 id="calendar-month" class="text-lg font-bold"></h3><button id="month-next" class="btn btn-ghost btn-square btn-sm"><span class="material-symbols-rounded">chevron_right</span></button></div><div class="grid grid-cols-7 gap-2 text-center text-xs font-semibold text-base-content/50"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div id="calendar-days" class="mt-3 grid grid-cols-7 gap-2"></div><div class="mt-5 flex flex-wrap items-center gap-4 text-xs text-base-content/60"><span class="flex items-center gap-2"><span class="size-3 rounded bg-base-200"></span>No activity</span><span class="flex items-center gap-2"><span class="size-3 rounded bg-primary/30"></span>Learning day</span><span class="flex items-center gap-2"><span class="size-3 rounded bg-primary"></span>Goal completed</span></div></div>
+          <div class="rounded-2xl border border-base-300 bg-base-100 p-5"><h3 class="font-bold">Your consistency</h3><p id="calendar-summary" class="mt-2 text-sm text-base-content/60"></p></div>
+        </section>
+
+        <section id="view-settings" class="view hidden space-y-6">
+          <div><p class="text-sm font-semibold uppercase tracking-wider text-primary">Make it yours</p><h2 class="mt-1 text-2xl font-bold">Settings & data</h2><p class="mt-1 text-sm text-base-content/60">Manage your preferences and keep a backup of your learning data.</p></div>
+          <div class="grid gap-5 lg:grid-cols-2">
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm"><div class="flex items-center gap-3"><span class="material-symbols-rounded rounded-xl bg-primary/10 p-3 text-primary">palette</span><div><h3 class="font-bold">Appearance</h3><p class="text-sm text-base-content/60">Choose your preferred theme.</p></div></div><div class="mt-5 flex items-center justify-between"><span class="text-sm font-medium">Dark mode</span><input id="settings-theme" type="checkbox" class="toggle toggle-primary"></div></div>
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm"><div class="flex items-center gap-3"><span class="material-symbols-rounded rounded-xl bg-success/10 p-3 text-success">database</span><div><h3 class="font-bold">Local database</h3><p class="text-sm text-base-content/60">Your information is stored in this browser.</p></div></div><div class="mt-4 space-y-2 text-sm"><p class="flex justify-between"><span class="text-base-content/60">Database</span><strong>IndexedDB</strong></p><p class="flex justify-between"><span class="text-base-content/60">Database name</span><strong>FluentPathDB</strong></p><p class="flex justify-between"><span class="text-base-content/60">Storage status</span><strong id="db-status" class="text-success">Connected</strong></p></div></div>
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm"><div class="flex items-center gap-3"><span class="material-symbols-rounded rounded-xl bg-info/10 p-3 text-info">download</span><div><h3 class="font-bold">Backup your progress</h3><p class="text-sm text-base-content/60">Export your lessons, scores and achievements as JSON.</p></div></div><button id="export-data" class="btn btn-outline btn-primary mt-5 w-full">Export backup <span class="material-symbols-rounded">download</span></button></div>
+            <div class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm"><div class="flex items-center gap-3"><span class="material-symbols-rounded rounded-xl bg-warning/10 p-3 text-warning">upload</span><div><h3 class="font-bold">Restore backup</h3><p class="text-sm text-base-content/60">Import a previous FluentPath JSON backup.</p></div></div><input id="import-file" type="file" accept=".json,application/json" class="file-input file-input-bordered mt-5 w-full"><button id="import-data" class="btn btn-outline mt-3 w-full">Import backup <span class="material-symbols-rounded">upload</span></button></div>
+          </div>
+          <div class="rounded-2xl border border-error/30 bg-base-100 p-5"><h3 class="font-bold text-error">Reset learning data</h3><p class="mt-1 text-sm text-base-content/60">This clears your saved progress, activity and earned badges in this browser. Export a backup first if you want to keep it.</p><button id="reset-data" class="btn btn-error btn-outline mt-4">Reset all progress</button></div>
+          <div class="alert"><span class="material-symbols-rounded">info</span><span class="text-sm">This is a browser-based app. Data is saved on this device and browser only. Use Export backup to move your progress to another device.</span></div>
+        </section>
+      </main>
+      <footer class="border-t border-base-300 bg-base-100 px-6 py-4 text-center text-xs text-base-content/50">FluentPath English Learning · Learn a little every day.</footer>
+    </div>
+
+    <div class="drawer-side z-40">
+      <label for="app-drawer" aria-label="Close navigation" class="drawer-overlay"></label>
+      <aside class="flex min-h-full w-72 flex-col border-r border-base-300 bg-base-100 p-4">
+        <a href="#" class="mb-8 flex items-center gap-3 px-2 pt-3" data-go="dashboard"><div class="flex size-11 items-center justify-center rounded-2xl bg-primary text-primary-content"><span class="material-symbols-rounded text-2xl">translate</span></div><div><p class="text-lg font-extrabold tracking-tight">Fluent<span class="text-primary">Path</span></p><p class="text-xs text-base-content/50">English made clearer</p></div></a>
+        <p class="px-3 pb-2 text-[11px] font-bold uppercase tracking-[0.16em] text-base-content/40">Learning</p>
+        <ul class="menu gap-1 p-0">
+          <li><a class="nav-link active" data-go="dashboard"><span class="material-symbols-rounded">space_dashboard</span>Dashboard</a></li>
+          <li><a class="nav-link" data-go="lessons"><span class="material-symbols-rounded">menu_book</span>Lessons</a></li>
+          <li><a class="nav-link" data-go="quiz"><span class="material-symbols-rounded">quiz</span>Quick quiz</a></li>
+          <li><a class="nav-link" data-go="achievements"><span class="material-symbols-rounded">workspace_premium</span>Achievements</a></li>
+          <li><a class="nav-link" data-go="calendar"><span class="material-symbols-rounded">calendar_month</span>Learning calendar</a></li>
+        </ul>
+        <div class="mt-auto space-y-3 pt-8">
+          <div class="rounded-2xl bg-base-200 p-4"><div class="flex items-center gap-2 text-sm font-bold"><span class="material-symbols-rounded text-warning">local_fire_department</span>Keep your streak!</div><p class="mt-2 text-xs leading-5 text-base-content/60">A little practice every day builds a lasting habit.</p><button class="btn btn-primary btn-sm mt-3 w-full" data-go="quiz">Practice now</button></div>
+          <ul class="menu p-0"><li><a class="nav-link" data-go="settings"><span class="material-symbols-rounded">settings</span>Settings & data</a></li></ul>
+          <p class="px-3 text-[11px] text-base-content/40">Version 1.0 · IndexedDB</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <dialog id="lesson-modal" class="modal">
+    <div class="modal-box max-w-2xl"><form method="dialog"><button class="btn btn-sm btn-circle btn-ghost absolute right-3 top-3">✕</button></form><div id="lesson-modal-content"></div></div><form method="dialog" class="modal-backdrop"><button>close</button></form>
+  </dialog>
+  <div id="toast" class="toast toast-end toast-bottom z-[100] hidden"><div class="alert alert-success shadow-lg"><span id="toast-message">Saved</span></div></div>
+
+<script>
+$(function () {
+  "use strict";
+  const DB_NAME = "FluentPathDB", DB_VERSION = 3;
+  let db, currentView = "dashboard", currentLesson = null, activeLevel = "All";
+  let quizQuestions = [], quizIndex = 0, quizCorrect = 0, selectedAnswer = null, answered = false, quizLanguage = "en";
+  let calendarDate = new Date();
+
+  const lessonsSeed = [
+    {id:"grammar-nouns",title:"Nouns: naming people, places and things",level:"Beginner",category:"Grammar",duration:"8 min",icon:"category",color:"primary",summary:"Understand how nouns name people, places, things and ideas.",sections:[{heading:"What is a noun?",body:"A noun is a word that names a person, place, thing, or idea. Nouns help us identify what we are talking about.",examples:["Person: teacher, student, doctor","Place: school, market, Cagayan de Oro","Thing: book, phone, table","Idea: kindness, freedom, happiness"]},{heading:"Common and proper nouns",body:"Common nouns name general things. Proper nouns name specific people or places and begin with a capital letter.",examples:["Common: city → Proper: Manila","Common: person → Proper: Maria","Common: company → Proper: Google"]}],takeaway:"A noun answers the question: Who or what are we talking about?"},
+    {id:"verbs-basics",title:"Verbs: actions and states",level:"Beginner",category:"Grammar",duration:"8 min",icon:"directions_run",color:"success",summary:"Learn action verbs and linking verbs.",sections:[{heading:"What is a verb?",body:"A verb tells us what someone or something does, or what state they are in.",examples:["Action: run, write, speak, study","State: am, is, are, seem, become"]},{heading:"Use verbs in sentences",body:"A complete sentence usually needs a subject and a verb.",examples:["I study English every day.","She writes in her notebook.","They are happy."]}],takeaway:"Find the verb by asking: What is happening, or what is the subject's state?"},
+    {id:"simple-present",title:"Simple present tense",level:"Beginner",category:"Grammar",duration:"10 min",icon:"schedule",color:"info",summary:"Talk about habits, routines and facts.",sections:[{heading:"When do we use it?",body:"Use the simple present for habits, repeated actions, facts and things that are generally true.",examples:["I work every weekday.","The sun rises in the east.","They speak English at work."]},{heading:"He, she and it",body:"For he, she and it, most verbs add -s or -es.",examples:["I play → She plays","They watch → He watches","We study → It studies"]}],takeaway:"Use the base verb with I/you/we/they. Add -s or -es with he/she/it."},
+    {id:"articles",title:"A, an and the",level:"Beginner",category:"Grammar",duration:"7 min",icon:"article",color:"warning",summary:"Choose the right article before a noun.",sections:[{heading:"A and an",body:"Use a or an when talking about one non-specific singular countable noun. Use an before a vowel sound.",examples:["a book","a university (you-niversity sound)","an apple","an honest person (silent h)"]},{heading:"The",body:"Use the when the listener knows which specific person or thing you mean.",examples:["Please close the door.","I read the book you recommended."]}],takeaway:"Choose a/an by sound, not just spelling. Use the for something specific."},
+    {id:"daily-vocabulary",title:"Everyday vocabulary",level:"Beginner",category:"Vocabulary",duration:"9 min",icon:"forum",color:"secondary",summary:"Learn useful words for everyday conversations.",sections:[{heading:"Useful daily words",body:"Build your vocabulary with words you can use in common situations.",examples:["Available — free or ready to be used","Improve — to make something better","Prefer — to like one thing more than another","Reliable — someone or something you can trust"]},{heading:"Put words into context",body:"Learning a word in a sentence makes it easier to remember.",examples:["I am available after lunch.","I want to improve my English.","I prefer tea to coffee.","She is a reliable teammate."]}],takeaway:"Write a new word in your own sentence to help you remember it."},
+    {id:"past-tense",title:"Simple past tense",level:"Intermediate",category:"Grammar",duration:"10 min",icon:"history",color:"info",summary:"Describe completed actions in the past.",sections:[{heading:"Regular verbs",body:"Many regular verbs form the past tense by adding -ed.",examples:["work → worked","clean → cleaned","visit → visited"]},{heading:"Irregular verbs",body:"Irregular verbs change in different ways, so learn them through practice.",examples:["go → went","eat → ate","see → saw","write → wrote"]}],takeaway:"Use the past form for a completed action in the past: I visited my friend yesterday."},
+    {id:"conversation",title:"Everyday conversation skills",level:"Intermediate",category:"Conversation",duration:"12 min",icon:"record_voice_over",color:"success",summary:"Speak politely and naturally in common situations.",sections:[{heading:"Starting a conversation",body:"A friendly greeting and an open question can make a conversation easier.",examples:["Good morning! How are you today?","How was your weekend?","What are you working on these days?"]},{heading:"Asking for clarification",body:"It is okay to ask someone to repeat or explain something.",examples:["Could you say that again, please?","What do you mean by that?","Could you explain it another way?"]}],takeaway:"Clear communication is more important than using complicated words."},
+    {id:"workplace-english",title:"Professional workplace English",level:"Intermediate",category:"Professional English",duration:"12 min",icon:"business_center",color:"primary",summary:"Communicate clearly and professionally at work.",sections:[{heading:"Giving a status update",body:"Use direct and polite language to explain progress.",examples:["I have completed the first task.","I am currently working on the report.","I expect to finish this by Friday."]},{heading:"Managing priorities",body:"When tasks compete, ask your manager to help clarify priorities.",examples:["Could you help me prioritize these tasks?","Which item should I complete first?","I can start this after I finish the current task."]}],takeaway:"Be clear, respectful and specific when communicating at work."},
+    {id:"conditionals",title:"First and second conditionals",level:"Advanced",category:"Grammar",duration:"14 min",icon:"alt_route",color:"secondary",summary:"Talk about real possibilities and imagined situations.",sections:[{heading:"First conditional",body:"Use if + present simple, then will + base verb for a real future possibility.",examples:["If I practice, I will improve.","If it rains, we will stay inside."]},{heading:"Second conditional",body:"Use if + past simple, then would + base verb for an imaginary or unlikely situation.",examples:["If I had more time, I would read more.","If I were you, I would ask for feedback."]}],takeaway:"First conditional = realistic possibility. Second conditional = hypothetical situation."},
+    {id:"writing-clarity",title:"Writing clear professional messages",level:"Advanced",category:"Writing",duration:"15 min",icon:"edit_note",color:"warning",summary:"Make emails and work messages easy to understand.",sections:[{heading:"Keep it clear",body:"Use a clear purpose, short paragraphs and a specific next step.",examples:["Unclear: Please do the thing soon.","Clear: Please send the updated file by 3 PM today."]},{heading:"A simple message structure",body:"A professional message often includes a greeting, purpose, important details and a polite closing.",examples:["Hello, team,","I am sharing the updated report for your review.","Please let me know if you have any questions.","Thank you."]}],takeaway:"Good writing helps the reader understand what you need and what happens next."}
+  ];
+
+  let questionsSeed = [];
+  async function loadQuestionBank() {
+    let data = null;
+    let loadError = null;
+
+    // First try automatic loading when the app is served through localhost/HTTPS.
+    if (location.protocol !== "file:") {
+      try {
+        const response = await fetch("./questions.json?v=" + Date.now(), {
+          cache: "no-store",
+          headers: { "Accept": "application/json" }
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status} while requesting ./questions.json`);
+        }
+        data = await response.json();
+      } catch (error) {
+        loadError = error;
+        console.warn("Automatic questions.json load failed:", error);
+      }
+    }
+
+    // Fallback: let the user choose questions.json directly (also works with file://).
+    if (!data) {
+      data = await new Promise((resolve, reject) => {
+        const picker = document.createElement("input");
+        picker.type = "file";
+        picker.accept = ".json,application/json";
+        picker.style.display = "none";
+        document.body.appendChild(picker);
+        picker.addEventListener("change", () => {
+          const file = picker.files && picker.files[0];
+          if (!file) {
+            picker.remove();
+            reject(new Error("No questions.json file was selected."));
+            return;
+          }
+          const reader = new FileReader();
+          reader.onload = () => {
+            try { resolve(JSON.parse(String(reader.result))); }
+            catch (error) { reject(new Error("The selected file is not valid JSON: " + error.message)); }
+            finally { picker.remove(); }
+          };
+          reader.onerror = () => { picker.remove(); reject(new Error("Unable to read the selected JSON file.")); };
+          reader.readAsText(file);
+        }, { once: true });
+        picker.addEventListener("cancel", () => {
+          picker.remove();
+          reject(new Error("Please select your questions.json file to load the quiz."));
+        }, { once: true });
+        picker.click();
+      });
+    }
+
+    if (!Array.isArray(data) || !data.length) {
+      throw new Error("questions.json must contain a non-empty JSON array.");
+    }
+    const required = ["category", "question", "options", "correctAnswer", "explanation", "wrongExplanations"];
+    data.forEach((q, index) => {
+      const missing = required.filter(key => q[key] == null);
+      if (missing.length) throw new Error(`Question ${index + 1} is missing: ${missing.join(", ")}.`);
+      if (!["A", "B", "C", "D"].every(key => typeof q.options[key] === "string" && q.options[key].trim())) {
+        throw new Error(`Question ${index + 1} must have four options (A, B, C, D).`);
+      }
+      if (!["A", "B", "C", "D"].includes(q.correctAnswer)) {
+        throw new Error(`Question ${index + 1} has an invalid correctAnswer.`);
+      }
+    });
+    questionsSeed = data.map(q => ({
+      ...q,
+      options: ["A", "B", "C", "D"].map(key => q.options[key]),
+      answer: ["A", "B", "C", "D"].indexOf(q.correctAnswer),
+      optionExplanations: ["A", "B", "C", "D"].map(key =>
+        key === q.correctAnswer ? q.explanation : (q.wrongExplanations?.[key] || "Review the correct answer explanation.")
+      )
+    }));
+    console.info(`Loaded ${questionsSeed.length} questions from JSON.`);
+  }
+  function openDB() {
+    return new Promise((resolve, reject) => {
+      const request = indexedDB.open(DB_NAME, DB_VERSION);
+      request.onupgradeneeded = event => {
+        const database = event.target.result;
+        ["lessons","questions","userProgress","achievements","dailyActivity","settings"].forEach(store => {
+          if (!database.objectStoreNames.contains(store)) database.createObjectStore(store, {keyPath:"id"});
+        });
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+  }
+  function store(name, mode="readonly") { return db.transaction(name, mode).objectStore(name); }
+  function getAll(name) { return new Promise((resolve,reject) => { const r=store(name).getAll(); r.onsuccess=()=>resolve(r.result); r.onerror=()=>reject(r.error); }); }
+  function getOne(name,id) { return new Promise((resolve,reject) => { const r=store(name).get(id); r.onsuccess=()=>resolve(r.result); r.onerror=()=>reject(r.error); }); }
+  function put(name,value) { return new Promise((resolve,reject) => { const r=store(name,"readwrite").put(value); r.onsuccess=()=>resolve(value); r.onerror=()=>reject(r.error); }); }
+  function clearStore(name) { return new Promise((resolve,reject)=>{const r=store(name,"readwrite").clear();r.onsuccess=resolve;r.onerror=()=>reject(r.error);}); }
+  async function seedDatabase() {
+    await loadQuestionBank();
+    const existing = await getAll("lessons");
+    if (!existing.length) for (const item of lessonsSeed) await put("lessons",item);
+    // questions.json is the editable source of truth; refresh the local bank on every app launch.
+    await clearStore("questions");
+    for (const item of questionsSeed) await put("questions",item);
+    const defaults = [{id:"profile",name:"Learner",createdAt:new Date().toISOString(),xp:0,correct:0,answered:0}];
+    if (!(await getOne("userProgress","profile"))) await put("userProgress",defaults[0]);
+  }
+  function todayKey(date=new Date()) { return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`; }
+  function showToast(message, success=true) {
+    $("#toast-message").text(message);
+    $("#toast .alert").toggleClass("alert-success",success).toggleClass("alert-error",!success);
+    $("#toast").removeClass("hidden");
+    setTimeout(()=>$("#toast").addClass("hidden"),2600);
+  }
+  function escapeHTML(value) { return String(value ?? "").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+  async function getProfile() { return (await getOne("userProgress","profile")) || {id:"profile",xp:0,correct:0,answered:0}; }
+  async function getActivity() { return await getAll("dailyActivity"); }
+  async function markActivity(type, amount=1) {
+    const id=todayKey(); const item=await getOne("dailyActivity",id) || {id,date:id,questions:0,correct:0,lessons:0};
+    if(type==="question") item.questions+=amount;
+    if(type==="correct") item.correct+=amount;
+    if(type==="lesson") item.lessons+=amount;
+    await put("dailyActivity",item);
+  }
+  async function updateProfile(patch) { const p=await getProfile(); Object.assign(p,patch); await put("userProgress",p); return p; }
+  const RECOVERY_DURATION = 10 * 60 * 1000;
+
+  async function applyAbsencePenalty() {
+    const profile = await getProfile();
+    const today = todayKey();
+
+    // Apply the absence check only once per calendar day.
+    if (profile.lastAbsenceCheckDate === today) return profile;
+
+    const activeDays = (await getActivity())
+      .filter(item => (item.questions || 0) > 0 || (item.lessons || 0) > 0)
+      .map(item => item.id)
+      .sort();
+
+    // Do not penalize a new learner who has no activity history yet.
+    if (!activeDays.length) {
+      return await updateProfile({ lastAbsenceCheckDate: today });
+    }
+
+    const lastActive = activeDays[activeDays.length - 1];
+    const baseline = profile.lastAbsenceCheckDate && profile.lastAbsenceCheckDate > lastActive
+      ? profile.lastAbsenceCheckDate
+      : lastActive;
+
+    const [by, bm, bd] = baseline.split("-").map(Number);
+    const [ty, tm, td] = today.split("-").map(Number);
+    const baselineDate = new Date(by, bm - 1, bd);
+    const currentDate = new Date(ty, tm - 1, td);
+    const daysBetween = Math.floor((currentDate - baselineDate) / 86400000);
+    const missedDays = Math.max(0, daysBetween - 1);
+
+    if (missedDays > 0 && Number(profile.recoveryRemainingMs || 0) <= 0) {
+      const penalty = missedDays * 20;
+      const currentXP = Math.max(0, Number(profile.xp || 0));
+      const nextXP = Math.max(0, currentXP - penalty);
+      const patch = {
+        xp: nextXP,
+        lastAbsenceCheckDate: today,
+        lastAbsencePenalty: penalty,
+        lastAbsenceDays: missedDays
+      };
+
+      if (nextXP === 0 && currentXP > 0) {
+        patch.recoveryRemainingMs = RECOVERY_DURATION;
+        patch.recoveryLastTick = document.visibilityState === "visible" ? Date.now() : null;
+      }
+
+      await updateProfile(patch);
+      showToast(`You were away for ${missedDays} day${missedDays === 1 ? "" : "s"}. -${penalty} XP applied.`, false);
+      return await getProfile();
+    }
+
+    return await updateProfile({ lastAbsenceCheckDate: today });
+  }
+
+  async function syncRecoveryState() {
+    let profile = await getProfile();
+    let remaining = Number(profile.recoveryRemainingMs || 0);
+    // Migrate an existing recovery countdown from the previous timestamp-based version.
+    if (!remaining && Number(profile.recoveryUntil || 0) > Date.now()) {
+      remaining = Math.min(RECOVERY_DURATION, Number(profile.recoveryUntil) - Date.now());
+      profile = await updateProfile({
+        recoveryRemainingMs: remaining,
+        recoveryLastTick: document.visibilityState === "visible" ? Date.now() : null,
+        recoveryUntil: null
+      });
+    }
+    const active = remaining > 0;
+
+    if (active && document.visibilityState === "visible") {
+      const lastTick = Number(profile.recoveryLastTick || Date.now());
+      const elapsed = Math.max(0, Math.min(5000, Date.now() - lastTick));
+      remaining = Math.max(0, remaining - elapsed);
+
+      if (remaining <= 0) {
+        profile = await updateProfile({
+          xp: 20,
+          recoveryRemainingMs: 0,
+          recoveryLastTick: null,
+          recoveryCompletedAt: new Date().toISOString()
+        });
+        showToast("Recovery complete! +20 XP added.");
+      } else {
+        profile = await updateProfile({
+          recoveryRemainingMs: remaining,
+          recoveryLastTick: Date.now()
+        });
+      }
+    } else if (active && profile.recoveryLastTick) {
+      // A hidden or closed browser does not consume recovery time.
+      profile = await updateProfile({ recoveryLastTick: null });
+    }
+
+    const isActive = Number(profile.recoveryRemainingMs || 0) > 0;
+    $("#recovery-notice").toggleClass("hidden", !isActive);
+    $("#start-quiz").prop("disabled", isActive);
+    if (isActive) {
+      const left = Number(profile.recoveryRemainingMs);
+      const minutes = Math.floor(left / 60000);
+      const seconds = Math.floor((left % 60000) / 1000);
+      const countdownText = `${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+      $("#recovery-countdown, #recovery-modal-countdown").text(countdownText);
+      $("#start-quiz").html('<span class="material-symbols-rounded">hourglass_top</span> Recovery in progress');
+      const recoveryDialog = document.getElementById("recovery-modal");
+      if (recoveryDialog && !recoveryDialog.open) recoveryDialog.showModal();
+    } else {
+      $("#start-quiz").html('Start <span class="material-symbols-rounded">arrow_forward</span>');
+      const recoveryDialog = document.getElementById("recovery-modal");
+      if (recoveryDialog?.open) recoveryDialog.close();
+    }
+    return { profile, active: isActive };
+  }
+  async function updateStreak() {
+    const days=(await getActivity()).filter(x=>x.questions>0||x.lessons>0).map(x=>x.id).sort();
+    let streak=0, cursor=new Date(); cursor.setHours(0,0,0,0);
+    if (!days.includes(todayKey(cursor))) cursor.setDate(cursor.getDate()-1);
+    const set=new Set(days);
+    while(set.has(todayKey(cursor))) { streak++; cursor.setDate(cursor.getDate()-1); }
+    return streak;
+  }
+  const achievementsSeed = [
+    {id:"first-steps",title:"First Steps",description:"Complete your first lesson.",icon:"school",requirement:"1 lesson",type:"lessons",target:1},
+    {id:"curious-mind",title:"Curious Mind",description:"Complete 5 lessons.",icon:"psychology",requirement:"5 lessons",type:"lessons",target:5},
+    {id:"quiz-starter",title:"Quiz Starter",description:"Get 10 correct answers.",icon:"quiz",requirement:"10 correct",type:"correct",target:10},
+    {id:"sharp-mind",title:"Sharp Mind",description:"Get 20 correct answers.",icon:"neurology",requirement:"20 correct",type:"correct",target:20},
+    {id:"quiz-master",title:"Quiz Master",description:"Get 50 correct answers.",icon:"workspace_premium",requirement:"50 correct",type:"correct",target:50},
+    {id:"five-day-streak",title:"Five-Day Streak",description:"Practice for 5 consecutive days.",icon:"local_fire_department",requirement:"5-day streak",type:"streak",target:5},
+    {id:"ten-day-streak",title:"Consistency Star",description:"Practice for 10 consecutive days.",icon:"stars",requirement:"10-day streak",type:"streak",target:10},
+    {id:"twenty-day-streak",title:"Habit Builder",description:"Practice for 20 consecutive days.",icon:"calendar_month",requirement:"20-day streak",type:"streak",target:20},
+    {id:"thirty-day-streak",title:"Dedicated Learner",description:"Practice for 30 consecutive days.",icon:"military_tech",requirement:"30-day streak",type:"streak",target:30}
+  ];
+  async function checkAchievements() {
+    const p=await getProfile(), completed=(await getAll("userProgress")).filter(x=>x.id.startsWith("lesson:")&&x.completed).length, streak=await updateStreak();
+    let earned=await getAll("achievements");
+    for(const a of achievementsSeed) {
+      const value=a.type==="lessons"?completed:a.type==="correct"?p.correct:streak;
+      if(value>=a.target&&!earned.some(x=>x.id===a.id)) {
+        const record={...a,earnedAt:new Date().toISOString()}; await put("achievements",record); earned.push(record);
+        showToast(`Achievement unlocked: ${a.title}`);
+      }
+    }
+  }
+  async function refreshDashboard() {
+    const lessons=await getAll("lessons"), progress=await getAll("userProgress"), p=await getProfile(), activities=await getActivity(), earned=await getAll("achievements"), streak=await updateStreak();
+    const completed=progress.filter(x=>x.id.startsWith("lesson:")&&x.completed), pct=lessons.length?Math.round(completed.length/lessons.length*100):0;
+    $("#top-xp,#stat-xp").text(`${p.xp||0} XP`); $("#top-streak").text(`${streak} day${streak===1?"":"s"}`);
+    $("#stat-streak").text(streak); $("#stat-correct").text(p.correct||0); $("#stat-lessons").text(completed.length);
+    $("#hero-lessons").text(completed.length); $("#hero-badges").text(earned.length);
+    $("#progress-percent").text(`${pct}%`); $("#progress-count").text(`${completed.length} of ${lessons.length} lessons`); $("#overall-progress").val(pct);
+    ["Beginner","Intermediate","Advanced"].forEach(level=>{const all=lessons.filter(l=>l.level===level).length, done=completed.filter(x=>lessons.some(l=>l.id===x.id.replace("lesson:","")&&l.level===level)).length; $(`#${level.toLowerCase()}-count`).text(`${done} / ${all}`);});
+    const today=activities.find(a=>a.id===todayKey()), count=today?.questions||0, dailyPct=Math.min(100,Math.round(count/10*100));
+    $("#daily-percent").text(`${dailyPct}%`); $("#daily-count").text(`${count} / 10`);
+    const recent=activities.sort((a,b)=>b.id.localeCompare(a.id)).slice(0,4);
+    $("#recent-activity").html(recent.length?recent.map(a=>`<div class="flex items-center justify-between rounded-xl bg-base-200 px-3 py-3"><div class="flex items-center gap-3"><span class="material-symbols-rounded text-primary">event_available</span><div><p class="text-sm font-semibold">${escapeHTML(a.id)}</p><p class="text-xs text-base-content/50">${a.questions} questions · ${a.lessons} lessons</p></div></div><span class="badge badge-ghost">${a.correct} correct</span></div>`).join(""):`<p class="rounded-xl bg-base-200 p-4 text-sm text-base-content/60">No activity yet. Start a lesson or quick quiz today.</p>`);
+    const next=lessons.filter(l=>!completed.some(x=>x.id===`lesson:${l.id}`)).slice(0,3);
+    $("#dashboard-lessons").html(next.map(l=>`<button class="flex w-full items-center gap-3 rounded-xl border border-base-300 p-3 text-left transition hover:bg-base-200" data-lesson="${l.id}"><span class="material-symbols-rounded rounded-xl bg-primary/10 p-3 text-primary">${l.icon}</span><span class="min-w-0 flex-1"><span class="block truncate text-sm font-semibold">${escapeHTML(l.title)}</span><span class="text-xs text-base-content/50">${l.level} · ${l.duration}</span></span><span class="material-symbols-rounded text-base-content/40">chevron_right</span></button>`).join("")||`<p class="text-sm text-success">All lessons completed. Great work!</p>`);
+  }
+  async function renderLessons() {
+    const lessons=await getAll("lessons"), progress=await getAll("userProgress");
+    const completed=new Set(progress.filter(x=>x.completed).map(x=>x.id.replace("lesson:","")));
+    const filtered=lessons.filter(l=>activeLevel==="All"||l.level===activeLevel);
+    $("#lesson-grid").html(filtered.length ? filtered.map(l=>`<article class="card border border-base-300 bg-base-100 shadow-sm"><div class="card-body gap-3"><div class="flex items-start justify-between"><span class="material-symbols-rounded rounded-2xl bg-primary/10 p-3 text-primary text-2xl">${escapeHTML(l.icon || "menu_book")}</span>${completed.has(l.id)?'<span class="badge badge-success badge-outline">Completed</span>':`<span class="badge badge-ghost">${escapeHTML(l.level)}</span>`}</div><div><p class="text-xs font-semibold uppercase tracking-wider text-primary">${escapeHTML(l.category)} · ${escapeHTML(l.duration)}</p><h3 class="mt-2 text-lg font-bold">${escapeHTML(l.title)}</h3><p class="mt-2 text-sm leading-6 text-base-content/60">${escapeHTML(l.summary)}</p></div><div class="card-actions mt-2"><button class="btn btn-primary btn-sm w-full" data-lesson="${escapeHTML(l.id)}">${completed.has(l.id)?"Review lesson":"Start lesson"}<span class="material-symbols-rounded">arrow_forward</span></button></div></div></article>`).join("") : `<div class="col-span-full rounded-2xl border border-dashed border-base-300 bg-base-100 p-8 text-center"><span class="material-symbols-rounded text-4xl text-base-content/40">menu_book</span><h3 class="mt-3 font-bold">No lessons found</h3><p class="mt-1 text-sm text-base-content/60">Try selecting another level.</p></div>`);
+  }
+  async function openLesson(id) {
+    const l=await getOne("lessons",id); if(!l)return; currentLesson=l;
+    const prog=await getOne("userProgress",`lesson:${id}`);
+    $("#lesson-content").html(`<div class="mx-auto max-w-3xl space-y-6"><div class="rounded-3xl bg-neutral p-6 text-neutral-content sm:p-8"><span class="badge badge-warning badge-outline">${l.level} · ${escapeHTML(l.category)}</span><h2 class="mt-4 text-2xl font-bold sm:text-3xl">${escapeHTML(l.title)}</h2><p class="mt-3 leading-7 text-neutral-content/70">${escapeHTML(l.summary)}</p><p class="mt-5 text-xs text-neutral-content/60">${escapeHTML(l.duration)} read · +25 XP on completion</p></div>${l.sections.map((s,i)=>`<article class="rounded-2xl border border-base-300 bg-base-100 p-5 sm:p-7"><p class="text-xs font-bold uppercase tracking-wider text-primary">PART ${i+1}</p><h3 class="mt-2 text-xl font-bold">${escapeHTML(s.heading)}</h3><p class="mt-3 leading-7 text-base-content/70">${escapeHTML(s.body)}</p><div class="mt-4 rounded-xl bg-base-200 p-4"><p class="mb-2 text-xs font-bold uppercase tracking-wider text-base-content/50">Examples</p><ul class="list-inside list-disc space-y-2 text-sm">${s.examples.map(e=>`<li>${escapeHTML(e)}</li>`).join("")}</ul></div></article>`).join("")}<div class="rounded-2xl border border-success/30 bg-success/5 p-5"><div class="flex items-center gap-2 font-bold text-success"><span class="material-symbols-rounded">lightbulb</span>Key takeaway</div><p class="mt-2 text-sm leading-6">${escapeHTML(l.takeaway)}</p></div><div class="flex flex-wrap justify-between gap-3"><button class="btn btn-outline" data-go="lessons">Back to lessons</button><button id="complete-lesson" class="btn btn-primary" ${prog?.completed?'disabled':''}>${prog?.completed?'Lesson completed':'Mark as completed'} <span class="material-symbols-rounded">task_alt</span></button></div></div>`);
+    navigate("lesson-detail");
+  }
+  async function completeLesson() {
+    if(!currentLesson)return; const id=`lesson:${currentLesson.id}`, existing=await getOne("userProgress",id);
+    if(existing?.completed)return;
+    await put("userProgress",{id,completed:true,completedAt:new Date().toISOString()});
+    await updateProfile({xp:(await getProfile()).xp+25}); await markActivity("lesson");
+    await checkAchievements(); await refreshDashboard(); $("#complete-lesson").prop("disabled",true).text("Lesson completed"); showToast("Lesson completed! +25 XP");
+  }
+  async function startQuiz() {
+    try {
+      const recovery = await syncRecoveryState();
+      if (recovery.active) {
+        showToast("Recovery Mode is active. Wait until the 10-minute rest is complete.", false);
+        return;
+      }
+      // Use the freshly loaded JSON bank directly. This avoids stale IndexedDB question records.
+      const eligible = (questionsSeed || []).filter(q =>
+        (q.level === "Intermediate" || q.level === "Hard") &&
+        typeof q.question === "string" && q.question.trim() &&
+        Array.isArray(q.options) && q.options.length === 4
+      );
+      if (!eligible.length) {
+        showToast("No valid quiz questions found. Please check questions.json.", false);
+        return;
+      }
+      quizQuestions = [...eligible].sort(() => Math.random() - 0.5).slice(0, 1);
+      quizIndex = 0; quizCorrect = 0; selectedAnswer = null; answered = false;
+      $("#quiz-start,#quiz-result").addClass("hidden");
+      $("#quiz-panel").removeClass("hidden");
+      renderQuestion();
+    } catch (error) {
+      console.error("Quiz start error:", error);
+      showToast("Unable to start the quiz. Please check questions.json.", false);
+    }
+  }
+  function quizText(q, key) {
+    return quizLanguage === "bi" ? (q.bislish?.[key] ?? q[key]) : q[key];
+  }
+  function renderQuestion() {
+    const q = quizQuestions[quizIndex];
+    if (!q || !q.question || !Array.isArray(q.options) || q.options.length !== 4) {
+      showToast("This question is incomplete. Please review its entry in questions.json.", false);
+      return;
+    }
+    selectedAnswer = null; answered = false;
+    const t = q.bislish || {};
+    $("#quiz-category").text(q.category);
+    $("#quiz-question").text(q.question);
+    $("#quiz-passage").text(q.passage || "").toggleClass("hidden",!q.passage);
+    $("#quiz-feedback").addClass("hidden").removeClass("flex");
+    $("#quiz-options").html(q.options.map((o,i)=>`<button class="btn btn-outline h-auto min-h-14 justify-start whitespace-normal py-3 text-left normal-case" data-answer="${i}"><span class="mr-2 flex size-7 shrink-0 items-center justify-center rounded-full bg-base-200 text-xs font-bold">${String.fromCharCode(65+i)}</span><span>${escapeHTML(o)}</span></button>`).join(""));
+    $("#quiz-next").prop("disabled",true).text("Check answer");
+  }
+  async function chooseAnswer(index) {
+    if(answered)return; selectedAnswer=index;
+    $("#quiz-options [data-answer]").removeClass("btn-primary").addClass("btn-outline");
+    $(`#quiz-options [data-answer="${index}"]`).removeClass("btn-outline").addClass("btn-primary");
+    $("#quiz-next").prop("disabled",false);
+  }
+  function renderQuizFeedback(q, correct, selectedIndex) {
+    const bi = q.bislish || {};
+    const selectedKey = String.fromCharCode(65 + selectedIndex);
+    const lang = quizLanguage;
+    const options = lang === "bi" ? (bi.options || {}) : q.options;
+    const selectedText = options[selectedKey] || q.options[selectedIndex];
+    const correctText = options[q.correctAnswer] || q.options[q.answer];
+    const selectedLabel = lang === "bi" ? "Imong gipili:" : "Your answer:";
+    const correctLabel = lang === "bi" ? "Sakto nga answer:" : "Correct answer:";
+    const explanation = lang === "bi" ? (bi.explanation || q.explanation) : q.explanation;
+    const wrongExplanation = lang === "bi"
+      ? (bi.wrongExplanations?.[selectedKey] || q.optionExplanations?.[selectedIndex] || q.explanation)
+      : (q.optionExplanations?.[selectedIndex] || q.explanation);
+    const heading = correct
+      ? (lang === "bi" ? "Sakto! Maayo kaayo." : "Correct! Well done.")
+      : (lang === "bi" ? "Sayop, pero padayon sa pagkat-on." : "Good try! Keep learning.");
+    const details = correct
+      ? `<p class="block w-full font-semibold">${selectedLabel} ${selectedKey}. ${escapeHTML(selectedText)}</p><p class="block w-full leading-relaxed">${escapeHTML(explanation)}</p>`
+      : `<p class="block w-full font-semibold">${selectedLabel} ${selectedKey}. ${escapeHTML(selectedText)}</p><p class="block w-full font-bold">${correctLabel} ${q.correctAnswer}. ${escapeHTML(correctText)}</p><p class="block w-full leading-relaxed">${escapeHTML(wrongExplanation)}</p><p class="block w-full leading-relaxed">${escapeHTML(explanation)}</p>`;
+    $("#quiz-feedback")
+      .removeClass("hidden alert bg-success bg-error text-success-content text-error-content")
+      .addClass("flex flex-col items-start gap-3 rounded-xl border border-base-300 bg-base-100 p-4 text-base-content")
+      .html(`
+        <div class="flex w-full flex-wrap items-center justify-between gap-3">
+          <strong class="flex items-center gap-2 text-base font-bold">
+            <span class="material-symbols-rounded ${correct ? "text-success" : "text-error"}">${correct ? "check_circle" : "cancel"}</span>
+            <span>${heading}</span>
+          </strong>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-base-content/60">Translate feedback:</span>
+            <div class="join">
+              <button type="button" class="btn btn-xs join-item feedback-language ${lang === "en" ? "btn-primary" : "btn-outline"}" data-language="en">English</button>
+              <button type="button" class="btn btn-xs join-item feedback-language ${lang === "bi" ? "btn-primary" : "btn-outline"}" data-language="bi">Bislish</button>
+            </div>
+          </div>
+        </div>
+        ${details}
+      `);
+  }
+
+  async function checkAnswer() {
+    const q=quizQuestions[quizIndex];
+    if(!answered) {
+      if(selectedAnswer===null)return;
+      answered=true; const correct=selectedAnswer===q.answer;
+      if(correct)quizCorrect++;
+      $("#quiz-options button").prop("disabled",true);
+      $(`#quiz-options [data-answer="${q.answer}"]`).removeClass("btn-outline btn-primary").addClass("btn-success");
+      if(!correct)$(`#quiz-options [data-answer="${selectedAnswer}"]`).removeClass("btn-outline btn-primary").addClass("btn-error");
+      renderQuizFeedback(q, correct, selectedAnswer);
+      $("#quiz-next").text("Finish");
+      await markActivity("question"); if(correct)await markActivity("correct");
+      const p=await getProfile();
+      const now=Date.now();
+      const recoveryActive=Number(p.recoveryRemainingMs||0)>0;
+      let nextXP=Number(p.xp||0);
+      let recoveryRemainingMs=Number(p.recoveryRemainingMs||0);
+      let recoveryLastTick=p.recoveryLastTick||null;
+
+      let wrongStreak=Number(p.consecutiveWrongAnswers||0);
+      let correctStreak=Number(p.consecutiveCorrectAnswers||0);
+      let penaltyLevel=Math.max(1,Number(p.xpPenaltyLevel||1));
+      let xpChange=0;
+      let currentPenalty=penaltyLevel*5;
+      let streakNotice=null;
+
+      if (!recoveryActive) {
+        if (correct) {
+          xpChange=10;
+          wrongStreak=0;
+          correctStreak+=1;
+
+          // Three correct answers in a row restore the standard -5 XP penalty.
+          if (correctStreak >= 3 && penaltyLevel > 1) {
+            penaltyLevel=1;
+            currentPenalty=5;
+            streakNotice={
+              type:"reset",
+              title:"XP penalty reset!",
+              message:"You answered 3 questions correctly in a row. Your wrong-answer penalty is back to -5 XP."
+            };
+            correctStreak=0;
+          }
+        } else {
+          correctStreak=0;
+          wrongStreak+=1;
+
+          // Every 5 consecutive wrong answers raises the penalty by 5 XP.
+          if (wrongStreak % 5 === 0) {
+            penaltyLevel+=1;
+            streakNotice={
+              type:"increase",
+              title:"XP penalty increased",
+              message:`You reached ${wrongStreak} wrong answers in a row. Your wrong-answer deduction is now -${penaltyLevel*5} XP.`
+            };
+          }
+
+          currentPenalty=penaltyLevel*5;
+          xpChange=-currentPenalty;
+        }
+
+        nextXP=Math.max(0,nextXP+xpChange);
+
+        if (!correct && nextXP===0) {
+          recoveryRemainingMs=RECOVERY_DURATION;
+          recoveryLastTick=document.visibilityState==="visible" ? now : null;
+        }
+      }
+
+      await updateProfile({
+        answered:(p.answered||0)+1,
+        correct:(p.correct||0)+(correct?1:0),
+        xp:nextXP,
+        consecutiveWrongAnswers:wrongStreak,
+        consecutiveCorrectAnswers:correctStreak,
+        xpPenaltyLevel:penaltyLevel,
+        lastQuizAnswerAt:now,
+        lastXPPenalty:correct ? 0 : currentPenalty,
+        recoveryRemainingMs,
+        recoveryLastTick
+      });
+
+      if (streakNotice && !recoveryActive) {
+        $("#xp-streak-title").text(streakNotice.title);
+        $("#xp-streak-message").text(streakNotice.message);
+        $("#xp-streak-value").text(`-${penaltyLevel*5} XP`);
+        $("#xp-streak-icon").toggleClass("bg-warning/10 text-warning",streakNotice.type==="increase")
+          .toggleClass("bg-success/10 text-success",streakNotice.type==="reset")
+          .find("span").text(streakNotice.type==="increase"?"trending_up":"restart_alt");
+        const streakDialog=document.getElementById("xp-streak-modal");
+        if (streakDialog && !streakDialog.open) streakDialog.showModal();
+      }
+      await syncRecoveryState();
+      await refreshDashboard(); return;
+    }
+    finishQuiz();
+  }
+  async function finishQuiz() {
+    $("#quiz-panel").addClass("hidden"); $("#quiz-result").removeClass("hidden");
+    const pct=Math.round(quizCorrect*100);
+    $("#result-message").text(pct>=80?"Excellent work! Your practice is paying off.":pct>=50?"Good effort! Review the explanations and keep going.":"Every attempt is progress. Review the lessons and try again.");
+    await checkAchievements(); await refreshDashboard();
+  }
+  async function renderAchievements() {
+    const earned=await getAll("achievements"), p=await getProfile(), completed=(await getAll("userProgress")).filter(x=>x.id.startsWith("lesson:")&&x.completed).length, streak=await updateStreak(), earnedIds=new Set(earned.map(x=>x.id));
+    $("#achievement-grid").html(achievementsSeed.map(a=>{const value=a.type==="lessons"?completed:a.type==="correct"?p.correct:streak,done=earnedIds.has(a.id);return `<article class="rounded-2xl border ${done?"border-success/40 bg-success/5":"border-base-300 bg-base-100"} p-5"><div class="flex items-start justify-between"><span class="material-symbols-rounded rounded-2xl ${done?"bg-success/10 text-success":"bg-base-200 text-base-content/40"} p-3 text-2xl">${a.icon}</span><span class="badge ${done?"badge-success":"badge-ghost"}">${done?"Unlocked":"Locked"}</span></div><h3 class="mt-4 font-bold">${a.title}</h3><p class="mt-1 text-sm text-base-content/60">${a.description}</p><div class="mt-4 flex items-center justify-between text-xs"><span class="font-semibold">${a.requirement}</span><span>${Math.min(value,a.target)} / ${a.target}</span></div><progress class="progress ${done?"progress-success":"progress-primary"} mt-2 w-full" value="${Math.min(value,a.target)}" max="${a.target}"></progress></article>`;}).join(""));
+  }
+  async function renderCalendar() {
+    const year=calendarDate.getFullYear(),month=calendarDate.getMonth(), first=new Date(year,month,1).getDay(), total=new Date(year,month+1,0).getDate(), activity=await getActivity(), map=new Map(activity.map(a=>[a.id,a]));
+    $("#calendar-month").text(calendarDate.toLocaleDateString("en-US",{month:"long",year:"numeric"}));
+    let html=""; for(let i=0;i<first;i++)html+='<div class="aspect-square"></div>';
+    for(let day=1;day<=total;day++){const key=todayKey(new Date(year,month,day)),a=map.get(key),active=a&&(a.questions||a.lessons),goal=a&&a.questions>=10,isToday=key===todayKey();html+=`<div class="flex aspect-square flex-col items-center justify-center rounded-xl ${goal?"bg-primary text-primary-content":active?"bg-primary/20 text-base-content":"bg-base-200"} ${isToday?"ring-2 ring-primary ring-offset-2 ring-offset-base-100":""}"><span class="text-sm font-semibold">${day}</span>${active?'<span class="mt-1 size-1.5 rounded-full bg-current"></span>':""}</div>`;}
+    $("#calendar-days").html(html);
+    const activeDays=activity.filter(a=>a.questions||a.lessons).length, streak=await updateStreak();
+    $("#calendar-summary").text(`You have practiced on ${activeDays} ${activeDays===1?"day":"days"} in total. Your current streak is ${streak} ${streak===1?"day":"days"}. Keep showing up!`);
+  }
+  function navigate(view) {
+    currentView=view; $(".view").addClass("hidden"); $(`#view-${view}`).removeClass("hidden");
+    const titles={dashboard:"Dashboard",lessons:"English lessons","lesson-detail":"Lesson",quiz:"Quick quiz",achievements:"Achievements",calendar:"Learning calendar",settings:"Settings & data"};
+    $("#page-title").text(titles[view]||"FluentPath"); $(".nav-link").removeClass("active"); $(`.nav-link[data-go="${view}"]`).addClass("active");
+    $("#app-drawer").prop("checked",false);
+    if(view==="dashboard")refreshDashboard(); if(view==="lessons")renderLessons(); if(view==="achievements")renderAchievements(); if(view==="calendar")renderCalendar();
+  }
+  async function setTheme(dark) {
+    $("html").attr("data-theme",dark?"dark":"light"); $("#settings-theme").prop("checked",dark);
+    $("#theme-toggle").html(`<span class="material-symbols-rounded">${dark?"light_mode":"dark_mode"}</span>`);
+    await put("settings",{id:"theme",value:dark?"dark":"light"});
+  }
+  async function exportData() {
+    const data={app:"FluentPath",version:1,exportedAt:new Date().toISOString(),stores:{}};
+    for(const name of ["lessons","questions","userProgress","achievements","dailyActivity","settings"])data.stores[name]=await getAll(name);
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+    a.href=url;a.download=`fluentpath-backup-${todayKey()}.json`;a.click();URL.revokeObjectURL(url);showToast("Backup exported successfully.");
+  }
+  async function importData() {
+    const file=$("#import-file")[0].files[0]; if(!file){showToast("Please choose a JSON backup file.",false);return;}
+    try {
+      const data=JSON.parse(await file.text()); if(data.app!=="FluentPath"||!data.stores)throw new Error("Invalid backup file.");
+      for(const name of ["lessons","questions","userProgress","achievements","dailyActivity","settings"]) {
+        if(Array.isArray(data.stores[name])) for(const item of data.stores[name]) await put(name,item);
+      }
+      showToast("Backup restored successfully."); await refreshDashboard(); await renderLessons(); await renderAchievements();
+      const theme=await getOne("settings","theme"); if(theme)await setTheme(theme.value==="dark");
+    } catch(e){showToast(e.message||"Could not import this file.",false);}
+  }
+  async function resetData() {
+    if(!confirm("Reset all learning progress and restore the starter lessons?"))return;
+    for(const name of ["userProgress","achievements","dailyActivity","settings"])await clearStore(name);
+    await seedDatabase(); await setTheme(false); await refreshDashboard(); navigate("dashboard"); showToast("Learning progress has been reset.");
+  }
+
+  $(document).on("click","[data-go]",function(e){e.preventDefault();navigate($(this).data("go"));});
+  $(document).on("click","[data-lesson]",function(){openLesson($(this).data("lesson"));});
+  $(document).on("click","[data-level]",function(){activeLevel=$(this).data("level");$("#level-filters button").removeClass("btn-primary").addClass("btn-ghost");$(this).removeClass("btn-ghost").addClass("btn-primary");renderLessons();});
+  $("#complete-lesson").on("click",completeLesson);
+  $(document).on("click", ".feedback-language", function () {
+    if (!answered || !quizQuestions.length) return;
+    quizLanguage = $(this).data("language");
+    renderQuizFeedback(quizQuestions[quizIndex], selectedAnswer === quizQuestions[quizIndex].answer, selectedAnswer);
+  });
+  setInterval(()=>{
+    if (document.visibilityState === "visible") {
+      syncRecoveryState().catch(error=>console.error("Recovery timer error:",error));
+    }
+  },1000);
+  document.addEventListener("visibilitychange",()=>{
+    syncRecoveryState().catch(error=>console.error("Recovery visibility update error:",error));
+  });
+  $("#start-quiz,#retry-quiz").on("click",startQuiz);
+  $(document).on("click","[data-answer]",function(){chooseAnswer(Number($(this).data("answer")));});
+  $("#quiz-next").on("click",checkAnswer);
+  $("#month-prev").on("click",()=>{calendarDate.setMonth(calendarDate.getMonth()-1);renderCalendar();});
+  $("#month-next").on("click",()=>{calendarDate.setMonth(calendarDate.getMonth()+1);renderCalendar();});
+  $("#theme-toggle").on("click",()=>setTheme($("html").attr("data-theme")!=="dark"));
+  $("#settings-theme").on("change",function(){setTheme(this.checked);});
+  $("#export-data").on("click",exportData); $("#import-data").on("click",importData); $("#reset-data").on("click",resetData);
+
+  (async function init(){
+    try {
+      if(!("indexedDB" in window))throw new Error("IndexedDB is not available in this browser.");
+      db=await openDB(); await seedDatabase();
+      const theme=await getOne("settings","theme"); if(theme)await setTheme(theme.value==="dark");
+      $("#db-status").text("Connected");
+      await applyAbsencePenalty();
+      await syncRecoveryState();
+      await checkAchievements(); await refreshDashboard();
+    } catch(error) {
+      $("#db-status").text("Unavailable").removeClass("text-success").addClass("text-error");
+      console.error(error); alert(error.message || "The local database could not be opened. Please use a modern browser and open this app through localhost or HTTPS.");
+    }
+  })();
+});
+</script>
+
+
+  <dialog id="xp-streak-modal" class="modal">
+    <div class="modal-box max-w-sm text-center">
+      <div id="xp-streak-icon" class="mx-auto mb-3 flex size-14 items-center justify-center rounded-full bg-warning/10 text-warning">
+        <span class="material-symbols-rounded text-3xl">trending_up</span>
+      </div>
+      <h3 id="xp-streak-title" class="text-xl font-bold">XP penalty increased</h3>
+      <p id="xp-streak-message" class="mt-2 text-sm leading-relaxed text-base-content/70"></p>
+      <div class="mt-4 rounded-xl bg-base-200 p-3">
+        <p class="text-xs text-base-content/60">Current wrong-answer penalty</p>
+        <p id="xp-streak-value" class="mt-1 text-2xl font-bold text-error">-5 XP</p>
+      </div>
+      <form method="dialog" class="mt-5"><button class="btn btn-primary w-full">Got it</button></form>
+    </div>
+    <form method="dialog" class="modal-backdrop"><button>close</button></form>
+  </dialog>
+
+
+  <dialog id="recovery-modal" class="modal">
+    <div class="modal-box max-w-sm text-center">
+      <div class="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-warning/10 text-warning">
+        <span class="material-symbols-rounded text-4xl">bedtime</span>
+      </div>
+      <p class="text-xs font-bold uppercase tracking-widest text-warning">Recovery Mode</p>
+      <h3 class="mt-2 text-2xl font-bold">Take a short rest</h3>
+      <p class="mt-2 text-sm leading-relaxed text-base-content/70">Your XP reached zero. The Quick Quiz will unlock after 10 minutes of active browser time.</p>
+      <div class="mt-5 rounded-2xl bg-base-200 p-5">
+        <p class="text-xs text-base-content/60">Time remaining</p>
+        <p id="recovery-modal-countdown" class="mt-1 text-5xl font-bold tabular-nums text-warning">10:00</p>
+      </div>
+      <p class="mt-3 text-xs text-base-content/60">The timer pauses when you close the browser or leave this tab.</p>
+      <form method="dialog" class="mt-5"><button class="btn btn-primary w-full">Okay</button></form>
+    </div>
+    <form method="dialog" class="modal-backdrop"><button>close</button></form>
+  </dialog>
+</body>
+</html>

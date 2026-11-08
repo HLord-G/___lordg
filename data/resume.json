@@ -1,0 +1,85 @@
+{
+  "page_title": "Work experience",
+  "page_description": "Experience and responsibilities from my résumé.",
+  "Fullname": "Harold A. Guzman",
+  "Address": "Lapasan, Cagayan de Oro City, Misamis Oriental, Philippines",
+  "email": "guzmanh056@gmail.com",
+  "phone": "09958548020",
+  "experience": [
+    {
+      "title": "Data Annotation | Robotics",
+      "company": "Remotask",
+      "years": "2025–2026",
+      "description": "Reviewed videos of people performing daily tasks and labeled robot movements, hand actions, and objects. Described each step, such as picking up, moving, folding, and placing items. Checked and corrected labels to ensure accuracy and consistency. This work helps train AI robots to understand and perform human actions."
+    },
+    {
+      "title": "Amazon Arbitrage | Amazon Private Label",
+      "company": "Matt 633 Inc.",
+      "years": "2024–2025",
+      "description": "Researched unique and trending products on Alibaba by checking reviews, customer feedback, and potential return on investment (ROI). Evaluated product prices based on the client's budget and requirements, searched for affordable and reliable suppliers, and prepared product case studies and reports using Canva. Created AI-generated video advertisements for TikTok and other social media platforms to help promote products, while the client handled the final Amazon product listing."
+    },
+    {
+      "title": "Graphic Designer",
+      "company": "Cyberbee Advertising",
+      "years": "2023–2024",
+      "description": "Created custom tarpaulin designs for birthdays and special events. Designed T-shirt graphics for sublimation printing and mug designs. Handled both design and printing tasks to ensure quality and customer satisfaction."
+    },
+    {
+      "title": "Graphic Designer, Sitio Affairs Office, Computer Technician",
+      "company": "Barangay Lapasan",
+      "years": "2020–2023",
+      "description": "Worked as a graphic designer, computer technician, and data entry staff. Recorded voter information, organized community records, and helped identify residents who needed financial aid or medical support. Also assisted in community projects and provided computer support."
+    },
+    {
+      "title": "CNC Plasma Operator",
+      "company": "G & R I",
+      "years": "2017–2018",
+      "description": "Operated CNC plasma cutting machines to produce metal parts based on technical designs. Used AutoCAD and SketchUp to work with designs, checked machine performance, and made adjustments to ensure accurate results. Maintained a safe and organized workplace."
+    }
+  ],
+  "education": [
+    {
+      "school": "Mana Millennium Technical",
+      "course": "Computer System Servicing NCII (CSS)",
+      "years": "2019"
+    },
+    {
+      "school": "Capitol University",
+      "course": "Bachelor of Science in Marine Engineering",
+      "years": "2012–2013"
+    }
+  ],
+  "skills": [
+    "Microsoft Office",
+    "Google Workspace",
+    "AI Video Creation",
+    "AI-Vibe Coding (Frontend & Backend)",
+    "Data Entry & Management",
+    "Administrative Support",
+    "File Management",
+    "IT Support & Troubleshooting",
+    "Graphic Design (Photoshop & Canva)",
+    "Web Development (HTML, CSS, JavaScript & PHP)",
+    "Database Management (MySQL & MongoDB)"
+  ],
+  "contact": [
+    {
+      "icon": "call",
+      "label": "Phone",
+      "value": "09958548020",
+      "href": "tel:09958548020"
+    },
+    {
+      "icon": "mail",
+      "label": "Email",
+      "value": "guzmanh056@gmail.com",
+      "href": "mailto:guzmanh056@gmail.com"
+    },
+    {
+      "icon": "location_on",
+      "label": "Location",
+      "value": "Lapasan, Cagayan de Oro City, Misamis Oriental, Philippines",
+      "href": ""
+    }
+  ]
+}
