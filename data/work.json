@@ -43,8 +43,62 @@
     "description": "An English learning platform featuring interactive lessons and activities to improve vocabulary, grammar, reading comprehension, and communication skills.",
     "link": "https://hlord-g.github.io/___lordg/projects/english/",
     "img": ""
-  } 
+  },
+  {
+  "icon": "web",
+  "title": "PHCODER",
+  "sub-header": "Website Development & Hosting Services",
+  "description": "Providing website development, ready-made websites, web hosting, and WordPress solutions for individuals and businesses.",
+  "link": "https://phcoder.rf.gd/",
+  "img": ""
+  },
+  {
+  "icon": "web",
+  "title": "Branding",
+  "sub-header": "Website- Sample 1",
+  "description": " ",
+  "link": "https://hlord-g.github.io/ProjectV01/",
+  "img": ""
+  },
+  {
+  "icon": "web",
+  "title": "Architecture",
+  "sub-header": "Website- Sample 2",
+  "description": " ",
+  "link": "https://hlord-g.github.io/ProjectV02/",
+  "img": ""
+  },
+  {
+  "icon": "web",
+  "title": "Property",
+  "sub-header": "Website- Sample 3",
+  "description": " ",
+  "link": "https://hlord-g.github.io/ProjectV03/",
+  "img": ""
+  },
+  {
+  "icon": "web",
+  "title": "Business",
+  "sub-header": "Website- Sample 4",
+  "description": " ",
+  "link": "https://hlord-g.github.io/ProjectV04/",
+  "img": ""
+  },
+  {
+  "icon": "web",
+  "title": "Accountant",
+  "sub-header": "Website- Sample 5",
+  "description": " ",
+  "link": "https://hlord-g.github.io/ProjectV05/",
+  "img": ""
+  },
+  {
+  "icon": "web",
+  "title": "Beauty Studio",
+  "sub-header": "Website- Sample 6",
+  "description": " ",
+  "link": "https://hlord-g.github.io/ProjectV06/",
+  "img": ""
+  }
 ]
-
-
 }
