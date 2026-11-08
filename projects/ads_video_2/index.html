@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>AI ADS Video Sample</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧹</text></svg>">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- DaisyUI Themes -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet">
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0" rel="stylesheet">
+
+</head>
+
+<body class="bg-base-100 text-base-content transition-colors duration-300"
+    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+
+    <!-- ===================================== -->
+    <!-- THEME TOGGLE -->
+    <!-- ===================================== -->
+
+    <div class="fixed top-5 right-5 z-50">
+
+        <button
+            id="themeToggle"
+            class="btn btn-circle btn-outline bg-base-100/90 backdrop-blur-md shadow-lg"
+            aria-label="Toggle theme"
+            title="Switch theme">
+
+            <span id="themeIcon" class="material-symbols-rounded">
+                dark_mode
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- VIDEO HERO -->
+    <!-- ===================================== -->
+
+    <header class="px-4 md:px-10 lg:px-20 pt-10 md:pt-16">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-8">
+
+                <span class="badge badge-primary badge-outline mb-4">
+                    <span class="material-symbols-rounded text-sm">movie</span>
+                    AI Video Production
+                </span>
+
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
+                    Creativity Meets <span class="text-primary">AI.</span>
+                </h2>
+
+                <p class="text-base-content/60 mt-3 text-sm md:text-base">
+                    A creative advertisement showcasing the power of AI-generated content.
+                </p>
+
+            </div>
+
+
+            <!-- VIDEO PLAYER -->
+            <div class="relative max-w-6xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden bg-neutral shadow-2xl">
+
+                <video
+                    id="mainVideo"
+                    class="w-full aspect-video object-cover"
+                    src="finales.mp4"
+                    autoplay
+                    loop
+                    playsinline
+                    preload="auto">
+                </video>
+
+
+                <!-- VIDEO CONTROLS -->
+                <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent">
+
+                    <!-- PROGRESS BAR -->
+                    <div class="flex items-center gap-3 mb-3">
+
+                        <span id="currentTime" class="text-white text-xs tabular-nums shrink-0">
+                            0:00
+                        </span>
+
+                        <input
+                            type="range"
+                            id="videoProgress"
+                            min="0"
+                            max="100"
+                            value="0"
+                            step="0.1"
+                            class="range range-primary range-xs flex-1 cursor-pointer"
+                            aria-label="Video progress">
+
+                        <span id="duration" class="text-white text-xs tabular-nums shrink-0">
+                            0:00
+                        </span>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+                    <div class="flex items-center justify-between">
+
+                        <div class="flex items-center gap-2">
+
+                            <!-- PLAY / PAUSE -->
+                            <button
+                                id="playBtn"
+                                class="btn btn-circle btn-sm md:btn-md bg-white/15 border-0 text-white hover:bg-white/30"
+                                aria-label="Play or pause">
+
+                                <span id="playIcon" class="material-symbols-rounded">
+                                    pause
+                                </span>
+
+                            </button>
+
+
+                            <!-- MUTE / UNMUTE -->
+                            <button
+                                id="muteBtn"
+                                class="btn btn-circle btn-sm md:btn-md bg-white/15 border-0 text-white hover:bg-white/30"
+                                aria-label="Mute or unmute">
+
+                                <span id="muteIcon" class="material-symbols-rounded">
+                                    volume_up
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                        <span class="text-xs text-white/60">
+                            AI Video Production
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO FEATURES -->
+            <div class="flex flex-wrap justify-center gap-3 mt-6">
+
+                <div class="flex items-center gap-2 text-xs text-base-content/50">
+                    <span class="material-symbols-rounded text-base text-primary">smart_display</span>
+                    AI Video Generation
+                </div>
+
+                <div class="flex items-center gap-2 text-xs text-base-content/50">
+                    <span class="material-symbols-rounded text-base text-primary">high_quality</span>
+                    Creative Production
+                </div>
+
+                <div class="flex items-center gap-2 text-xs text-base-content/50">
+                    <span class="material-symbols-rounded text-base text-primary">movie_filter</span>
+                    Advertisement
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ===================================== -->
+    <!-- INTRODUCTION -->
+    <!-- ===================================== -->
+
+    <section class="px-6 md:px-12 lg:px-20 py-20 md:py-28">
+
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center">
+
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                    About This Project
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 tracking-tight">
+                    Professional House Cleaning,<br class="hidden md:block">
+                    Powered by AI
+                </h2>
+
+                <p class="text-base-content/60 text-sm md:text-base leading-8 max-w-4xl mx-auto mt-6">
+
+                    This is a sample house cleaning advertisement for HCT (House Cleaning Texas). Images and scripts are created using ChatGPT, while the video is generated using Google Flow's free credits.
+
+                </p>
+
+                <p class="text-base-content/60 text-sm md:text-base leading-8 max-w-4xl mx-auto mt-4">
+
+                    Other AI tools like Higgsfield and Leonardo AI are also available for more advanced results, but they require paid subscriptions. For now, we're using Google Flow to keep production costs low while still creating quality advertisements.
+
+                </p>
+
+            </div>
+
+
+            <!-- CTA CARD -->
+            <div class="card bg-base-200 mt-12 border border-base-300 shadow-sm">
+
+                <div class="card-body md:p-10 text-center items-center">
+
+                    <div class="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
+
+                        <span class="material-symbols-rounded text-3xl">
+                            campaign
+                        </span>
+
+                    </div>
+
+                    <h3 class="text-xl md:text-2xl font-bold mt-2">
+                        Ready to Promote Your Business?
+                    </h3>
+
+                    <p class="text-sm md:text-base text-base-content/60 leading-7 max-w-2xl">
+
+                        Share your preferred design, advertising style, and budget. I'll help you find the best approach and tools to create a professional, eye-catching advertisement that fits your brand and budget.
+
+                    </p>
+
+                    <p class="text-sm font-semibold text-primary mt-2">
+                        Let's bring your ideas to life!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- IMAGE GALLERY -->
+    <!-- ===================================== -->
+
+    <section class="px-5 md:px-12 lg:px-20 pb-24">
+
+        <div class="max-w-7xl mx-auto">
+
+
+            <!-- GALLERY HEADING -->
+            <div class="text-center mb-10">
+
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                    Project Showcase
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-3">
+                    Creative Highlights
+                </h2>
+
+                <p class="text-sm md:text-base text-base-content/60 mt-4 max-w-2xl mx-auto leading-7">
+
+                    A sample HCT (House Cleaning Texas) advertisement created using Google Flow's free credits, showcasing professional home cleaning services and AI-generated visuals.
+
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+                <!-- IMAGE 1 -->
+                <div class="card bg-base-100 border border-base-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+
+                    <figure class="aspect-[4/3] overflow-hidden">
+
+                        <img
+                            src="image_1.png"
+                            alt="Creative Highlight 1"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+
+                    </figure>
+
+                </div>
+
+
+                <!-- IMAGE 2 -->
+                <div class="card bg-base-100 border border-base-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+
+                    <figure class="aspect-[4/3] overflow-hidden">
+
+                        <img
+                            src="image_2.png"
+                            alt="Creative Highlight 2"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+
+                    </figure>
+
+                </div>
+
+
+                <!-- IMAGE 3 -->
+                <div class="card bg-base-100 border border-base-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+
+                    <figure class="aspect-[4/3] overflow-hidden">
+
+                        <img
+                            src="image_3.png"
+                            alt="Creative Highlight 3"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+
+                    </figure>
+
+                </div>
+
+
+                <!-- IMAGE 4 -->
+                <div class="card bg-base-100 border border-base-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+
+                    <figure class="aspect-[4/3] overflow-hidden">
+
+                        <img
+                            src="image_4.png"
+                            alt="Creative Highlight 4"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+
+                    </figure>
+
+                </div>
+
+
+                <!-- IMAGE 5 -->
+                <div class="card bg-base-100 border border-base-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+
+                    <figure class="aspect-[4/3] overflow-hidden">
+
+                        <img
+                            src="image_5.png"
+                            alt="Creative Highlight 5"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+
+                    </figure>
+
+                </div>
+
+
+                <!-- IMAGE 6 -->
+                <div class="card bg-base-100 border border-base-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+
+                    <figure class="aspect-[4/3] overflow-hidden">
+
+                        <img
+                            src="image_6.png"
+                            alt="Creative Highlight 6"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+
+                    </figure>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================== -->
+
+    <footer class="bg-base-200 border-t border-base-300 px-6 py-12">
+
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
+
+            <div class="flex items-center gap-3">
+
+                <div class="size-10 rounded-xl bg-primary text-primary-content flex items-center justify-center">
+
+                    <span class="material-symbols-rounded">
+                        auto_awesome
+                    </span>
+
+                </div>
+
+                <div class="text-left">
+
+                    <h2 class="font-bold">
+                        AI-Powered Ads
+                    </h2>
+
+                    <p class="text-xs text-base-content/50">
+                        Sample Presentation
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="divider max-w-xs mx-auto my-1"></div>
+
+            <p class="text-sm text-base-content/60">
+
+                Powered by <span class="font-bold text-primary">Harold Guzman</span>
+
+            </p>
+
+            <p class="text-xs text-base-content/40">
+                © 2026 All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ===================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ===================================== -->
+
+    <script>
+
+        // =====================================
+        // THEME TOGGLE
+        // =====================================
+
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        htmlElement.setAttribute('data-theme', savedTheme);
+
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', function () {
+
+            const currentTheme = htmlElement.getAttribute('data-theme');
+
+            const newTheme = currentTheme === 'light'
+                ? 'dark'
+                : 'light';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+
+            localStorage.setItem('theme', newTheme);
+
+            updateThemeIcon(newTheme);
+
+        });
+
+
+        function updateThemeIcon(theme) {
+
+            themeIcon.textContent = theme === 'light'
+                ? 'dark_mode'
+                : 'light_mode';
+
+            themeToggle.setAttribute(
+                'title',
+                theme === 'light'
+                    ? 'Switch to dark mode'
+                    : 'Switch to light mode'
+            );
+
+        }
+
+
+        // =====================================
+        // VIDEO PLAYER
+        // =====================================
+
+        const video = document.getElementById('mainVideo');
+
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+
+        const muteBtn = document.getElementById('muteBtn');
+        const muteIcon = document.getElementById('muteIcon');
+
+        const progress = document.getElementById('videoProgress');
+
+        const currentTime = document.getElementById('currentTime');
+        const duration = document.getElementById('duration');
+
+
+        // =====================================
+        // AUTOPLAY WITH SOUND
+        // =====================================
+
+        video.muted = false;
+        video.defaultMuted = false;
+        video.volume = 1;
+
+
+        async function autoPlayVideo() {
+
+            try {
+
+                video.muted = false;
+                video.volume = 1;
+
+                await video.play();
+
+                updatePlayIcon();
+                updateMuteIcon();
+
+                console.log('Video autoplay started with sound.');
+
+            } catch (error) {
+
+                console.log('Browser blocked autoplay with sound:', error);
+
+            }
+
+        }
+
+
+        // Attempt autoplay when video is ready
+        video.addEventListener('canplay', function () {
+
+            if (video.paused) {
+                autoPlayVideo();
+            }
+
+        }, { once: true });
+
+
+        // Attempt autoplay on page load
+        window.addEventListener('load', autoPlayVideo);
+
+
+        // =====================================
+        // VIDEO TIME FORMAT
+        // =====================================
+
+        function formatTime(seconds) {
+
+            if (!Number.isFinite(seconds)) {
+                return '0:00';
+            }
+
+            const minutes = Math.floor(seconds / 60);
+
+            const remainingSeconds = Math.floor(seconds % 60);
+
+            return `${minutes}:${String(remainingSeconds).padStart(2, '0')}`;
+
+        }
+
+
+        // =====================================
+        // VIDEO DURATION
+        // =====================================
+
+        video.addEventListener('loadedmetadata', function () {
+
+            progress.max = video.duration;
+
+            duration.textContent = formatTime(video.duration);
+
+        });
+
+
+        // =====================================
+        // UPDATE PROGRESS BAR
+        // =====================================
+
+        video.addEventListener('timeupdate', function () {
+
+            if (!progress.matches(':active')) {
+
+                progress.value = video.currentTime;
+
+            }
+
+            currentTime.textContent = formatTime(video.currentTime);
+
+        });
+
+
+        // =====================================
+        // DRAG / SEEK VIDEO
+        // =====================================
+
+        progress.addEventListener('input', function () {
+
+            video.currentTime = Number(this.value);
+
+            currentTime.textContent = formatTime(video.currentTime);
+
+        });
+
+
+        // =====================================
+        // PLAY / PAUSE
+        // =====================================
+
+        playBtn.addEventListener('click', function () {
+
+            if (video.paused) {
+
+                video.play();
+
+            } else {
+
+                video.pause();
+
+            }
+
+        });
+
+
+        // =====================================
+        // MUTE / UNMUTE
+        // =====================================
+
+        muteBtn.addEventListener('click', function () {
+
+            video.muted = !video.muted;
+
+            updateMuteIcon();
+
+        });
+
+
+        // =====================================
+        // UPDATE PLAY ICON
+        // =====================================
+
+        function updatePlayIcon() {
+
+            playIcon.textContent = video.paused
+                ? 'play_arrow'
+                : 'pause';
+
+        }
+
+
+        // =====================================
+        // UPDATE MUTE ICON
+        // =====================================
+
+        function updateMuteIcon() {
+
+            muteIcon.textContent = video.muted
+                ? 'volume_off'
+                : 'volume_up';
+
+        }
+
+
+        // =====================================
+        // VIDEO EVENTS
+        // =====================================
+
+        video.addEventListener('play', updatePlayIcon);
+
+        video.addEventListener('pause', updatePlayIcon);
+
+        video.addEventListener('volumechange', updateMuteIcon);
+
+
+        // =====================================
+        // INITIAL STATE
+        // =====================================
+
+        updatePlayIcon();
+
+        updateMuteIcon();
+
+
+    </script>
+
+</body>
+</html>

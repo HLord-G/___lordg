@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>AI ADS Video Sample</title>
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧹</text></svg>">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- DaisyUI Themes -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0" rel="stylesheet">
+
+</head>
+
+<body class="font-sans bg-base-100 text-base-content transition-colors duration-300">
+
+
+    <!-- ====================================== -->
+    <!-- THEME TOGGLE -->
+    <!-- ====================================== -->
+
+    <div class="fixed top-5 right-5 z-50">
+
+        <button
+            id="themeToggle"
+            class="btn btn-circle btn-outline bg-base-100/90 backdrop-blur-md shadow-lg"
+            aria-label="Toggle theme"
+            title="Switch theme">
+
+            <span id="themeIcon" class="material-symbols-rounded">
+                dark_mode
+            </span>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- HEADER / YOUTUBE VIDEO -->
+    <!-- ====================================== -->
+
+    <header class="w-full flex justify-center align-center">
+
+            <div class="w-[80%] aspect-video md:aspect-[16/9] bg-base-200">
+
+                <video
+                    class="w-full h-full object-cover"
+                    src="finales.mp4"
+                    autoplay
+                    loop
+                    playsinline
+                    controls>
+                </video>
+
+            </div>
+
+    </header>
+
+
+
+    <!-- ====================================== -->
+    <!-- INTRODUCTION / DESCRIPTION -->
+    <!-- ====================================== -->
+
+    <section class="px-6 py-16 md:px-12 lg:px-24">
+
+        <div class="max-w-5xl mx-auto text-center space-y-4">
+
+
+            <!-- Small Heading -->
+
+            <span class="block text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+
+                Creativity Meets AI
+
+            </span>
+
+
+            <!-- Main Heading -->
+
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight">
+
+                Professional House Cleaning, Powered by AI
+
+            </h1>
+
+
+            <!-- Description -->
+
+            <p class="text-base md:text-lg text-base-content/70 leading-relaxed max-w-4xl mx-auto">
+
+This is a sample house cleaning advertisement for HCT (House Cleaning Texas). Images and scripts are created using ChatGPT, while the video is generated using Google Flow's free credits. Other AI tools like Higgsfield and Leonardo AI are also available for more advanced results, but they require paid subscriptions. For now, we're using Google Flow to keep production costs low while still creating quality advertisements.
+
+            </p>
+
+ <p class="text-base md:text-lg text-base-content/70 leading-relaxed max-w-4xl mx-auto">
+ <b>Ready to promote your business?</b>  Share your preferred design, advertising style, and budget. I'll help you find the best approach and tools to create a professional, eye-catching advertisement that fits your brand and budget. Let's bring your ideas to life!
+ </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================================== -->
+    <!-- IMAGE GALLERY -->
+    <!-- ====================================== -->
+
+    <section class="px-6 pb-20 md:px-12 lg:px-24">
+
+        <div class="max-w-7xl mx-auto">
+
+
+            <!-- Gallery Heading -->
+
+            <div class="text-center mb-10 mt-[120px]">
+
+                <h2 class="text-2xl md:text-3xl font-bold mt-3">
+
+                    Creative Highlights
+
+                </h2>
+
+                <p class="text-base-content/60 mt-3">
+
+                 A sample HCT (House Cleaning Texas) advertisement created using Google Flow's free credits, showcasing professional home cleaning services and AI-generated visuals.
+                </p>
+
+            </div>
+
+
+
+            <!-- 6 IMAGES GRID -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+                <!-- IMAGE 1 -->
+
+                <div class="card bg-base-200 overflow-hidden shadow-sm">
+
+                    <figure class="aspect-[4/3]">
+
+                        <img
+                            src="image_1.png"
+                            alt="Creative Highlight 1"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+
+                    </figure>
+
+                </div>
+
+
+
+                <!-- IMAGE 2 -->
+
+                <div class="card bg-base-200 overflow-hidden shadow-sm">
+
+                    <figure class="aspect-[4/3]">
+
+                        <img
+                            src="image_2.png"
+                            alt="Creative Highlight 2"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+
+                    </figure>
+
+                </div>
+
+
+
+                <!-- IMAGE 3 -->
+
+                <div class="card bg-base-200 overflow-hidden shadow-sm">
+
+                    <figure class="aspect-[4/3]">
+
+                        <img
+                            src="image_3.png"
+                            alt="Creative Highlight 3"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+
+                    </figure>
+
+                </div>
+
+
+
+                <!-- IMAGE 4 -->
+
+                <div class="card bg-base-200 overflow-hidden shadow-sm">
+
+                    <figure class="aspect-[4/3]">
+
+                        <img
+                            src="image_4.png"
+                            alt="Creative Highlight 4"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+
+                    </figure>
+
+                </div>
+
+
+
+                <!-- IMAGE 5 -->
+
+                <div class="card bg-base-200 overflow-hidden shadow-sm">
+
+                    <figure class="aspect-[4/3]">
+
+                        <img
+                            src="image_5.png"
+                            alt="Creative Highlight 5"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+
+                    </figure>
+
+                </div>
+
+
+
+                <!-- IMAGE 6 -->
+
+                <div class="card bg-base-200 overflow-hidden shadow-sm">
+
+                    <figure class="aspect-[4/3]">
+
+                        <img
+                            src="image_6.png"
+                            alt="Creative Highlight 6"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+
+                    </figure>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================================== -->
+    <!-- FOOTER -->
+    <!-- ====================================== -->
+
+
+    <footer class="footer footer-center bg-base-200 text-base-content px-6 py-10">
+
+        <div class=" ">
+
+            <div class="space-y-[-4px] ">
+                <h2 class="text-xl font-bold">
+                    AI-Powered Ads
+                </h2>
+                <p class="text-sm text-base-content/60">
+                    Sample Presentation
+                </p>
+            </div>
+
+            <div class="space-y-[-4px] mt-[10px]">
+                    <p class="text-sm font-medium">
+                        Powered by <span class="text-primary">Harold Guzman</span>
+                    </p>
+
+                    <p class="text-xs text-base-content/50">
+                        © 2026 All Rights Reserved.
+                    </p>
+            </div>
+
+  
+
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- ====================================== -->
+    <!-- JAVASCRIPT / THEME TOGGLE -->
+    <!-- ====================================== -->
+
+    <script>
+
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        htmlElement.setAttribute('data-theme', savedTheme);
+
+        updateThemeIcon(savedTheme);
+
+
+        // Toggle theme
+        themeToggle.addEventListener('click', function () {
+
+            const currentTheme = htmlElement.getAttribute('data-theme');
+
+            const newTheme = currentTheme === 'light'
+                ? 'dark'
+                : 'light';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+
+            localStorage.setItem('theme', newTheme);
+
+            updateThemeIcon(newTheme);
+
+        });
+
+
+        // Update theme icon
+        function updateThemeIcon(theme) {
+
+            themeIcon.textContent = theme === 'light'
+                ? 'dark_mode'
+                : 'light_mode';
+
+            themeToggle.setAttribute(
+                'title',
+                theme === 'light'
+                    ? 'Switch to dark mode'
+                    : 'Switch to light mode'
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
